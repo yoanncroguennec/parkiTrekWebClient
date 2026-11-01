@@ -7,6 +7,8 @@ import {
 } from "@/app/components/common/layouts";
 // EFFECTS
 import { WhiteFlash } from "@/app/components/effects";
+// FEEDBACK
+import { ResourceNotFound } from "@/app/components/common/feedback";
 // DATAS
 import { cards } from "@/app/utils/constants/data/treks/map/data";
 import { getSectionsTrekID } from "./data/section.data";
@@ -29,13 +31,13 @@ export default async function TrekID({ params, searchParams }: Props) {
 
   const selectedArea = trek?.areas.find((item) => item.code === area);
 
-  // if (!trek || !selectedArea) {
-  //   return (
-  //     <ResourceNotFound
-  //       message={!trek ? "Trek introuvable" : "Zone introuvable"}
-  //     />
-  //   );
-  // }
+  if (!trek || !selectedArea) {
+    return (
+      <ResourceNotFound
+        message={!trek ? "Trek introuvable" : "Zone introuvable"}
+      />
+    );
+  }
 
   const sectionsTrekID = getSectionsTrekID(selectedArea);
 
