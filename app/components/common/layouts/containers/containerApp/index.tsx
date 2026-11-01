@@ -17,7 +17,6 @@ const ContainerApp = forwardRef<HTMLDivElement, Props>(
   ({ children, displayNavbar = true, displayFooter = true, className }, ref) => {
     return (
       <Box ref={ref} className={className}>
-        <h1>mmmmjjj</h1>
         {/* {displayNavbar && <Navbar />} */}
 
         {children}

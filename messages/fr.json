@@ -1,0 +1,223 @@
+{
+  "Menu": {
+    "home": {
+      "title": "ACCUEIL",
+      "subtitle": "Le projet en un regard",
+      "alt": "accueil",
+      "img": "/assets/imgs/components/common/layouts/navbar/navbarApp/menu/img_home_2.png"
+    },
+    "trek": {
+      "title": "LE TREK",
+      "subtitle": "Traverser la France à pied",
+      "alt": "Le Trek",
+      "img": "/assets/imgs/components/common/layouts/navbar/navbarApp/menu/img_theTrek_2.png"
+    },
+    "parkinson": {
+      "title": "LA MALADIE DE PARKINSON",
+      "subtitle": "Comprendre la maladie",
+      "alt": "La maladie de Parkinson",
+      "img": "/assets/imgs/components/common/layouts/navbar/navbarApp/menu/img_parkinson_2.png"
+    },
+    "story": {
+      "title": "MON HISTOIRE",
+      "subtitle": "Mon parcours de vie",
+      "alt": "Mon histoire",
+      "img": "/assets/imgs/components/common/layouts/navbar/navbarApp/menu/img_myStory_2.png"
+    },
+    "gallery": {
+      "title": "GALERIE",
+      "subtitle": "Photos & vidéos des treks, conférences...",
+      "alt": "Galerie",
+      "img": "/assets/imgs/components/common/layouts/navbar/navbarApp/menu/img_galery_2.png"
+    },
+    "journal": {
+      "title": "JOURNAL DE BORD",
+      "subtitle": "Les étapes au quotidien",
+      "alt": "Journal de bord",
+      "img": "/assets/imgs/components/common/layouts/navbar/navbarApp/menu/img_travelJournal.png"
+    },
+    "support": {
+      "title": "SOUTENIR",
+      "subtitle": "Faire avancer la cause",
+      "alt": "Soutenir",
+      "img": "/assets/imgs/components/common/layouts/navbar/navbarApp/menu/img_support_2.png"
+    },
+    "contact": {
+      "title": "CONTACT",
+      "subtitle": "Restons en contact",
+      "alt": "Contact",
+      "img": "/assets/imgs/components/common/layouts/navbar/navbarApp/menu/img_contact_2.png"
+    }
+  },
+  "HomePage": {
+    "metadata": {
+      "title": "Accueil | Parki Trek - Trek à travers la France pour Parkinson",
+      "desc": "Bienvenue sur Parki Trek. Suivez une aventure unique à pied à travers la France pour sensibiliser à la maladie de Parkinson, partager chaque étape et inspirer le dépassement de soi."
+    },
+    "hero": {
+      "title": "Bienvenue",
+      "subtitle": "Développeur Web & Mobile"
+    }
+  },
+  "TrekPage": {
+    "metadata": {
+      "title": "Treks | Parki Trek - Les étapes de la traversée de la France",
+      "desc": "Découvrez les itinéraires, les étapes et les aventures de Parki Trek à travers la France. Suivez chaque randonnée et explorez des paysages exceptionnels."
+    },
+    "hero": {
+      "title": "",
+      "subtitle": ""
+    }
+  },
+  "ParkinsonPage": {
+    "metadata": {
+      "title": "Maladie de Parkinson : symptômes, défis et sensibilisation | Parki Trek",
+      "desc": "Comprenez la maladie de Parkinson, ses symptômes, son impact sur la vie quotidienne et découvrez comment Parki Trek sensibilise grâce à un défi sportif à travers la France."
+    },
+    "hero": {
+      "title": "",
+      "subtitle": ""
+    }
+  },
+  "MyStoryPage": {
+    "metadata": {
+      "title": "Mon Histoire | Parki Trek - Vivre avec la maladie de Parkinson",
+      "desc": "Découvrez l'histoire derrière Parki Trek, un défi personnel de randonnée à travers la France pour sensibiliser à la maladie de Parkinson et montrer que les obstacles peuvent être surmontés."
+    },
+    "hero": {
+      "title": "",
+      "subtitle": ""
+    }
+  },
+  "GalleryPage": {
+    "metadata": {
+      "title": "Galerie | Parki Trek - Photos et souvenirs du trek",
+      "desc": "Découvrez la galerie officielle de Parki Trek avec les plus belles photos, paysages, rencontres et moments marquants de cette traversée de la France."
+    },
+    "hero": {
+      "title": "",
+      "subtitle": ""
+    },
+    "cinematicJourney": {
+      "call-of-the-horizon": {
+        "title": "L’appel de l’horizon",
+        "description": "Ici commence le <strong>combat</strong> contre les symptômes de la <strong>maladie de Parkinson</strong>.\nUn chemin où chaque <strong>pas</strong> défie la maladie, où chaque <strong>sommet</strong> devient un symbole <strong>d'espoir</strong>.\nEt où chaque <strong>kilomètre</strong> rappelle <strong>qu'abandonner n'est pas une option</strong>."
+      },
+
+      "faces-of-the-journey": {
+        "title": "Les visages de la route",
+        "description": "Chaque étape est une <strong>rencontre</strong>.\nChaque <strong>conférence</strong> ouvre le dialogue.\nChaque action de <strong>sensibilisation</strong> fait naître une nouvelle prise de conscience.\nAu fil des sentiers, les paysages défilent, mais ce sont les femmes et les hommes croisés en chemin qui transforment cette aventure en une histoire profondément humaine.\nEnsemble, nous avançons pour faire connaître la <strong>maladie de Parkinson</strong> et rappeler <strong>qu'aucun combat ne devrait être mené seul</strong>."
+      },
+
+      "challenges-and-resilience": {
+        "title": "Défis & résilience",
+        "description": "Chaque <strong>défi</strong> laisse une trace.\nChaque chute met le <strong>mental</strong> à l'épreuve.\nChaque pas exige un courage que l'on ne voit pas.\nLa maladie de <strong>Parkinson</strong> ne se résume pas à des tremblements. Elle s'invite dans le corps, s'immisce dans les pensées et transforme les gestes les plus simples en montagnes à gravir. Pourtant, au milieu des doutes, une lumière demeure : celle de la volonté de continuer.\n<strong>La résilience n'est pas l'absence de souffrance. C'est le choix de se relever, encore et encore, lorsque tout semble vouloir nous arrêter.</strong>"
+      },
+
+      "unforgettable-horizons": {
+        "title": "Les horizons inoubliables",
+        "description": "Les kilomètres s'effacent.\nLes paysages changent.\n<strong>L'horizon</strong>, lui, continue de nous appeler.\nÀ chaque étape, le monde nous rappelle que la beauté se découvre en marchant. Chaque sentier devient une rencontre avec soi-même, chaque détour une leçon d'humilité, chaque pas une victoire sur les limites que l'on croyait infranchissables.\n<strong>Les plus grands voyages ne changent pas seulement le paysage. Ils changent celui qui ose les parcourir.</strong>"
+      },
+
+      "hope-in-motion": {
+        "title": "L'espoir en marche",
+        "description": "Chaque <strong>pas</strong> est une victoire.\nChaque <strong>combat</strong> fait naître une nouvelle force.\nChaque horizon nourrit un peu plus l'<strong>espoir</strong>.\nAu fil des kilomètres, nous n'avons pas seulement traversé des paysages. Nous avons porté un message, éveillé des consciences et rappelé que derrière chaque personne touchée par la <strong>maladie de Parkinson</strong> se cache un combat quotidien, souvent invisible.\n<strong>La plus belle victoire n'est pas d'atteindre un horizon. C'est de donner à d'autres la force de croire qu'ils peuvent, eux aussi, continuer à avancer.</strong>"
+      }
+    }
+  },
+  "PaymentsDonationsPage": {
+    "metadata": {
+      "title": "Soutenir Parki Trek | Dons, sponsors, partenaires et financement | Parki Trek",
+      "desc": "Découvrez comment soutenir Parki Trek grâce aux dons, au sponsoring et aux partenariats. Consultez le budget prévisionnel, les dépenses, les besoins de financement et l'utilisation des fonds pour contribuer en toute transparence à ce projet de sensibilisation à la maladie de Parkinson."
+    },
+    "hero": {
+      "title": "Parki Trek",
+      "subtitle": "Chaque pas compte",
+      "text": "Une aventure humaine conçue pour sensibiliser le public à la maladie de Parkinson, promouvoir les bienfaits de la marche de longue distance et rassembler partenaires, sponsors et donateurs autour d’un projet inspirant.",
+      "title_Amount": "Objectif",
+      "title_btn1": "Devenir Sponsor",
+      "title_btn2": "Faire un Don"
+    },
+    "supportShowCase": {
+      "circleCTA": {
+        "title": "PARKI",
+        "subtitle": "TREK",
+        "label": "SOUTENIR"
+      },
+      "hero": {
+        "title": "Chaque Pas Compte",
+        "subTitle": "Transparence, Impact, Confiance",
+        "data_SupportShowcase": {
+          "funding-objective": {
+            "title": "Objectif de financement",
+            "value": "150000"
+          },
+          "sponsors": {
+            "title": "Sponsors",
+            "value": "16"
+          },
+          "donors": {
+            "title": "Donnateurs",
+            "value": "450000"
+          },
+          "partners": {
+            "title": "Partenaires",
+            "value": "200"
+          }
+        },
+        "inspirationalQuote": {
+          "quoteText": "Seul on va plus vite,",
+          "quoteTextSecond": "Ensemble on va plus loin."
+        }
+      }
+    }
+  },
+  "ContactPage": {
+    "metadata": {
+      "title": "Contact | Parki Trek",
+      "desc": "Contactez Parki Trek pour toute question, proposition de partenariat, demande de presse ou collaboration autour de cette aventure de sensibilisation à la maladie de Parkinson."
+    },
+    "contactHeroSection": {
+      "hero": {
+        "title": "Là où les chemins se croisent\nnaissent les plus belles histoires.",
+        "subtitle": "Pour une collaboration, un partenariat ou un simple échange,\nnous serons ravis de vous lire et de construire ensemble de nouveaux horizons."
+      },
+      "form": {
+        "label_1": "Prénom",
+        "label_2": "Nom de famille",
+        "label_3": "Numéro de téléphone",
+        "label_4": "Email",
+        "label_5": "Objet",
+        "selectField": {
+          "label_title": "Raison",
+          "label_1": "Partenariat",
+          "value_1": "partenariat",
+          "label_2": "Question",
+          "value_2": "question",
+          "label_3": "Autre",
+          "value_3": "autre"
+        },
+        "textAreaField": {
+          "placeholder": "Tapez ici votre message..."
+        },
+        "titleTooltip_Btn": "Envoyer"
+      }
+    },
+    "contactInfoSection": {
+      "cards_Footer": {
+        "title_1": "NOUS CONTACTER",
+        "title_2": "NOS RÉSEAUX SOCIAUX"
+      }
+    }
+  },
+  "LegalNoticesPage": {
+    "metadata": {
+      "title": "Mentions Légales | Parki Trek",
+      "desc": "Consultez les mentions légales de Parki Trek : informations sur l'éditeur du site, hébergement, propriété intellectuelle, confidentialité et conditions d'utilisation"
+    },
+    "hero": {
+      "title": "",
+      "subtitle": ""
+    }
+  }
+}
