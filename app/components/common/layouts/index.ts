@@ -1,7 +1,7 @@
 // CONTAINERS
 import ContainerApp from "./containers/containerApp";
 // LAYOUTS
-// import SplitLayout from "./layouts/splitLayout";
+import SplitLayout from "./layouts/splitLayout";
 // // NAVBAR
 // import Navbar from "./navbar";
 // // FOOTER
@@ -9,4 +9,4 @@ import ContainerApp from "./containers/containerApp";
 // //
 // import NavTopScreen from "./navigations/navTopScreen";
 
-export { ContainerApp };
+export { ContainerApp, SplitLayout };
