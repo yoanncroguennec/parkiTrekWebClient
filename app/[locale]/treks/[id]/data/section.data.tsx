@@ -1,9 +1,9 @@
 // SECTIONS
 import {
-  // Gallery_TrekID,
-  GPX_TrekID,
+  Gallery_TrekID_Section,
+  GPX_TrekID_Section,
   HeroTrekIDSection,
-  // Journey_TrekID,
+  Journey_TrekID_Section,
 } from "@/app/components/sections/treks/[id]";
 // DATAS
 import { cards } from "@/app/utils/constants/data/treks/map/data";
@@ -18,15 +18,15 @@ export function getSectionsTrekID(selectedArea: SelectedArea) {
     },
     {
       id: "parcours",
-      component: () => <GPX_TrekID />,
+      component: () => <GPX_TrekID_Section />,
     },
     // {
     //   id: "journey",
-    //   component: () => <Journey_TrekID />,
+    //   component: () => <Journey_TrekID_Section />,
     // },
-    // {
-    //   id: "galerie",
-    //   component: () => <Gallery_TrekID />,
-    // },
+    {
+      id: "galerie",
+      component: () => <Gallery_TrekID_Section />,
+    },
   ];
 }

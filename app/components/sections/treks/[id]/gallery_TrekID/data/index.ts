@@ -1,0 +1,81 @@
+export const photos = [
+  {
+    id: 1,
+    src: "https://images.unsplash.com/photo-1470770841072-f978cf4d019e?auto=format&fit=crop&w=1800&q=85",
+    title: "Au cœur des montagnes",
+    category: "NATURE · 01",
+    description: "Là où le silence rencontre l'immensité.",
+    number: "01",
+  },
+  {
+    id: 2,
+    src: "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=1800&q=85",
+    title: "Prendre de la hauteur",
+    category: "ALTITUDE · 02",
+    description: "Chaque sommet ouvre un nouvel horizon.",
+    number: "02",
+  },
+  {
+    id: 3,
+    src: "https://images.unsplash.com/photo-1472396961693-142e6e269027?auto=format&fit=crop&w=1800&q=85",
+    title: "La vie sauvage",
+    category: "FAUNE · 03",
+    description: "Retrouver l'essentiel au détour d'un sentier.",
+    number: "03",
+  },
+  {
+    id: 4,
+    src: "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1800&q=85",
+    title: "L'appel du voyage",
+    category: "EXPLORATION · 04",
+    description: "Avancer, découvrir et se dépasser.",
+    number: "04",
+  },
+  {
+    id: 5,
+    src: "https://images.unsplash.com/photo-1469474968028-56623f02e42e?auto=format&fit=crop&w=1800&q=85",
+    title: "Vers de nouveaux horizons",
+    category: "AVENTURE · 05",
+    description: "Le plus beau chemin reste à parcourir.",
+    number: "05",
+  },
+];
+
+
+export const photosV2 = [
+  {
+    id: 1,
+    src: "https://images.unsplash.com/photo-1470770841072-f978cf4d019e",
+    title: "Le début du voyage",
+    category: "EXPLORATION",
+    number: "01",
+  },
+  {
+    id: 2,
+    src: "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b",
+    title: "Face aux sommets",
+    category: "DÉPASSEMENT",
+    number: "02",
+  },
+  {
+    id: 3,
+    src: "https://images.unsplash.com/photo-1472396961693-142e6e269027",
+    title: "Au cœur du vivant",
+    category: "NATURE",
+    number: "03",
+  },
+  {
+    id: 4,
+    src: "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee",
+    title: "Continuer d'avancer",
+    category: "RÉSILIENCE",
+    number: "04",
+  },
+  {
+    id: 5,
+    src: "https://images.unsplash.com/photo-1469474968028-56623f02e42e",
+    title: "Vers l'horizon",
+    category: "LIBERTÉ",
+    number: "05",
+  },
+];

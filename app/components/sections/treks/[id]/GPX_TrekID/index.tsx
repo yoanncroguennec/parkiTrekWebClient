@@ -4,7 +4,7 @@ import { GPXRouteViewer } from "./components";
 // DATAS
 import { data_MyTreks } from "@/app/utils/constants/data/treks/[id]";
 
-export default function GPX_TrekID() {
+export default function GPX_TrekID_Section() {
   return (
     <Container
       id="parcours"
