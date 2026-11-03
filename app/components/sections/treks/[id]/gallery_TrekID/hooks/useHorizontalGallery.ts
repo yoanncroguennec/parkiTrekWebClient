@@ -55,14 +55,13 @@ export default function useHorizontalGallery() {
           onUpdate: (self) => {
             const percentage = self.progress * 100;
 
-            // MISE À JOUR DE LA PROGRESSION
+            // Éviter les mises à jour React inutiles
             setProgress((previous) =>
               Math.round(previous) === Math.round(percentage)
                 ? previous
                 : percentage
             );
 
-            // CALCUL DE LA CARTE ACTIVE
             const index = Math.min(
               photos.length - 1,
               Math.floor(self.progress * photos.length)
@@ -72,7 +71,7 @@ export default function useHorizontalGallery() {
               previous === index ? previous : index
             );
 
-            // ANIMATION DU DÉGRADÉ
+            // Animation du dégradé
             gsap.set(section, {
               backgroundPosition: `${percentage}% 50%`,
             });
@@ -97,7 +96,6 @@ export default function useHorizontalGallery() {
           },
         });
 
-        // APPARITION ET DISPARITION
         cardAnimation
           .fromTo(
             card,
@@ -123,54 +121,30 @@ export default function useHorizontalGallery() {
           });
       });
 
-      // ACTUALISATION APRÈS LE CHARGEMENT DES IMAGES
+      // ATTENDRE LE CHARGEMENT DES IMAGES
       const images = Array.from(
         track.querySelectorAll<HTMLImageElement>("img")
       );
 
-      const refreshGallery = () => {
+      Promise.all(
+        images.map((image) => image.decode().catch(() => undefined))
+      ).then(() => {
+        // Recalculer les dimensions après chargement
         requestAnimationFrame(() => {
           ScrollTrigger.refresh();
         });
-      };
-
-      // ACTUALISATION À CHAQUE IMAGE CHARGÉE
-      images.forEach((image) => {
-        if (image.complete) {
-          refreshGallery();
-        } else {
-          image.addEventListener("load", refreshGallery, {
-            once: true,
-          });
-
-          image.addEventListener("error", refreshGallery, {
-            once: true,
-          });
-        }
       });
 
-      // ACTUALISATION FINALE APRÈS DÉCODAGE DES IMAGES
-      Promise.all(
-        images.map((image) =>
-          image.decode().catch(() => undefined)
-        )
-      ).then(refreshGallery);
-
-      // RÉACTUALISATION APRÈS REDIMENSIONNEMENT
+      // REACTUALISATION APRÈS REDIMENSIONNEMENT
       const handleResize = () => {
         ScrollTrigger.refresh();
       };
 
       window.addEventListener("resize", handleResize);
 
-      // NETTOYAGE
+      // Nettoyage
       return () => {
         window.removeEventListener("resize", handleResize);
-
-        images.forEach((image) => {
-          image.removeEventListener("load", refreshGallery);
-          image.removeEventListener("error", refreshGallery);
-        });
       };
     },
     {
