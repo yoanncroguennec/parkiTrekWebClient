@@ -34,6 +34,7 @@ export default function Content({ trackRef }: ContentProps) {
             src={photo.src}
             alt={photo.title}
             fill
+            loading="lazy"
             priority={index === 0}
             // (max-width: 899px)	Si l'écran fait au maximum 899 px
             // Mobile, écran de 390 px : 82vw = 319,8 px. => Image occupe 82 % de la largeur de l'écran
