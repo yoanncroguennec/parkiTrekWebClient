@@ -2,7 +2,7 @@
 
 import { Stack } from "@mui/material";
 // HOOKS
-import useHorizontalGallery from "./hooks/useHorizontalGallery.ts";
+import useHorizontalGallery from "./hooks/useHorizontalGallery";
 // COMPONENTS
 import { Content, Footer, Header } from "./components";
 

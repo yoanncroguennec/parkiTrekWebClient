@@ -1,16 +1,5 @@
 @import "tailwindcss";
 
-html,
-body {
-  scrollbar-width: none;
-  -ms-overflow-style: none;
-}
-
-html::-webkit-scrollbar,
-body::-webkit-scrollbar {
-  display: none;
-}
-
 * {
   box-sizing: border-box;
 }
@@ -21,6 +10,13 @@ body {
   padding: 0;
   width: 100%;
   min-height: 100%;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+html::-webkit-scrollbar,
+body::-webkit-scrollbar {
+  display: none;
 }
 
 body {
