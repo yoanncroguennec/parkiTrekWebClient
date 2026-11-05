@@ -1,6 +1,6 @@
 "use client";
 
-import { MutableRefObject, RefObject, useLayoutEffect } from "react";
+import { RefObject, useLayoutEffect } from "react";
 
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
@@ -16,8 +16,8 @@ interface UseExplorerScrollAnimationProps {
   sportsRef: RefObject<HTMLDivElement | null>;
   timelineRef: RefObject<HTMLDivElement | null>;
 
-  sportsCardRefs: MutableRefObject<(HTMLDivElement | null)[]>;
-  timelineItemRefs: MutableRefObject<(HTMLDivElement | null)[]>;
+  sportsCardRefs: RefObject<(HTMLDivElement | null)[]>;
+  timelineItemRefs: RefObject<(HTMLDivElement | null)[]>;
 }
 
 export function useExplorerScrollAnimation({

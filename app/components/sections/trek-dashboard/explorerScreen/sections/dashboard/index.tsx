@@ -1,6 +1,6 @@
 "use client";
 
-import { MutableRefObject, RefObject } from "react";
+import { RefObject } from "react";
 
 import { Stack } from "@mui/material";
 
@@ -9,7 +9,7 @@ import { dashboardCards } from "./data/data.dashboardCards";
 interface DashboardSectionProps {
   dashboardRef: RefObject<HTMLDivElement | null>;
 
-  dashboardCardRefs: MutableRefObject<(HTMLDivElement | null)[]>;
+  dashboardCardRefs: RefObject<(HTMLDivElement | null)[]>;
 }
 
 export default function DashboardSection({

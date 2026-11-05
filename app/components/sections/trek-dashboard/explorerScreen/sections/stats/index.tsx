@@ -1,6 +1,6 @@
 "use client";
 
-import { MutableRefObject, RefObject } from "react";
+import { RefObject } from "react";
 
 import {
   StatsGrid,
@@ -18,7 +18,7 @@ import { formatTrekDuration } from "./helpers/formatTrekDuration";
 interface StatsSectionProps {
   statsRef: RefObject<HTMLDivElement | null>;
 
-  statCardRefs: MutableRefObject<(HTMLDivElement | null)[]>;
+  statCardRefs: RefObject<(HTMLDivElement | null)[]>;
 }
 
 export default function StatsSection({

@@ -1,6 +1,6 @@
-// useCarousel3D : positionnement des cartes et animation de rotation continue.
-import { MutableRefObject, RefObject, useEffect, useRef } from "react";
+import { RefObject, useEffect, useRef } from "react";
 import gsap from "gsap";
+
 // CONSTANTS
 import {
   CAROUSEL_RADIUS,
@@ -18,7 +18,7 @@ export function useCarousel3D(
   totalImages: number,
   radius = CAROUSEL_RADIUS,
   initialRotationX = INITIAL_ROTATION,
-): MutableRefObject<RotationState> {
+): RefObject<RotationState> {
   const rotationState = useRef<RotationState>({
     speed: INITIAL_SPEED,
     currentRotation: 0,
@@ -32,8 +32,6 @@ export function useCarousel3D(
     const cards = wheel.querySelectorAll<HTMLDivElement>(
       ".circular-carousel-card",
     );
-
-    // console.log(cards.length);
 
     cards.forEach((card, index) => {
       const angle = (360 / totalImages) * index;

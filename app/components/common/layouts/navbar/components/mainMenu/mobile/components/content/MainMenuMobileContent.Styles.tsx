@@ -2,7 +2,8 @@
 import Image from "next/image";
 import { Link } from "@/i18n/navigation";
 import { Box, Paper, PaperProps, Stack, styled, Typography } from "@mui/material";
-import { mobileDrawerBG_ClipPath } from "../../shapes/mobileDrawerBG";
+// SHAPES
+import { menuMobileDrawerBG_ClipPath } from "@/app/components/common/shapes";
 
 // IMAGE LOGO
 export const LogoImage = styled(Image)(() => ({
@@ -21,7 +22,7 @@ export const DecorationImage = styled(Image)(() => ({
 // CONTAINER
 export const PaperStyles = styled(Paper)<PaperProps>(() => ({
   background: "#FFF",
-  clipPath: mobileDrawerBG_ClipPath,
+  clipPath: menuMobileDrawerBG_ClipPath,
   filter: "drop-shadow(0 15px 35px rgba(0,0,0,.18))",
   inset: 0,
   padding: "15px",

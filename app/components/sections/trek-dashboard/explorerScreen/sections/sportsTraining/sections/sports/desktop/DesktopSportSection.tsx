@@ -1,12 +1,18 @@
 "use client";
 
-import { useState } from "react";
+import { useState, RefObject } from "react";
 import { Box } from "@mui/material";
 
 import { sportsTrainingSessions } from "../../../data";
 import SportTrainingCard from "./components/SportTrainingCard";
 
-export default function DesktopSportSection() {
+interface DesktopSportSectionProps {
+  sportsCardRefs: RefObject<(HTMLDivElement | null)[]>;
+}
+
+export default function DesktopSportSection({
+  sportsCardRefs,
+}: DesktopSportSectionProps) {
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
 
   const cardsPerRow = 3;
@@ -40,14 +46,22 @@ export default function DesktopSportSection() {
               : null;
 
           return (
-            <SportTrainingCard
+            <Box
               key={`${item.sport}-${index}`}
-              item={item}
-              isHovered={hoveredIndex === index}
-              isRowExpanded={hoveredIndex !== null && currentRow === hoveredRow}
-              onHover={() => setHoveredIndex(index)}
-              onLeave={() => setHoveredIndex(null)}
-            />
+              ref={(element: HTMLDivElement | null) => {
+                sportsCardRefs.current[index] = element;
+              }}
+            >
+              <SportTrainingCard
+                item={item}
+                isHovered={hoveredIndex === index}
+                isRowExpanded={
+                  hoveredIndex !== null && currentRow === hoveredRow
+                }
+                onHover={() => setHoveredIndex(index)}
+                onLeave={() => setHoveredIndex(null)}
+              />
+            </Box>
           );
         })}
       </Box>

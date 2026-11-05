@@ -1,6 +1,6 @@
 "use client";
 
-import { MutableRefObject, RefObject } from "react";
+import { RefObject } from "react";
 
 import { Stack } from "@mui/material";
 // LAYOUTS
@@ -28,13 +28,13 @@ interface ExplorerScreenProps {
 
   timelineRef: RefObject<HTMLDivElement | null>;
 
-  statCardRefs: MutableRefObject<(HTMLDivElement | null)[]>;
+  statCardRefs: RefObject<(HTMLDivElement | null)[]>;
 
-  dashboardCardRefs: MutableRefObject<(HTMLDivElement | null)[]>;
+  dashboardCardRefs: RefObject<(HTMLDivElement | null)[]>;
 
-  sportsCardRefs: MutableRefObject<(HTMLDivElement | null)[]>;
+  sportsCardRefs: RefObject<(HTMLDivElement | null)[]>;
 
-  timelineItemRefs: MutableRefObject<(HTMLDivElement | null)[]>;
+  timelineItemRefs: RefObject<(HTMLDivElement | null)[]>;
 }
 
 export default function ExplorerScreen({

@@ -1,4 +1,4 @@
-export const mobileDrawerBG_ClipPath = `
+export const menuMobileDrawerBG_ClipPath = `
 polygon(
   0 0,
   72% 0,

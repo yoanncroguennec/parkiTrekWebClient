@@ -15,10 +15,12 @@ import {
 
 interface SportsTrainingSectionProps {
   sportsRef: RefObject<HTMLDivElement | null>;
+  sportsCardRefs: RefObject<(HTMLDivElement | null)[]>;
 }
 
 export default function SportsTrainingSection({
   sportsRef,
+  sportsCardRefs,
 }: SportsTrainingSectionProps) {
   const theme = useTheme();
   const isDesktop = useMediaQuery(theme.breakpoints.up("md"));
@@ -28,7 +30,11 @@ export default function SportsTrainingSection({
       <Hero />
       <Filters />
 
-      {isDesktop ? <DesktopSportSection /> : <MobileSportsSwiperSection />}
+      {isDesktop ? (
+        <DesktopSportSection sportsCardRefs={sportsCardRefs} />
+      ) : (
+        <MobileSportsSwiperSection />
+      )}
 
       <AutoScrollingText />
       <CTA />
