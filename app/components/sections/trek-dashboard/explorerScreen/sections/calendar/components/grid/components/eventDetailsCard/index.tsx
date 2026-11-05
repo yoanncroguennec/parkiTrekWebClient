@@ -37,7 +37,7 @@ export default function EventDetailsCard({
   const start = event.start instanceof Date ? event.start : null;
   const end = event.end instanceof Date ? event.end : null;
 
-  function handleOpenEventDetails() {}
+  function handleOpenEventDetails() { }
 
   return (
     <Card
@@ -64,7 +64,7 @@ export default function EventDetailsCard({
           component="img"
           height="140"
           image="/assets/imgs/trek-dashboard/explorerScreen/calendar/eventDetailsCard/bgCardItem.jpg"
-          alt={event.title}
+          alt={typeof event.title === "string" ? event.title : "Illustration de l'événement"}
           sx={{
             objectFit: "cover",
             display: "block",

@@ -4,7 +4,7 @@
 import { useMediaQuery, useTheme } from "@mui/material";
 import Tilt from "react-parallax-tilt";
 // DATAS
-import { QuoteData } from "@/app/components/sections/trek-dahboard/explorerScreen/sections/dashboard/data/data.quoteLines";
+
 // ICONS
 import { ImQuotesLeft, ImQuotesRight } from "react-icons/im";
 // STYLES
@@ -14,6 +14,7 @@ import {
   QuoteIconRight,
   QuoteLine,
 } from "./QuoteDefault.Styles";
+import { QuoteData } from "@/app/components/sections/trek-dashboard/explorerScreen/sections/dashboard/data/data.quoteLines";
 
 interface QuoteDefaultProps {
   quote: QuoteData;
