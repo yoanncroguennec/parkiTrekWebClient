@@ -20,7 +20,6 @@ export default function useHorizontalGallery() {
   // HTMLDivElement correspond à un élément HTML <div>.
   // GSAP utilisera cette référence pour déplacer les cartes horizontalement.
   const trackRef = useRef<HTMLDivElement | null>(null);
-  
 
   // Stocke la progression du défilement horizontal, exprimée en pourcentage.
   // Au départ, la progression est de 0 %.
@@ -31,7 +30,6 @@ export default function useHorizontalGallery() {
   // Au départ, l'index est 0, donc la première carte.
   // setActiveIndex permet de mettre à jour cet index.
   const [activeIndex, setActiveIndex] = useState<number>(0);
-
 
   // useGSAP permet d'exécuter du code GSAP dans un composant React.
   // Il facilite également le nettoyage des animations lorsque nécessaire.
@@ -44,7 +42,6 @@ export default function useHorizontalGallery() {
       // Récupère l'élément HTML correspondant à trackRef.
       // track représente la piste horizontale contenant les cartes.
       const track = trackRef.current;
-
 
       // Vérifie que les deux éléments HTML existent.
       // Si l'un des deux est absent, on arrête l'exécution
@@ -60,10 +57,7 @@ export default function useHorizontalGallery() {
         // pour obtenir la distance nécessaire au défilement.
 
         // Math.max(0, ...) empêche d'obtenir une distance négative.
-        return Math.max(
-          0,
-          track.scrollWidth - section.clientWidth
-        );
+        return Math.max(0, track.scrollWidth - section.clientWidth);
       };
 
       // ANIMATION PRINCIPALE : DÉFILEMENT HORIZONTAL
@@ -83,7 +77,6 @@ export default function useHorizontalGallery() {
         // la progression du défilement grâce à scrub.
         ease: "none",
 
-        
         // CONFIG DU COMPORTEMENT DE L'ANIMATION AU DÉFILEMENT
         scrollTrigger: {
           // Définit la section comme élément déclencheur.
@@ -93,14 +86,13 @@ export default function useHorizontalGallery() {
           // atteint le haut de la fenêtre du navigateur.
           start: "top top",
 
-
           // Définit la longueur du défilement nécessaire pour terminer l'animation.
           // La distance : Correspond à la largeur à parcourir horizontalement par la piste.
           // "Le signe +="" : Signifie que la fin est définie relativement au point de départ.
           end: () => `+=${getDistance()}`,
           // Immobilise temporairement la section à l'écran pendant que la piste défile horizontalement.
           pin: true,
-          
+
           pinSpacing: true,
 
           // Lie la progression de l'animation au défilement vertical.
@@ -126,9 +118,7 @@ export default function useHorizontalGallery() {
 
             // Éviter les mises à jour React inutiles
             setProgress((previous) =>
-              Math.round(previous) === Math.round(percentage)
-                ? previous
-                : percentage
+              Math.round(previous) === Math.round(percentage) ? previous : percentage
             );
 
             // Calcule l'index de la carte à considérer comme active.
@@ -140,14 +130,9 @@ export default function useHorizontalGallery() {
             // 30 %  -> index 1
             // 60 %  -> index 2
             // 90 %  -> index 3
-            const index = Math.min(
-              photos.length - 1,
-              Math.floor(self.progress * photos.length)
-            );
+            const index = Math.min(photos.length - 1, Math.floor(self.progress * photos.length));
 
-            setActiveIndex((previous) =>
-              previous === index ? previous : index
-            );
+            setActiveIndex((previous) => (previous === index ? previous : index));
 
             // Animation du dégradé
             gsap.set(section, {
@@ -185,7 +170,7 @@ export default function useHorizontalGallery() {
         });
 
         cardAnimation
-        // 1. APPARITION
+          // 1. APPARITION
           .fromTo(
             card,
             {
@@ -201,7 +186,7 @@ export default function useHorizontalGallery() {
               ease: "none",
             }
           )
-        // 2. DISPARITION
+          // 2. DISPARITION
           .to(card, {
             opacity: 0.001,
             scale: 0.92,
@@ -212,13 +197,9 @@ export default function useHorizontalGallery() {
       });
 
       // ATTENDRE LE CHARGEMENT DES IMAGES
-      const images = Array.from(
-        track.querySelectorAll<HTMLImageElement>("img")
-      );
+      const images = Array.from(track.querySelectorAll<HTMLImageElement>("img"));
 
-      Promise.all(
-        images.map((image) => image.decode().catch(() => undefined))
-      ).then(() => {
+      Promise.all(images.map((image) => image.decode().catch(() => undefined))).then(() => {
         // Recalculer les dimensions après chargement
         requestAnimationFrame(() => {
           ScrollTrigger.refresh();
@@ -243,7 +224,7 @@ export default function useHorizontalGallery() {
       //
       // Les animations créées dans ce contexte sont associées à la section, ce qui facilite leur nettoyage.
       scope: sectionRef,
-    },
+    }
   );
 
   return {

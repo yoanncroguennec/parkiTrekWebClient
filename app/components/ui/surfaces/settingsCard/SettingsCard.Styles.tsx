@@ -1,8 +1,7 @@
 import { Stack, StackProps, styled } from "@mui/material";
 
 export const StyledCard = styled(Stack)<StackProps>(({ theme }) => ({
-  background:
-    "linear-gradient(180deg, rgba(255,255,255,.65), rgba(255,255,255,.35))",
+  background: "linear-gradient(180deg, rgba(255,255,255,.65), rgba(255,255,255,.35))",
   backdropFilter: "blur(24px)",
   border: "1px solid rgba(255,255,255,.45)",
   borderRadius: 24,

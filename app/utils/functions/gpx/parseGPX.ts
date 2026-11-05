@@ -15,10 +15,7 @@ import { GpxPoint, SimplifiedPoint } from "../../constants/types/gpx";
 //   y: number;
 // };
 
-function haversine(
-  p1: { lat: number; lon: number },
-  p2: { lat: number; lon: number },
-) {
+function haversine(p1: { lat: number; lon: number }, p2: { lat: number; lon: number }) {
   const R = 6371;
   const dLat = ((p2.lat - p1.lat) * Math.PI) / 180;
   const dLon = ((p2.lon - p1.lon) * Math.PI) / 180;
@@ -54,21 +51,19 @@ export function parseGPX(gpxText: string): GpxPoint[] {
       ...p,
     })),
     0.0001,
-    true,
+    true
   ) as SimplifiedPoint[];
 
   // 🔥 Reconversion propre sans .find()
 
   type RawPoint = Omit<GpxPoint, "dist">;
 
-  const simplifiedPoints: RawPoint[] = simplified.map(
-    ({ x, y, ele, time }) => ({
-      lat: x,
-      lon: y,
-      ele,
-      time,
-    }),
-  );
+  const simplifiedPoints: RawPoint[] = simplified.map(({ x, y, ele, time }) => ({
+    lat: x,
+    lon: y,
+    ele,
+    time,
+  }));
 
   // 🔥 Distance cumulée SUR les points simplifiés
   let total = 0;

@@ -32,8 +32,7 @@ const clipPaths: Record<ClipPathForm, string> = {
 
   inset_1: "inset(25% 0 round 0 25%)",
 
-  comic_strip_speech_bubble:
-    "polygon(0% 0%,100% 0%,100% 75%,75% 75%,75% 100%,50% 75%,0% 75%)",
+  comic_strip_speech_bubble: "polygon(0% 0%,100% 0%,100% 75%,75% 75%,75% 100%,50% 75%,0% 75%)",
 
   star: "polygon(50% 0%,63% 38%,100% 38%,69% 59%,82% 100%,50% 75%,18% 100%,31% 59%,0 38%,37% 38%)",
 };

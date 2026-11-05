@@ -41,7 +41,6 @@ export const photos = [
   },
 ];
 
-
 export const photosV2 = [
   {
     id: 1,

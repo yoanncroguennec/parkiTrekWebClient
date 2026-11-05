@@ -22,10 +22,7 @@ const units = [
   "seize",
 ];
 
-export const numberToWords = (
-  number: number,
-  options: NumberToWordsOptions = {},
-): string => {
+export const numberToWords = (number: number, options: NumberToWordsOptions = {}): string => {
   const { capitalize = false } = options;
 
   const convert = (value: number): string => {

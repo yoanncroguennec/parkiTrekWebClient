@@ -3,5 +3,14 @@ import WaveSeparator from "./waves/WaveSeparator";
 import CurvedLine from "./curves/curvedLine";
 import CurvedPath from "./curves/curvedPath";
 import ClipPath from "./clipPaths/clipPath";
+//
+import HeroShape_TrekDashboard from "./pages/trek-dashboard/heroShape";
 
-export { WaveClip, WaveSeparator, CurvedLine, CurvedPath, ClipPath };
+export {
+    WaveClip,
+    WaveSeparator,
+    CurvedLine,
+    CurvedPath,
+    ClipPath,
+    HeroShape_TrekDashboard,
+};

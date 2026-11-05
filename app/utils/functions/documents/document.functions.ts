@@ -26,7 +26,7 @@ export type SetState<T> = React.Dispatch<React.SetStateAction<T>>;
 export function updateTree(
   tree: FileItem[],
   parentId: string | null,
-  newItems: FileItem[],
+  newItems: FileItem[]
 ): FileItem[] {
   if (parentId === null) {
     return newItems;
@@ -61,11 +61,7 @@ export function handleDragEnd(
   path: FileItem[],
   rootItemsState: FileItem[],
   setRootItems: SetState<FileItem[]>,
-  updateTree: (
-    tree: FileItem[],
-    parentId: string | null,
-    newItems: FileItem[],
-  ) => FileItem[],
+  updateTree: (tree: FileItem[], parentId: string | null, newItems: FileItem[]) => FileItem[]
 ) {
   if (!result.destination) return;
 
@@ -91,11 +87,7 @@ export function createFolder(
   path: FileItem[],
   rootItemsState: FileItem[],
   setRootItems: SetState<FileItem[]>,
-  updateTree: (
-    tree: FileItem[],
-    parentId: string | null,
-    newItems: FileItem[],
-  ) => FileItem[],
+  updateTree: (tree: FileItem[], parentId: string | null, newItems: FileItem[]) => FileItem[]
 ) {
   const newFolder: FileItem = {
     id: Date.now().toString(),
@@ -120,11 +112,7 @@ export function createFile(
   path: FileItem[],
   rootItemsState: FileItem[],
   setRootItems: SetState<FileItem[]>,
-  updateTree: (
-    tree: FileItem[],
-    parentId: string | null,
-    newItems: FileItem[],
-  ) => FileItem[],
+  updateTree: (tree: FileItem[], parentId: string | null, newItems: FileItem[]) => FileItem[]
 ) {
   const newFile: FileItem = { id: Date.now().toString(), name, type: "file" };
   const updatedItems = [...currentItems, newFile];
@@ -146,7 +134,7 @@ export function renameItem(
   rootItemsState: FileItem[],
   setRootItems: SetState<FileItem[]>,
   currentItems: FileItem[],
-  setCurrentItems: SetState<FileItem[]>,
+  setCurrentItems: SetState<FileItem[]>
 ) {
   const renameRecursive = (items: FileItem[]): FileItem[] =>
     items.map((item) => {
@@ -160,7 +148,7 @@ export function renameItem(
   setRootItems(updatedTree);
 
   const updatedCurrent = currentItems.map((item) =>
-    item.id === id ? { ...item, name: newName } : item,
+    item.id === id ? { ...item, name: newName } : item
   );
   setCurrentItems(updatedCurrent);
 
@@ -175,13 +163,12 @@ export function deleteItem(
   rootItemsState: FileItem[],
   setRootItems: SetState<FileItem[]>,
   currentItems: FileItem[],
-  setCurrentItems: SetState<FileItem[]>,
+  setCurrentItems: SetState<FileItem[]>
 ) {
   const deleteRecursive = (items: FileItem[]): FileItem[] =>
     items.filter((item) => {
       if (item.id === id) return false;
-      if (item.type === "folder" && item.children)
-        item.children = deleteRecursive(item.children);
+      if (item.type === "folder" && item.children) item.children = deleteRecursive(item.children);
       return true;
     });
 

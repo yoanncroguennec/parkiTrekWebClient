@@ -6,7 +6,11 @@ import { useMediaQuery, useTheme } from "@mui/material";
 // LAYOUTS
 import { ContainerApp } from "@/app/components/common/layouts";
 // SECTIONS
-import { MapCountry, MapCountryNavigation, MapCountryPagination } from "@/app/components/sections/treks/listTreks";
+import {
+  MapCountry,
+  MapCountryNavigation,
+  MapCountryPagination,
+} from "@/app/components/sections/treks/listTreks";
 // DATAS
 import { Area, cards } from "@/app/utils/constants/data/treks/map/data";
 // STYLES
@@ -35,11 +39,11 @@ export default function ListTreksPage() {
   const mapCountry = <MapCountry {...mapCountryProps} />;
 
   const mapCountryPagination = (
-      <MapCountryPagination
-          cards={cards}
-          currentIndex={currentIndex}
-          setCurrentIndex={setCurrentIndex}
-      />
+    <MapCountryPagination
+      cards={cards}
+      currentIndex={currentIndex}
+      setCurrentIndex={setCurrentIndex}
+    />
   );
 
   return (

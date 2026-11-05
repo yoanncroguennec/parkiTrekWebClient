@@ -1,13 +1,13 @@
 // ICONS
 import {
-    type IconType,
-    IoFlagOutline,
-    IoLocationOutline,
-    IoPeopleOutline,
-    IoTrophyOutline,
-    IoVideocamOutline,
-    IoWalkOutline,
-    IoWaterOutline,
+  type IconType,
+  IoFlagOutline,
+  IoLocationOutline,
+  IoPeopleOutline,
+  IoTrophyOutline,
+  IoVideocamOutline,
+  IoWalkOutline,
+  IoWaterOutline,
 } from "@/app/utils/constants/icons";
 
 export type TrekStep = {

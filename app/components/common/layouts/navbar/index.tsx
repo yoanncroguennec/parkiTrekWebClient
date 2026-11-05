@@ -6,11 +6,7 @@ import Link from "next/link";
 import { useMediaQuery, useTheme } from "@mui/material";
 import { useLocale } from "next-intl";
 // COMPONENTS
-import {
-  AccessibilityDrawer,
-  MainMenuCellular,
-  MainMenuDesktop,
-} from "./components";
+import { AccessibilityDrawer, MainMenuCellular, MainMenuDesktop } from "./components";
 // CONFIGS
 import { createNavbarActions } from "./config/navbarActions";
 // HOOKS
@@ -79,12 +75,7 @@ export default function Navbar() {
         {/* ----------------------------------------------------------------- */}
 
         <Link href="/" ref={logoRef}>
-          <ImgLogo
-            alt="Logo du site internet"
-            height={400}
-            src={IMG_LOGO}
-            width={400}
-          />
+          <ImgLogo alt="Logo du site internet" height={400} src={IMG_LOGO} width={400} />
         </Link>
 
         {/* ----------------------------------------------------------------- */}

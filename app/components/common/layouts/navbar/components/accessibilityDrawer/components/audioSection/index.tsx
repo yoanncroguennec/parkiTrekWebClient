@@ -9,17 +9,9 @@ import { SliderSelect, SectionTitle, SettingsCard } from "@/app/components/ui";
 // DATAS
 // import { bars_MusicWaves_Animation } from "@/app/utils/constants/data/layouts/floatingNavbar/dataFloatingNavbar";
 // ICONS
-import {
-  FiPause,
-  FiPlay
-} from "@/app/utils/constants/icons";
+import { FiPause, FiPlay } from "@/app/utils/constants/icons";
 // STYLES
-import {
-  AudioHeader,
-  AudioInfo,
-  AudioTitle,
-  AudioSubtitle,
-} from "./AudioSection.Styles";
+import { AudioHeader, AudioInfo, AudioTitle, AudioSubtitle } from "./AudioSection.Styles";
 
 interface AudioSectionProps {
   isPlaying: boolean;
@@ -49,9 +41,7 @@ export default function AudioSection({
               {isPlaying ? "Lecture en cours" : "Lecture en pause"}
             </AudioTitle>
 
-            <AudioSubtitle variant="body2">
-              Musique d&apos;ambiance
-            </AudioSubtitle>
+            <AudioSubtitle variant="body2">Musique d&apos;ambiance</AudioSubtitle>
           </AudioInfo>
         </AudioHeader>
 

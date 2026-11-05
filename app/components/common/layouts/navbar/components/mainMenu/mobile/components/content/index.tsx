@@ -1,22 +1,18 @@
 // GOOD
-"use client";
-
-import Image from "next/image";
-import { useLayoutEffect } from "react";
-import Link from "next/link";
 import { useTranslations } from "next-intl";
+import { useLayoutEffect } from "react";
 // UI
 import { BlobCard, LivePlatform } from "@/app/components/ui";
 // DATA
 import { dataMainMenu } from "../../../data/MainMenu.data";
 // HOOKS
-import { useMainMenuMobileContentAnimation } from "../../../../../../../../../hooks/animations/gsap/navigations/useMainMenuMobileContentAnimation";
+import { useMainMenuMobileContentAnimation } from "@/app/hooks";
 // STYLES
 import {
   PaperStyles,
   Logo,
   HeaderContent,
-  MenuLinkWrapper,
+  MainMenuLink,
   LiveCardWrapper,
   Dot,
   Live,
@@ -66,16 +62,10 @@ export default function Content() {
       });
     };
 
-    window.addEventListener(
-      "main-menu-mobile-start-content-close",
-      handleStartClose,
-    );
+    window.addEventListener("main-menu-mobile-start-content-close", handleStartClose);
 
     return () => {
-      window.removeEventListener(
-        "main-menu-mobile-start-content-close",
-        handleStartClose,
-      );
+      window.removeEventListener("main-menu-mobile-start-content-close", handleStartClose);
     };
   }, [closeContent]);
 
@@ -94,14 +84,9 @@ export default function Content() {
   return (
     <PaperStyles ref={paperRef}>
       <Header>
-<Logo ref={logoRef}>
-  <LogoImage
-    alt="Logo du projet Parki Trek"
-    height={250}
-    src={logoParkiTrek}
-    width={250}
-  />
-</Logo>
+        <Logo ref={logoRef}>
+          <LogoImage alt="Logo du projet Parki Trek" height={250} src={logoParkiTrek} width={250} />
+        </Logo>
         <HeaderContent ref={titleRef}>
           <Title variant="h6">PARKI TREK</Title>
 
@@ -114,13 +99,14 @@ export default function Content() {
       ================================================= */}
 
       {dataMainMenu.map((menuItem) => (
-        <MenuLinkWrapper key={menuItem.id} ref={addLinkRef}>
-          <Link href={menuItem.url} onClick={handleCloseContent}>
-            <MenuLinkTitle variant="h6">
-              {t(`${menuItem.id}.title`)}
-            </MenuLinkTitle>{" "}
-          </Link>
-        </MenuLinkWrapper>
+        <MainMenuLink
+          key={menuItem.id}
+          href={menuItem.url}
+          onClick={handleCloseContent}
+          ref={addLinkRef}
+        >
+          <MenuLinkTitle variant="h6">{t(`${menuItem.id}.title`)}</MenuLinkTitle>{" "}
+        </MainMenuLink>
       ))}
 
       {/* =================================================
@@ -153,14 +139,14 @@ export default function Content() {
         <LivePlatform />
       </BlobCard>
 
-<Decoration ref={decorRef}>
-  <DecorationImage
-    alt="Image de décoration du menu de navigation"
-    height={250}
-    src={bgImgCellularDecoration}
-    width={300}
-  />
-</Decoration>
+      <Decoration ref={decorRef}>
+        <DecorationImage
+          alt="Image de décoration du menu de navigation"
+          height={250}
+          src={bgImgCellularDecoration}
+          width={300}
+        />
+      </Decoration>
     </PaperStyles>
   );
 }

@@ -9,12 +9,7 @@ import { useMainMenuMobileAnimation } from "@/app/hooks";
 // ICONS
 import { RxCross2 } from "@/app/utils/constants/icons";
 // STYLES
-import {
-  MainMenuContainer,
-  Background,
-  Shadow,
-  CloseButton,
-} from "./MainMenuMobile.Styles";
+import { MainMenuContainer, Background, Shadow, CloseButton } from "./MainMenuMobile.Styles";
 
 type Props = {
   open: boolean;
@@ -59,10 +54,7 @@ export default function MainMenuCellular({ open, setOpen }: Props) {
     window.addEventListener("main-menu-mobile-close", handleContentFinished);
 
     return () => {
-      window.removeEventListener(
-        "main-menu-mobile-close",
-        handleContentFinished,
-      );
+      window.removeEventListener("main-menu-mobile-close", handleContentFinished);
     };
   }, [closeMenu]);
 
@@ -71,9 +63,7 @@ export default function MainMenuCellular({ open, setOpen }: Props) {
   // =====================================================
 
   function requestContentClose() {
-    window.dispatchEvent(
-      new CustomEvent("main-menu-mobile-start-content-close"),
-    );
+    window.dispatchEvent(new CustomEvent("main-menu-mobile-start-content-close"));
   }
 
   if (!open) {

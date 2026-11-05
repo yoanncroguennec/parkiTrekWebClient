@@ -1,9 +1,9 @@
 // ICONS
 import {
-    type IconType,
-    MdOutlineSettings,
-    MdOutlineShoppingCart,
-    RxHamburgerMenu,
+  type IconType,
+  MdOutlineSettings,
+  MdOutlineShoppingCart,
+  RxHamburgerMenu,
 } from "@/app/utils/constants/icons";
 
 export interface NavbarAction {

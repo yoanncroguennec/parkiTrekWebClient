@@ -7,10 +7,7 @@ interface AccessibilityDrawerProps {
   onClose: () => void;
 }
 
-export default function AccessibilityDrawer({
-  open,
-  onClose,
-}: AccessibilityDrawerProps) {
+export default function AccessibilityDrawer({ open, onClose }: AccessibilityDrawerProps) {
   const theme = useTheme();
   const isDesktop = useMediaQuery(theme.breakpoints.up("md"));
 

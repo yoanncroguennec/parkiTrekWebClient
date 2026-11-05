@@ -4,22 +4,14 @@ import { Fragment } from "react";
 import { IconButton } from "@mui/material";
 // UI
 import { SliderSelect, SectionTitle, SettingsCard } from "@/app/components/ui";
-// 
+//
 import MusicWavesAnimation from "../../animations/musicWavesAnimation";
 // DATAS
 import { bars_MusicWaves_Animation } from "./data/AudioSection.Data";
 // ICONS
-import {
-  FiPause,
-  FiPlay,
-} from "@/app/utils/constants/icons";
+import { FiPause, FiPlay } from "@/app/utils/constants/icons";
 // STYLES
-import {
-  AudioHeader,
-  AudioInfo,
-  AudioTitle,
-  AudioSubtitle,
-} from "./AudioSection.Styles";
+import { AudioHeader, AudioInfo, AudioTitle, AudioSubtitle } from "./AudioSection.Styles";
 
 interface AudioSectionProps {
   isPlaying: boolean;
@@ -49,9 +41,7 @@ export default function AudioSection({
               {isPlaying ? "Lecture en cours" : "Lecture en pause"}
             </AudioTitle>
 
-            <AudioSubtitle variant="body2">
-              Musique d&apos;ambiance
-            </AudioSubtitle>
+            <AudioSubtitle variant="body2">Musique d&apos;ambiance</AudioSubtitle>
           </AudioInfo>
         </AudioHeader>
 
@@ -64,11 +54,7 @@ export default function AudioSection({
           formatValue={(v) => `${Math.round(v * 100)} %`}
           onChange={handleVolumeChange}
         />
-        {isPlaying && (
-          <MusicWavesAnimation
-            bars_MusicWaves_Animation={bars_MusicWaves_Animation}
-          />
-        )}
+        {isPlaying && <MusicWavesAnimation bars_MusicWaves_Animation={bars_MusicWaves_Animation} />}
       </SettingsCard>
     </Fragment>
   );

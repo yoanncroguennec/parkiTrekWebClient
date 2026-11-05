@@ -1,10 +1,13 @@
-"use client"
+"use client";
 
 import { useLayoutEffect, useRef, useState } from "react";
 
 import gsap from "gsap";
 
-import { TrekPoint, trekPoints } from "../../../../components/common/layouts/footer/data/footer.data";
+import {
+  TrekPoint,
+  trekPoints,
+} from "../../../../components/common/layouts/footer/data/footer.data";
 
 export default function useTrekAnimation() {
   // Refs
@@ -27,14 +30,7 @@ export default function useTrekAnimation() {
     const blueHalo = blueHaloRef.current;
     const bubble = bubbleRef.current;
 
-    if (
-      !path ||
-      !blueTrailGlow ||
-      !blueTrail ||
-      !bluePoint ||
-      !blueHalo ||
-      !bubble
-    ) {
+    if (!path || !blueTrailGlow || !blueTrail || !bluePoint || !blueHalo || !bubble) {
       return;
     }
 
@@ -166,8 +162,7 @@ export default function useTrekAnimation() {
       trekPoints.forEach((point) => {
         const targetProgress = point.progress;
 
-        const distance =
-          Math.abs(targetProgress - currentProgress) * totalLength;
+        const distance = Math.abs(targetProgress - currentProgress) * totalLength;
 
         const duration = Math.max(2.5, distance / 130);
 
@@ -264,7 +259,7 @@ export default function useTrekAnimation() {
           {},
           {
             duration: 20,
-          },
+          }
         );
 
         /*

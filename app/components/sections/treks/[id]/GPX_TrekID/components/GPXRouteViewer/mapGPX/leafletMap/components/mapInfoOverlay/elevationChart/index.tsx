@@ -29,11 +29,7 @@ type Props = {
   onReset: () => void;
 };
 
-export default function ElevationChart({
-  points,
-  currentIndex,
-  onHover,
-}: Props) {
+export default function ElevationChart({ points, currentIndex, onHover }: Props) {
   const timeout = useRef<ReturnType<typeof setTimeout> | null>(null);
   const pulseRef = useRef<HTMLDivElement>(null);
 
@@ -44,7 +40,7 @@ export default function ElevationChart({
         ele: p.ele,
         dist: p.dist,
       })),
-    [points],
+    [points]
   );
 
   useEffect(() => {
@@ -103,12 +99,7 @@ export default function ElevationChart({
         tickFormatter={(v) => `${v.toFixed(1)} km`}
       />
 
-      <YAxis
-        stroke="#808080"
-        tickLine={false}
-        axisLine={false}
-        tickFormatter={(v) => `${v} m`}
-      />
+      <YAxis stroke="#808080" tickLine={false} axisLine={false} tickFormatter={(v) => `${v} m`} />
 
       <Tooltip
         contentStyle={{
@@ -128,12 +119,7 @@ export default function ElevationChart({
         formatter={(value) => [`${Number(value).toFixed(1)} m`, "Altitude"]}
       />
 
-      <Area
-        type="monotone"
-        dataKey="ele"
-        stroke="none"
-        fill="url(#elevationFill)"
-      />
+      <Area type="monotone" dataKey="ele" stroke="none" fill="url(#elevationFill)" />
 
       <Line
         type="monotone"

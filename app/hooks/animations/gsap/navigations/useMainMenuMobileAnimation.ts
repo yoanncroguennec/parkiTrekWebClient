@@ -90,7 +90,7 @@ export function useMainMenuMobileAnimation({
 
           ease: "power2.out",
         },
-        "-=0.2",
+        "-=0.2"
       );
 
       // =================================================
@@ -110,7 +110,7 @@ export function useMainMenuMobileAnimation({
 
           ease: "back.out(2)",
         },
-        "-=0.15",
+        "-=0.15"
       );
     }, rootRef);
 
@@ -168,7 +168,7 @@ export function useMainMenuMobileAnimation({
 
         ease: "power2.in",
       },
-      "-=0.1",
+      "-=0.1"
     );
 
     // =================================================
@@ -184,7 +184,7 @@ export function useMainMenuMobileAnimation({
 
         ease: "power2.in",
       },
-      "-=0.15",
+      "-=0.15"
     );
 
     return timeline;

@@ -1,8 +1,8 @@
 import {
-    type IconType,
-    IoCalendarOutline,
-    IoFootstepsOutline,
-    IoLocationOutline,
+  type IconType,
+  IoCalendarOutline,
+  IoFootstepsOutline,
+  IoLocationOutline,
 } from "@/app/utils/constants/icons";
 
 export interface StatsCard {

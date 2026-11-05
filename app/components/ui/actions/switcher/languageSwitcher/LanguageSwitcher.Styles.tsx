@@ -112,7 +112,7 @@ export const Stack_Dropdown = styled(Stack)<StackProps & Stack_Dropdown_Props>(
       background: "rgba(255,255,255,.06)",
       transform: "translateX(8px)",
     },
-  }),
+  })
 );
 
 export const Typo_Label_Dropdown = styled(Typography, {

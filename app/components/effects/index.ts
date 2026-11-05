@@ -1,5 +1,3 @@
 import WhiteFlash from "./whiteFlash";
 
-export {
-    WhiteFlash,
-}
+export { WhiteFlash };

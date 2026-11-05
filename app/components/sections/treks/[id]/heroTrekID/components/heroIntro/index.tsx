@@ -1,4 +1,4 @@
-"use client"
+"use client";
 
 // GOOD
 // import CircleCTA from "@/app/components/common/cta/circleCTA";
@@ -27,17 +27,15 @@ export default function HeroIntro({ selectedArea }: Props) {
     <HeroIntroRoot>
       <HeroDescription className="hero-item">
         De <strong>Saint-Brieuc</strong> à <strong>Morlaix</strong>, un trek de{" "}
-        <strong>{selectedArea.km ?? 0} kilomètres</strong> pour montrer
-        qu&apos;il est possible d&apos;avancer malgré la maladie de Parkinson.
+        <strong>{selectedArea.km ?? 0} kilomètres</strong> pour montrer qu&apos;il est possible
+        d&apos;avancer malgré la maladie de Parkinson.
         <br />
         <br />
-        Chaque pas raconte une histoire. Chaque kilomètre porte un message
-        d&apos;espoir.
+        Chaque pas raconte une histoire. Chaque kilomètre porte un message d&apos;espoir.
         <br />
         <br />
-        {selectedArea.km ?? 0} kilomètres à travers paysages sauvages, côtes
-        emblématiques et patrimoine breton. Une étape entre terre et mer, défi
-        et émerveillement.
+        {selectedArea.km ?? 0} kilomètres à travers paysages sauvages, côtes emblématiques et
+        patrimoine breton. Une étape entre terre et mer, défi et émerveillement.
       </HeroDescription>
 
       <HeroActions>
@@ -77,8 +75,7 @@ export default function HeroIntro({ selectedArea }: Props) {
 
       <HeroQuote>
         <HeroQuoteText>
-          « La maladie accompagne le voyage, mais elle ne décide jamais de la
-          destination. »
+          « La maladie accompagne le voyage, mais elle ne décide jamais de la destination. »
         </HeroQuoteText>
       </HeroQuote>
     </HeroIntroRoot>

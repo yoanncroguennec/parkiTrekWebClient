@@ -1,8 +1,4 @@
-import {
-  FooterContainer,
-  ProgressContainer,
-  ProgressBar,
-} from "./Footer.Styles";
+import { FooterContainer, ProgressContainer, ProgressBar } from "./Footer.Styles";
 
 interface FooterProps {
   progress: number;

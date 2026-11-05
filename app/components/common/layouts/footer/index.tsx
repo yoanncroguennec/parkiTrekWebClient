@@ -6,7 +6,7 @@ import {
 // COMPONENTs
 import { TopBar, FooterMountain, FooterContent } from "./components";
 // HOOKS
-import { useFooterScroll } from "@/app/hooks"
+import { useFooterScroll } from "@/app/hooks";
 // STYLES
 import {
   FooterBackground,
@@ -14,7 +14,6 @@ import {
   FooterWhitePanel,
   FooterWaveDefinition,
 } from "./Footer.styles";
-
 
 interface FooterProps {
   showWave?: boolean;

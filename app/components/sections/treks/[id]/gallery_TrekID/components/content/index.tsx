@@ -1,10 +1,10 @@
-"use client"
+"use client";
 
 import type { RefObject } from "react";
 import { Typography } from "@mui/material";
 // ICONS
 import { FiArrowUpRight } from "@/app/utils/constants/icons";
-// 
+//
 import { photos } from "../../data";
 // STYLES
 import {
@@ -52,17 +52,12 @@ export default function Content({ trackRef }: ContentProps) {
           {/* CATÉGORIE ET NUMÉRO */}
           <PhotoHeader>
             <PhotoCategory>
-              <Typography
-                component="span"
-                sx={{ color: "#FFFFFF" }}
-              >
+              <Typography component="span" sx={{ color: "#FFFFFF" }}>
                 {photo.category}
               </Typography>
             </PhotoCategory>
 
-            <PhotoNumber component="span">
-              {photo.number}
-            </PhotoNumber>
+            <PhotoNumber component="span">{photo.number}</PhotoNumber>
           </PhotoHeader>
 
           {/* CONTENU */}
@@ -72,10 +67,7 @@ export default function Content({ trackRef }: ContentProps) {
               <PhotoTitle component="h3">{photo.title}</PhotoTitle>
             </PhotoTextContent>
 
-            <GalleryArrow
-              className="gallery-arrow"
-              aria-label={`Explorer : ${photo.title}`}
-            >
+            <GalleryArrow className="gallery-arrow" aria-label={`Explorer : ${photo.title}`}>
               <FiArrowUpRight size={22} />
             </GalleryArrow>
           </PhotoContent>

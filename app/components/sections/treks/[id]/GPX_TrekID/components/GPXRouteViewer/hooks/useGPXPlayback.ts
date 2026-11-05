@@ -7,12 +7,7 @@ type Props = {
   setCurrentIndex: React.Dispatch<React.SetStateAction<number>>;
 };
 
-export function useGPXPlayback({
-  pointCount,
-  isPlaying,
-  speed,
-  setCurrentIndex,
-}: Props) {
+export function useGPXPlayback({ pointCount, isPlaying, speed, setCurrentIndex }: Props) {
   useEffect(() => {
     if (!isPlaying) {
       return;

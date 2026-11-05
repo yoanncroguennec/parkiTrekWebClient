@@ -75,7 +75,7 @@ export default function LanguageSwitcher() {
           scale: 1,
           duration: 0.45,
           ease: "power3.out",
-        },
+        }
       );
 
       gsap.fromTo(
@@ -90,7 +90,7 @@ export default function LanguageSwitcher() {
           duration: 0.45,
           stagger: 0.07,
           ease: "power3.out",
-        },
+        }
       );
 
       gsap.to(arrowRef.current, {
@@ -123,11 +123,7 @@ export default function LanguageSwitcher() {
         {isDesktop && <Typo_Label>{current.label}</Typo_Label>}
 
         <IconChevron ref={arrowRef}>
-          {open ? (
-            <IoChevronDown color="#FFF" size={35} />
-          ) : (
-            <IoChevronUp color="#FFF" size={35} />
-          )}
+          {open ? <IoChevronDown color="#FFF" size={35} /> : <IoChevronUp color="#FFF" size={35} />}
         </IconChevron>
       </Stack_Trigger>
 

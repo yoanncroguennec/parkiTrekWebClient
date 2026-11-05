@@ -29,15 +29,15 @@ export default function Spiral() {
     TextureLoader,
     Array.from(
       { length: CONFIG.totalImages },
-      (_, index) => `${IMAGE_PATH}/img${index + 1}${IMAGE_EXTENSION}`,
-    ),
+      (_, index) => `${IMAGE_PATH}/img${index + 1}${IMAGE_EXTENSION}`
+    )
   );
 
   const cameraPositionUniform = useMemo(
     () => ({
       value: new THREE.Vector3(),
     }),
-    [],
+    []
   );
 
   useEffect(() => {
@@ -59,7 +59,7 @@ export default function Spiral() {
         vertexShader,
         fragmentShader,
       }),
-    [textures, cameraPositionUniform],
+    [textures, cameraPositionUniform]
   );
 
   useSpiralInteraction({

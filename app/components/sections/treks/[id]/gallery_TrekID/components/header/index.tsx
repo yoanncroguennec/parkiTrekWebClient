@@ -5,10 +5,7 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 // DATA
 import { photos } from "../../data";
 // ICONS
-import {
-  FiArrowLeft,
-  FiArrowRight,
-} from "@/app/utils/constants/icons";
+import { FiArrowLeft, FiArrowRight } from "@/app/utils/constants/icons";
 // STYLES
 import {
   HeaderContainer,
@@ -38,19 +35,13 @@ interface HeaderProps {
   progress: number;
 }
 
-export default function Header({
-  sectionRef,
-  activeIndex,
-  progress,
-}: HeaderProps) {
+export default function Header({ sectionRef, activeIndex, progress }: HeaderProps) {
   const scrollToGalleryPosition = (position: "start" | "end") => {
     const section = sectionRef.current;
 
     if (!section) return;
 
-    const trigger = ScrollTrigger.getAll().find(
-      (item) => item.trigger === section,
-    );
+    const trigger = ScrollTrigger.getAll().find((item) => item.trigger === section);
 
     if (!trigger) return;
 
@@ -83,15 +74,11 @@ export default function Header({
 
         {/* COMPTEUR ET BOUTONS */}
         <GalleryNavigation>
-          <ActiveNumber component="span">
-            {String(activeIndex + 1).padStart(2, "0")}
-          </ActiveNumber>
+          <ActiveNumber component="span">{String(activeIndex + 1).padStart(2, "0")}</ActiveNumber>
 
           <CounterSeparator component="span">/</CounterSeparator>
 
-          <TotalNumber component="span">
-            {String(photos.length).padStart(2, "0")}
-          </TotalNumber>
+          <TotalNumber component="span">{String(photos.length).padStart(2, "0")}</TotalNumber>
 
           <NavigationButtons>
             <NavigationButtonSlot>

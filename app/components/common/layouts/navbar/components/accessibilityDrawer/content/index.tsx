@@ -5,11 +5,7 @@ import { Divider } from "@mui/material";
 // UI
 import { PrimaryButton } from "@/app/components/ui";
 // COMPONENTS
-import {
-  AccessibilitySettingsSection,
-  AudioSection,
-  LocalClock,
-} from "./components";
+import { AccessibilitySettingsSection, AudioSection, LocalClock } from "./components";
 // HOOKS
 import { useIdleTimeout } from "@/app/hooks";
 // PROVIDERS
@@ -56,10 +52,7 @@ export default function AccessibilityDrawerContent() {
     idleTimeout: timeout,
   });
 
-  const DEFAULT_SETTINGS = useMemo(
-    () => createDefaultSettings(DEFAULT_TIMEOUT),
-    [DEFAULT_TIMEOUT],
-  );
+  const DEFAULT_SETTINGS = useMemo(() => createDefaultSettings(DEFAULT_TIMEOUT), [DEFAULT_TIMEOUT]);
 
   // ---------------------------------------------------------------------------
   // State

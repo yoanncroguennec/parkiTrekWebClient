@@ -36,7 +36,7 @@ export function setLocalStorage<T>(key: StorageKey, value: T): void {
   window.dispatchEvent(
     new CustomEvent("app-storage-change", {
       detail: { key },
-    }),
+    })
   );
 }
 
@@ -50,7 +50,7 @@ export function removeLocalStorage(key: StorageKey): void {
   window.dispatchEvent(
     new CustomEvent("app-storage-change", {
       detail: { key },
-    }),
+    })
   );
 }
 

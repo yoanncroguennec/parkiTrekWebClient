@@ -34,13 +34,7 @@ export default function WaveSeparator({
         aria-hidden="true"
       >
         <defs>
-          <filter
-            id={`${id}-glow`}
-            x="-20%"
-            y="-20%"
-            width="140%"
-            height="140%"
-          >
+          <filter id={`${id}-glow`} x="-20%" y="-20%" width="140%" height="140%">
             <feGaussianBlur stdDeviation="12" result="blur" />
 
             <feMerge>

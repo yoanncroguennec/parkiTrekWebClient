@@ -1,11 +1,21 @@
 // ACTIONS
 import PrimaryButton from "./actions/buttons/primaryButton";
+import PrimaryDropdown from "./actions/dopdown";
 import LanguageSwitcher from "./actions/switcher/languageSwitcher";
 import ThemeSwitcher from "./actions/switcher/themeSwitcher";
 
 // BACKGROUND
 
 // DATA DISPLAY
+import {
+    CircularCarouselImages,
+    DonationGrowthChart,
+    Donut,
+    LineChart,
+    InspirationalQuote,
+    TestimonialQuote,
+    QuoteDefault    
+} from "./data-display"
 
 // FEEDBACK
 import GlobalFeedback from "./feedback/globalFeedback";
@@ -14,6 +24,7 @@ import GlobalFeedback from "./feedback/globalFeedback";
 import SliderSelect from "./forms/sliders/sliderSelect";
 
 // ILLUSTRATIONS
+import { CurvedArrowBottomLeft, CurvedArrowDownLeft } from "./illustrations"
 
 // LIVE
 import LivePlatform from "./live/livePlatform";
@@ -30,34 +41,44 @@ import SettingsCard from "./surfaces/settingsCard";
 import SectionTitle from "./typography/sectionTitle";
 
 export {
-    // ACTIONS
-    PrimaryButton,
-    LanguageSwitcher,
-    ThemeSwitcher,
+  // ACTIONS
+  PrimaryButton,
+  PrimaryDropdown,
+  LanguageSwitcher,
+  ThemeSwitcher,
 
-    // BACKGROUND
+  // BACKGROUND
 
-    // DATA DISPLAY
+  // DATA DISPLAY
+    CircularCarouselImages,
+    DonationGrowthChart,
+    Donut,
+    LineChart,
+    InspirationalQuote,
+    TestimonialQuote,
+    QuoteDefault,
 
-    // FEEDBACK
-    GlobalFeedback,
-    
-    // FORMS
-    SliderSelect,
+  // FEEDBACK
+  GlobalFeedback,
 
-    // ILLUSTRATIONS
+  // FORMS
+  SliderSelect,
 
-    // LIVE
-    LivePlatform,
-    
-    // OVERLAYS
+  // ILLUSTRATIONS
+  CurvedArrowBottomLeft,
+  CurvedArrowDownLeft,
 
-    // PRELOADERS
+  // LIVE
+  LivePlatform,
 
-    // SURFACES
-    BlobCard,
-    SettingsCard,
+  // OVERLAYS
 
-    // TYPOGRAPHY
-    SectionTitle,
-}
+  // PRELOADERS
+
+  // SURFACES
+  BlobCard,
+  SettingsCard,
+
+  // TYPOGRAPHY
+  SectionTitle,
+};

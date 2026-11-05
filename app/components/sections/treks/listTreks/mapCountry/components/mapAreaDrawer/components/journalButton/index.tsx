@@ -7,7 +7,7 @@ import { useRef } from "react";
 // DATA
 import { Area } from "@/app/utils/constants/data/treks/map/data";
 // HOOKS
-import { useJournalButtonAnimation } from "@/app/hooks"
+import { useJournalButtonAnimation } from "@/app/hooks";
 // ICONS
 import { IoArrowForward } from "@/app/utils/constants/icons";
 // STYLES

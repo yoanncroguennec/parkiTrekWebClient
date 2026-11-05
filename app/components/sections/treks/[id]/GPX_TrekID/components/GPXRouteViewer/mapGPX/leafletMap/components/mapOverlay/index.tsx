@@ -26,13 +26,7 @@ type Props = {
   setMapMode: (mode: MapMode) => void;
 };
 
-export default function MapOverlay({
-  totalKm,
-  pointCount,
-  progress,
-  mapMode,
-  setMapMode,
-}: Props) {
+export default function MapOverlay({ totalKm, pointCount, progress, mapMode, setMapMode }: Props) {
   const theme = useTheme();
 
   const isDesktop = useMediaQuery(theme.breakpoints.up("md"));

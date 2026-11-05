@@ -21,5 +21,4 @@ export const satelliteStyle: StyleSpecification = {
   ],
 };
 
-export const simpleStyle =
-  "https://basemaps.cartocdn.com/gl/voyager-gl-style/style.json";
+export const simpleStyle = "https://basemaps.cartocdn.com/gl/voyager-gl-style/style.json";

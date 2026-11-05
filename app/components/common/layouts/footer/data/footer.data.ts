@@ -1,9 +1,4 @@
-import {
-    FiFacebook,
-    FiInstagram,
-    FiLinkedin,
-    FiYoutube 
-} from "@/app/utils/constants/icons";
+import { FiFacebook, FiInstagram, FiLinkedin, FiYoutube } from "@/app/utils/constants/icons";
 
 /* =========================================================
    TYPES

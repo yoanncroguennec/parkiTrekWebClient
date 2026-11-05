@@ -1,11 +1,4 @@
-import {
-  Box,
-  BoxProps,
-  Chip,
-  styled,
-  Typography,
-  TypographyProps,
-} from "@mui/material";
+import { Box, BoxProps, Chip, styled, Typography, TypographyProps } from "@mui/material";
 
 export const IntroBadge = styled(Chip)(({ theme }) => ({
   marginBottom: 20,

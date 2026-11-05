@@ -31,15 +31,7 @@ export const PrimaryButtonRoot = styled(Button, {
     prop !== "border" &&
     prop !== "boxShadow",
 })<PrimaryButtonRootProps>(
-  ({
-    active,
-    background,
-    backgroundHover,
-    backdropFilter,
-    border,
-    boxShadow,
-    theme,
-  }) => ({
+  ({ active, background, backgroundHover, backdropFilter, border, boxShadow, theme }) => ({
     alignItems: "center",
 
     border: border ?? "none",
@@ -74,9 +66,7 @@ export const PrimaryButtonRoot = styled(Button, {
 
     background:
       background ??
-      (active
-        ? "linear-gradient(135deg, #06B6D4, #8B5CF6)"
-        : "rgba(255, 255, 255, 0.8)"),
+      (active ? "linear-gradient(135deg, #06B6D4, #8B5CF6)" : "rgba(255, 255, 255, 0.8)"),
 
     ...(backdropFilter && {
       backdropFilter,
@@ -98,5 +88,5 @@ export const PrimaryButtonRoot = styled(Button, {
 
       fontSize: "16px",
     },
-  }),
+  })
 );

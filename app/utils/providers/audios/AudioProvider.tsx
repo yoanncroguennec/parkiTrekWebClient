@@ -5,9 +5,7 @@ import useAudioPlayer from "@/app/hooks/audios/useAudioPlayer";
 
 const bg_musicApp = "/assets/music/bg_musicApp_1.mp3";
 
-const AudioContext = createContext<ReturnType<typeof useAudioPlayer> | null>(
-  null,
-);
+const AudioContext = createContext<ReturnType<typeof useAudioPlayer> | null>(null);
 
 export function AudioProvider({ children }: { children: React.ReactNode }) {
   const audioRef = useRef<HTMLAudioElement>(null);

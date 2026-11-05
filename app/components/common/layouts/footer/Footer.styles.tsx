@@ -34,8 +34,7 @@ export const FooterBackground = styled(Stack, {
   top: showWave ? "-150px" : 0,
   marginBottom: showWave ? "-150px" : 0,
 
-  backgroundImage:
-    'url("/assets/imgs/components/common/layouts/footer/bgFooterDesktop.png")',
+  backgroundImage: 'url("/assets/imgs/components/common/layouts/footer/bgFooterDesktop.png")',
 
   backgroundRepeat: "no-repeat",
   backgroundSize: "cover",

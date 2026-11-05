@@ -16,6 +16,7 @@ import useFooterScroll from "./animations/gsap/scroll/useFooterScroll";
 import useTrekAnimation from "./animations/gsap/trek/useTrekAnimation";
 import { useLivePlatformAnimation } from "./animations/gsap/text/useLivePlatformAnimation";
 import { useCloseButtonAnimation } from "./animations/gsap/ui/buttons/useCloseButtonAnimation";
+import { useMainMenuMobileContentAnimation } from "./animations/gsap/navigations/useMainMenuMobileContentAnimation";
 
 // AUDIOS
 import useAudioPlayer from "./audios/useAudioPlayer";
@@ -25,31 +26,41 @@ import { useLocalTime } from "./datetime/useLocalTime";
 
 // NAVIGATIONS
 
+// PAGES
+import { useExplorerScrollAnimation } from "./animations/gsap/pages/trek-dashboard/useExplorerScrollAnimation";
+import { useTrekJournalTransition } from "./animations/gsap/pages/trek-dashboard/useTrekJournalTransition";
+
 export {
-// ACCESSIBILITY
-    useIdle,
-    useIdleTimeout,
+  // ACCESSIBILITY
+  useIdle,
+  useIdleTimeout,
 
-// ANIMATIONS
-useAnimationCursor,
-useFadeInUpSequence,
-useMenuAnimation,
-useTimelineAnimation,
-useHeaderAnimation,
-useJourneyHighlightsAnimation,
-useJournalButtonAnimation,
-useProgressRingAnimation,
-useMainMenuMobileAnimation,
-useFooterScroll,
-useTrekAnimation,
-useLivePlatformAnimation,
-useCloseButtonAnimation,
+  // ANIMATIONS
+  useAnimationCursor,
+  useFadeInUpSequence,
+  useMenuAnimation,
+  useTimelineAnimation,
+  useHeaderAnimation,
+  useJourneyHighlightsAnimation,
+  useJournalButtonAnimation,
+  useProgressRingAnimation,
+  useMainMenuMobileAnimation,
+  useFooterScroll,
+  useTrekAnimation,
+  useLivePlatformAnimation,
+  useCloseButtonAnimation,
+  useMainMenuMobileContentAnimation,
 
-// AUDIOS
-useAudioPlayer,
+  // AUDIOS
+  useAudioPlayer,
 
-// DATETIME
-useLocalTime,
+  // DATETIME
+  useLocalTime,
 
-// NAVIGATIONS
-}
+  // NAVIGATIONS
+
+  // PAGES
+  useExplorerScrollAnimation,
+  useTrekJournalTransition,
+
+};

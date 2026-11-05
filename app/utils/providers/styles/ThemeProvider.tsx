@@ -6,10 +6,7 @@ import { CssBaseline, ThemeProvider as MuiThemeProvider } from "@mui/material";
 
 import { getTheme } from "@/app/utils/constants/styles/theme/theme";
 
-import {
-  setLocalStorage,
-  STORAGE_KEYS,
-} from "@/app/utils/constants/storage/localStorage";
+import { setLocalStorage, STORAGE_KEYS } from "@/app/utils/constants/storage/localStorage";
 
 type ThemeMode = "light" | "dark";
 
@@ -25,10 +22,7 @@ interface ThemeProviderProps {
 
 const ThemeContext = createContext<ThemeContextType | undefined>(undefined);
 
-export default function ThemeProvider({
-  children,
-  initialTheme,
-}: ThemeProviderProps) {
+export default function ThemeProvider({ children, initialTheme }: ThemeProviderProps) {
   const [mode, setMode] = useState<ThemeMode>(initialTheme);
 
   useEffect(() => {

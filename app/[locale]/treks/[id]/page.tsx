@@ -32,11 +32,7 @@ export default async function TrekID({ params, searchParams }: Props) {
   const selectedArea = trek?.areas.find((item) => item.code === area);
 
   if (!trek || !selectedArea) {
-    return (
-      <ResourceNotFound
-        message={!trek ? "Trek introuvable" : "Zone introuvable"}
-      />
-    );
+    return <ResourceNotFound message={!trek ? "Trek introuvable" : "Zone introuvable"} />;
   }
 
   const sectionsTrekID = getSectionsTrekID(selectedArea);

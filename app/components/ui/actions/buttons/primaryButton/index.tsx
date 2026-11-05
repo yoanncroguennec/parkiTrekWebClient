@@ -5,10 +5,7 @@ import type { ButtonProps } from "@mui/material";
 // ICONS
 import { type IconType } from "@/app/utils/constants/icons";
 // ANIMATIONS
-import {
-  animatePrimaryButtonHover,
-  animatePrimaryButtonLeave,
-} from "@/app/utils/animations";
+import { animatePrimaryButtonHover, animatePrimaryButtonLeave } from "@/app/utils/animations";
 
 // STYLES
 import { PrimaryButtonRoot, PrimaryButtonGroup } from "./PrimaryButton.Styles";
@@ -64,12 +61,8 @@ export default function PrimaryButton({ buttons }: Props) {
             boxShadow={button.boxShadow}
             onClick={button.onClick}
             endIcon={EndIcon && <EndIcon size={22} aria-hidden="true" />}
-            onMouseEnter={(event) =>
-              animatePrimaryButtonHover(event.currentTarget)
-            }
-            onMouseLeave={(event) =>
-              animatePrimaryButtonLeave(event.currentTarget)
-            }
+            onMouseEnter={(event) => animatePrimaryButtonHover(event.currentTarget)}
+            onMouseLeave={(event) => animatePrimaryButtonLeave(event.currentTarget)}
           >
             {Icon && <Icon size={18} aria-hidden="true" />}
 

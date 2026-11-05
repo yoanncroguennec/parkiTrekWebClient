@@ -4,7 +4,10 @@ import { useRef, useState, useEffect } from "react";
 // COMPONENTS
 import AnimatedTitleMenu from "./animatedTitleMenu";
 // HOOKS
-import { MAIN_MENU_THUMBNAIL, useMainMenuAnimation } from "@/app/hooks/animations/gsap/navigations/others/useMainMenuAnimation";
+import {
+  MAIN_MENU_THUMBNAIL,
+  useMainMenuAnimation,
+} from "@/app/hooks/animations/gsap/navigations/others/useMainMenuAnimation";
 // DATA
 import { dataMainMenu } from "../../../data/MainMenu.data";
 
@@ -75,9 +78,7 @@ export default function Content() {
           >
             <AnimatedTitleMenu title={t(`${menuItem.id}.title`)} />
 
-            <MainMenuSubtitle variant="h6">
-              {t(`${menuItem.id}.subtitle`)}
-            </MainMenuSubtitle>
+            <MainMenuSubtitle variant="h6">{t(`${menuItem.id}.subtitle`)}</MainMenuSubtitle>
           </MainMenuLink>
         ))}
       </MainMenuList>
@@ -86,8 +87,7 @@ export default function Content() {
         <MainMenuSlider
           ref={sliderRef}
           sx={{
-            height:
-              MAIN_MENU_THUMBNAIL.height * dataMainMenu.length,
+            height: MAIN_MENU_THUMBNAIL.height * dataMainMenu.length,
           }}
         >
           {dataMainMenu.map((menuItem, index) => (
@@ -100,10 +100,7 @@ export default function Content() {
             >
               <MainMenuImage
                 src={t(`${menuItem.id}.img`)}
-                alt={
-                  t(`${menuItem.id}.alt`) ||
-                  t(`${menuItem.id}.title`)
-                }
+                alt={t(`${menuItem.id}.alt`) || t(`${menuItem.id}.title`)}
                 width={MAIN_MENU_THUMBNAIL.width}
                 height={MAIN_MENU_THUMBNAIL.height}
               />

@@ -12,7 +12,7 @@ type Props = {
 
 const BlobCard = forwardRef<HTMLDivElement, Props>(function BlobCard(
   { children, formatting, background, sx },
-  ref,
+  ref
 ) {
   return (
     <Stack

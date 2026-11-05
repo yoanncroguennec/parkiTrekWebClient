@@ -77,11 +77,7 @@ export default function MapLegend({ infoOpen, onInfoToggle }: Props) {
 
       {/* DESKTOP UNIQUEMENT */}
       {isDesktop && (
-        <InfoButton
-          active={infoOpen}
-          onClick={onInfoToggle}
-          startIcon={<MdInfoOutline />}
-        >
+        <InfoButton active={infoOpen} onClick={onInfoToggle} startIcon={<MdInfoOutline />}>
           {infoOpen ? "Fermer" : "Plus d'infos"}
         </InfoButton>
       )}

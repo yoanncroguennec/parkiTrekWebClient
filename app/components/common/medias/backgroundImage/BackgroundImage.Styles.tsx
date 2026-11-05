@@ -1,11 +1,5 @@
 import Image from "next/image";
-import {
-  Box,
-  BoxProps,
-  Container,
-  ContainerProps,
-  styled,
-} from "@mui/material";
+import { Box, BoxProps, Container, ContainerProps, styled } from "@mui/material";
 
 export const BackgroundImageStyles = styled(Box)<BoxProps>(() => ({
   position: "relative",
@@ -25,8 +19,7 @@ export const GlobalOverlayStyles = styled(Box)<BoxProps>(() => ({
   position: "absolute",
   inset: 0,
   zIndex: 1,
-  background:
-    "linear-gradient(to bottom, rgba(0,0,0,.45), rgba(0,0,0,.55), rgba(0,0,0,.85))",
+  background: "linear-gradient(to bottom, rgba(0,0,0,.45), rgba(0,0,0,.55), rgba(0,0,0,.85))",
 }));
 
 export const BottomGradientStyles = styled(Box)<BoxProps>(() => ({

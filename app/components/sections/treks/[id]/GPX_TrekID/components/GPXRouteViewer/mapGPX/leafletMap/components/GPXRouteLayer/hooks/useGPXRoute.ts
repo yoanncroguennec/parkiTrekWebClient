@@ -25,8 +25,7 @@ export function useGPXRoute(points: GpxPoint[]) {
 
         const elevation = (nextPoint.ele ?? 0) - (point.ele ?? 0);
 
-        const slope =
-          distanceMeters > 0 ? (elevation / distanceMeters) * 100 : 0;
+        const slope = distanceMeters > 0 ? (elevation / distanceMeters) * 100 : 0;
 
         return {
           type: "Feature",

@@ -1,4 +1,3 @@
-
 "use client";
 
 import { Dispatch, SetStateAction, useRef } from "react";
@@ -7,13 +6,14 @@ import { Content } from "./components";
 // ICONS
 import { RxCross2 } from "@/app/utils/constants/icons";
 // HOOKS
-import {
-  useMenuAnimation,
-  useAnimationCursor,
-  useCloseButtonAnimation,
-} from "@/app/hooks";
+import { useMenuAnimation, useAnimationCursor, useCloseButtonAnimation } from "@/app/hooks";
 // STYLES
-import { AnimationCursor, CloseButton, MainMenuDesktopContainer, MainMenuDesktopContent } from "./MainMenuDesktop.Styles";
+import {
+  AnimationCursor,
+  CloseButton,
+  MainMenuDesktopContainer,
+  MainMenuDesktopContent,
+} from "./MainMenuDesktop.Styles";
 
 type Props = {
   open: boolean;

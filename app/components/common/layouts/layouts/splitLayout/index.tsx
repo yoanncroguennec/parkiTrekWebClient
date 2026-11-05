@@ -4,12 +4,7 @@
 import { ReactNode } from "react";
 
 // STYLES
-import {
-  SplitContainer,
-  SplitStack,
-  SplitColumn,
-  SplitMobileOverlay,
-} from "./SplitLayout.Styles";
+import { SplitContainer, SplitStack, SplitColumn, SplitMobileOverlay } from "./SplitLayout.Styles";
 
 export type MobilePosition = "above" | "below" | "background" | "overlay";
 
@@ -19,12 +14,7 @@ export interface SplitColumnContentProps {
   flexDirection?: "row" | "row-reverse" | "column" | "column-reverse";
 
   justifyContent?:
-    | "flex-start"
-    | "center"
-    | "flex-end"
-    | "space-between"
-    | "space-around"
-    | "space-evenly";
+    "flex-start" | "center" | "flex-end" | "space-between" | "space-around" | "space-evenly";
 
   alignItems?: "flex-start" | "center" | "flex-end" | "stretch" | "baseline";
 }
@@ -72,11 +62,7 @@ export default function SplitLayout({
 
   return (
     <SplitContainer maxWidth={maxWidth}>
-      <SplitStack
-        reverse={reverse}
-        alignItems={alignItems}
-        mobilePosition={mobilePosition}
-      >
+      <SplitStack reverse={reverse} alignItems={alignItems} mobilePosition={mobilePosition}>
         {showMobileOverlay && (
           <SplitMobileOverlay
             overlayColor={mobileOverlayColor}
@@ -94,11 +80,7 @@ export default function SplitLayout({
           {left}
         </SplitColumn>
 
-        <SplitColumn
-          side="right"
-          mobilePosition={mobilePosition}
-          sx={rightColumnProps}
-        >
+        <SplitColumn side="right" mobilePosition={mobilePosition} sx={rightColumnProps}>
           {right}
         </SplitColumn>
       </SplitStack>

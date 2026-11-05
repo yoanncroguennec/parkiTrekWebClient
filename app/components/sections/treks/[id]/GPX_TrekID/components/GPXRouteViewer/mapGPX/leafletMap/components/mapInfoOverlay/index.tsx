@@ -3,7 +3,7 @@
 import { useEffect, useMemo, useRef } from "react";
 import { Box, keyframes, MenuItem } from "@mui/material";
 import gsap from "gsap";
-// 
+//
 import { StatCard } from "./elevationChart/statCard";
 import { GlassButton } from "./elevationChart/glassButton";
 import ChartContainer from "./chartContainer";
@@ -23,7 +23,6 @@ import {
   SpeedSelect,
   PulseGlow,
 } from "./MapInfoOverlay.Styles";
-
 
 export type MapInfoOverlayProps = GPXViewerProps & {
   open: boolean;
@@ -79,16 +78,14 @@ export default function MapInfoOverlay({
         ele: point.ele ?? 0,
         dist: point.dist ?? 0,
       })),
-    [points],
+    [points]
   );
 
   /*
    * Altitude maximale
    */
   const maxElevation =
-    data.length > 0
-      ? Math.max(...data.map((point) => point.ele)).toFixed(0)
-      : "0";
+    data.length > 0 ? Math.max(...data.map((point) => point.ele)).toFixed(0) : "0";
 
   /*
    * Animation du glow
@@ -144,10 +141,7 @@ export default function MapInfoOverlay({
       ===================================== */}
 
       <InfoOverlayHeader>
-        <InfoOverlayClose
-          onClick={onClose}
-          aria-label="Fermer les informations"
-        >
+        <InfoOverlayClose onClick={onClose} aria-label="Fermer les informations">
           <IoClose />
         </InfoOverlayClose>
       </InfoOverlayHeader>
@@ -192,10 +186,7 @@ export default function MapInfoOverlay({
 
             <StatCard title="Altitude max" value={`${maxElevation} m`} />
 
-            <StatCard
-              title="Progression"
-              value={`${currentIndex}/${pointCount}`}
-            />
+            <StatCard title="Progression" value={`${currentIndex}/${pointCount}`} />
           </StatsGrid>
         </InfoOverlayLeft>
 
@@ -203,11 +194,7 @@ export default function MapInfoOverlay({
             GRAPHIQUE À DROITE
         ===================================== */}
 
-        <ChartContainer
-          data={data}
-          currentIndex={currentIndex}
-          onHover={setCurrentIndex}
-        />
+        <ChartContainer data={data} currentIndex={currentIndex} onHover={setCurrentIndex} />
       </InfoOverlayBody>
 
       {/* =====================================

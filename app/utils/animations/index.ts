@@ -1,9 +1,6 @@
 import {
-    animatePrimaryButtonHover,
-    animatePrimaryButtonLeave,
+  animatePrimaryButtonHover,
+  animatePrimaryButtonLeave,
 } from "./gsap/buttons/primaryButton.animation";
 
-export {
-    animatePrimaryButtonHover,
-    animatePrimaryButtonLeave,
-}
+export { animatePrimaryButtonHover, animatePrimaryButtonLeave };

@@ -45,7 +45,7 @@ export function useBackgroundImageScroll({
             scale: 1.12,
             ease: "none",
           },
-          0,
+          0
         );
 
         // OVERLAY
@@ -55,7 +55,7 @@ export function useBackgroundImageScroll({
             opacity: 0.9,
             ease: "none",
           },
-          0,
+          0
         );
 
         // GRADIENT BAS
@@ -66,7 +66,7 @@ export function useBackgroundImageScroll({
             scaleY: 1.15,
             ease: "none",
           },
-          0,
+          0
         );
 
         // CONTENT
@@ -76,7 +76,7 @@ export function useBackgroundImageScroll({
             y: -90,
             ease: "none",
           },
-          0,
+          0
         );
 
         // LÉGER EFFET DE PROFONDEUR
@@ -87,7 +87,7 @@ export function useBackgroundImageScroll({
             scale: 0.97,
             ease: "none",
           },
-          0,
+          0
         );
       }, rootRef);
 
@@ -95,6 +95,6 @@ export function useBackgroundImageScroll({
     },
     {
       scope: rootRef,
-    },
+    }
   );
 }

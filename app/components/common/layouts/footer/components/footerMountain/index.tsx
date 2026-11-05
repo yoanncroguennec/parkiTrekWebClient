@@ -1,14 +1,11 @@
 "use client";
 
 // HOOKS
-import { useTrekAnimation } from "@/app/hooks"
+import { useTrekAnimation } from "@/app/hooks";
 // DATA
 import { mountainPathD, trekPoints } from "../../data/footer.data";
 
-import {
-  FooterMountainWrapper,
-  FooterMountainSvg,
-} from "./FooterMountain.Styles";
+import { FooterMountainWrapper, FooterMountainSvg } from "./FooterMountain.Styles";
 
 const BLUE = "#1677FF";
 const WHITE = "#fff";
@@ -99,24 +96,11 @@ export default function FooterMountain() {
 
         {/* Halo */}
 
-        <circle
-          ref={blueHaloRef}
-          r="15"
-          fill="none"
-          stroke={BLUE}
-          strokeWidth="2"
-          opacity="0.35"
-        />
+        <circle ref={blueHaloRef} r="15" fill="none" stroke={BLUE} strokeWidth="2" opacity="0.35" />
 
         {/* Point actif */}
 
-        <circle
-          ref={bluePointRef}
-          r="7"
-          fill={BLUE}
-          stroke={WHITE}
-          strokeWidth="3"
-        />
+        <circle ref={bluePointRef} r="7" fill={BLUE} stroke={WHITE} strokeWidth="3" />
 
         {/* Bulle */}
 

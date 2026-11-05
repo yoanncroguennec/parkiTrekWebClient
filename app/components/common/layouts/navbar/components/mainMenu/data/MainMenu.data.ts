@@ -1,4 +1,3 @@
-
 import {
   type IconType,
   FiActivity,
@@ -6,9 +5,9 @@ import {
   FiHeart,
   FiHome,
   FiImage,
-    FiMap,
-    FiMail,
-    FiUser,
+  FiMap,
+  FiMail,
+  FiUser,
 } from "@/app/utils/constants/icons";
 
 export interface MainMenuItem {

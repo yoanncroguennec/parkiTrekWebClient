@@ -22,13 +22,9 @@ export default function AnimatedTitleMenu({ title }: Props) {
               transitionDelay: `${index * 0.03}s`,
             }}
           >
-            <AnimatedLetterText>
-              {letter}
-            </AnimatedLetterText>
+            <AnimatedLetterText>{letter}</AnimatedLetterText>
 
-            <AnimatedLetterTextHover>
-              {letter}
-            </AnimatedLetterTextHover>
+            <AnimatedLetterTextHover>{letter}</AnimatedLetterTextHover>
           </AnimatedLetterInner>
         </AnimatedLetter>
       ))}

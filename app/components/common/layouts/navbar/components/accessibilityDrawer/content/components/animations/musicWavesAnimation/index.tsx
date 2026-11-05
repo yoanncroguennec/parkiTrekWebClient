@@ -7,9 +7,7 @@ type Props = {
   bars_MusicWaves_Animation: MusicBar[];
 };
 
-export default function MusicWavesAnimation({
-  bars_MusicWaves_Animation,
-}: Props) {
+export default function MusicWavesAnimation({ bars_MusicWaves_Animation }: Props) {
   return (
     <MusicContainer>
       {bars_MusicWaves_Animation.map((bar, index) => (

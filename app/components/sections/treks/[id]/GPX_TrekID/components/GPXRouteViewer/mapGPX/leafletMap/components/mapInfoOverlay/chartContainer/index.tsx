@@ -107,12 +107,7 @@ export default function ChartContainer({ data, currentIndex, onHover }: Props) {
             formatter={(value) => [`${Number(value).toFixed(1)} m`, "Altitude"]}
           />
 
-          <Area
-            type="monotone"
-            dataKey="ele"
-            stroke="none"
-            fill="url(#elevationFill)"
-          />
+          <Area type="monotone" dataKey="ele" stroke="none" fill="url(#elevationFill)" />
 
           <Line
             type="monotone"

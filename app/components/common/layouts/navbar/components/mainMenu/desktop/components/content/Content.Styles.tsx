@@ -1,6 +1,6 @@
+import Image from "next/image";
 import { Link } from "@/i18n/navigation";
 import { Box, Container, Stack, Typography, styled } from "@mui/material";
-import Image from "next/image";
 
 // CONTAINER
 export const MainMenuContentContainer = styled(Container)({

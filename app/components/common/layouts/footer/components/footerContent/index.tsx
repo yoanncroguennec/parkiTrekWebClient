@@ -14,7 +14,7 @@ import {
   FiBookOpen,
   FiCompass,
   FiUsers,
-} from "@/app/utils/constants/icons"
+} from "@/app/utils/constants/icons";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -35,8 +35,7 @@ export default function FooterContent() {
        * =====================================================
        */
 
-      const revealElements =
-        gsap.utils.toArray<HTMLElement>(".pt-footer__reveal");
+      const revealElements = gsap.utils.toArray<HTMLElement>(".pt-footer__reveal");
 
       if (revealElements.length) {
         gsap.fromTo(
@@ -58,7 +57,7 @@ export default function FooterContent() {
               toggleActions: "play none none reverse",
               invalidateOnRefresh: true,
             },
-          },
+          }
         );
       }
 
@@ -90,7 +89,7 @@ export default function FooterContent() {
               toggleActions: "play none none reverse",
               invalidateOnRefresh: true,
             },
-          },
+          }
         );
       }
 
@@ -275,8 +274,7 @@ export default function FooterContent() {
             width: "10px",
             height: "100%",
             margin: "130px 0 80px",
-            background:
-              "linear-gradient(90deg, transparent, #8066ff, transparent)",
+            background: "linear-gradient(90deg, transparent, #8066ff, transparent)",
             boxShadow: "0 0 25px rgba(128, 102, 255, 0.5)",
             borderRadius: "50px",
           }}
@@ -447,8 +445,7 @@ export default function FooterContent() {
             letterSpacing: "-0.05em",
           }}
         >
-          Ce n&apos;est pas le chemin qui est difficile, c&apos;est l&apos;idée
-          de rester immobile.
+          Ce n&apos;est pas le chemin qui est difficile, c&apos;est l&apos;idée de rester immobile.
         </blockquote>
 
         <span

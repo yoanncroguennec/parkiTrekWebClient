@@ -1,9 +1,7 @@
 // GOOD
 import gsap from "gsap";
 
-export function animatePrimaryButtonHover(
-  target: HTMLElement | null
-) {
+export function animatePrimaryButtonHover(target: HTMLElement | null) {
   if (!target) return;
 
   gsap.to(target, {
@@ -15,9 +13,7 @@ export function animatePrimaryButtonHover(
   });
 }
 
-export function animatePrimaryButtonLeave(
-  target: HTMLElement | null
-) {
+export function animatePrimaryButtonLeave(target: HTMLElement | null) {
   if (!target) return;
 
   gsap.to(target, {

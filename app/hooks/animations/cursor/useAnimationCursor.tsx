@@ -2,9 +2,7 @@
 
 import { RefObject, useEffect, useRef } from "react";
 
-export function useAnimationCursor(
-  containerRef: RefObject<HTMLDivElement | null>,
-) {
+export function useAnimationCursor(containerRef: RefObject<HTMLDivElement | null>) {
   const rafRef = useRef<number | null>(null);
 
   const pointerRef = useRef({

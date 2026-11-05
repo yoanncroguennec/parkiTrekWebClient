@@ -16,11 +16,7 @@ export const metadata: Metadata = {
   description: "Description",
 };
 
-export default async function LocaleLayout({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
+export default async function LocaleLayout({ children }: { children: React.ReactNode }) {
   const messages = await getMessages();
   const locale = await getLocale();
 
@@ -34,18 +30,12 @@ export default async function LocaleLayout({
   const initialTheme = themeCookie === "dark" ? "dark" : "light";
 
   return (
-    <html
-      lang={locale}
-      className={`${dahlia.variable} ${canela.variable} ${neon.variable}`}
-    >
-                  <body cz-shortcut-listen="true">
-        <GlobalProviders
-          locale={locale}
-          messages={messages}
-          initialTheme={initialTheme}
-        >
+    <html lang={locale} className={`${dahlia.variable} ${canela.variable} ${neon.variable}`}>
+      <body cz-shortcut-listen="true">
+        <GlobalProviders locale={locale} messages={messages} initialTheme={initialTheme}>
           {children}
-          </GlobalProviders></body>
+        </GlobalProviders>
+      </body>
     </html>
   );
 }

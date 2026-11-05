@@ -31,16 +31,14 @@ export function createSpiral({
   for (let index = 0; index < totalTiles; index++) {
     const progress = index / totalTiles;
 
-    const radius =
-      CONFIG.startRadius + (CONFIG.endRadius - CONFIG.startRadius) * progress;
+    const radius = CONFIG.startRadius + (CONFIG.endRadius - CONFIG.startRadius) * progress;
 
     const arcWidth = (2 * Math.PI * radius) / CONFIG.tilesPerRevolution;
 
     const tileHeight = arcWidth * CONFIG.tileHeightRatio;
 
     tileEdgesY.push(
-      tileEdgesY[index] -
-        (tileHeight + CONFIG.spiralGap) / CONFIG.tilesPerRevolution,
+      tileEdgesY[index] - (tileHeight + CONFIG.spiralGap) / CONFIG.tilesPerRevolution
     );
   }
 
@@ -50,13 +48,11 @@ export function createSpiral({
   for (let index = 0; index < totalTiles; index++) {
     const progress = index / totalTiles;
 
-    const radius =
-      CONFIG.startRadius + (CONFIG.endRadius - CONFIG.startRadius) * progress;
+    const radius = CONFIG.startRadius + (CONFIG.endRadius - CONFIG.startRadius) * progress;
 
     const tileGap = 0.12;
 
-    const arcWidth =
-      (2 * Math.PI * radius) / CONFIG.tilesPerRevolution - tileGap;
+    const arcWidth = (2 * Math.PI * radius) / CONFIG.tilesPerRevolution - tileGap;
 
     const tileHeight = arcWidth * CONFIG.tileHeightRatio;
 
@@ -84,7 +80,7 @@ export function createSpiral({
 
           (row - 0.5) * tileHeight + (normalizedColumn - 0.5) * slope,
 
-          Math.cos(angle) * radius,
+          Math.cos(angle) * radius
         );
 
         uvs.push(normalizedColumn, row);
@@ -105,7 +101,7 @@ export function createSpiral({
 
         below,
         below + 1,
-        current + 1,
+        current + 1
       );
     }
 
@@ -114,10 +110,7 @@ export function createSpiral({
      */
     const geometry = new THREE.BufferGeometry();
 
-    geometry.setAttribute(
-      "position",
-      new THREE.Float32BufferAttribute(positions, 3),
-    );
+    geometry.setAttribute("position", new THREE.Float32BufferAttribute(positions, 3));
 
     geometry.setAttribute("uv", new THREE.Float32BufferAttribute(uvs, 2));
 

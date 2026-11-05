@@ -37,11 +37,10 @@ export default function MapLibreMap(props: GPXViewerProps) {
 
   const [infoOpen, setInfoOpen] = useState<boolean>(false);
 
-  const { mapRef, mapMode, setMapMode, current, totalKm, progress, mapStyle } =
-    useMapLibre({
-      points,
-      currentIndex,
-    });
+  const { mapRef, mapMode, setMapMode, current, totalKm, progress, mapStyle } = useMapLibre({
+    points,
+    currentIndex,
+  });
 
   if (!current) {
     return null;
@@ -59,10 +58,7 @@ export default function MapLibreMap(props: GPXViewerProps) {
         setMapMode={setMapMode}
       />
 
-      <MapLegend
-        infoOpen={infoOpen}
-        onInfoToggle={() => setInfoOpen((value) => !value)}
-      />
+      <MapLegend infoOpen={infoOpen} onInfoToggle={() => setInfoOpen((value) => !value)} />
 
       <MapInfoOverlay
         open={infoOpen}

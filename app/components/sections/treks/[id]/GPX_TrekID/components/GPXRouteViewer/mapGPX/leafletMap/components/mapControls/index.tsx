@@ -1,10 +1,7 @@
 "use client";
 
 // ICONS
-import {
-  MdMap,
-  MdSatelliteAlt,
-} from "@/app/utils/constants/icons";
+import { MdMap, MdSatelliteAlt } from "@/app/utils/constants/icons";
 // STYLES
 import {
   ControlsContainer,
@@ -19,11 +16,7 @@ type Props = {
   mobile?: boolean;
 };
 
-export default function MapControls({
-  mapMode,
-  onChange,
-  mobile = false,
-}: Props) {
+export default function MapControls({ mapMode, onChange, mobile = false }: Props) {
   return (
     <ControlsContainer mobile={mobile}>
       <ActiveBackground active={mapMode} />

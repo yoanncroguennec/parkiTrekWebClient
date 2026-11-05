@@ -33,9 +33,7 @@ export function useGPXLoader(file_GPX: string): UseGPXLoaderResult {
         });
 
         if (!response.ok) {
-          throw new Error(
-            `Impossible de charger le parcours (${response.status}).`,
-          );
+          throw new Error(`Impossible de charger le parcours (${response.status}).`);
         }
 
         const gpx = await response.text();
@@ -47,9 +45,7 @@ export function useGPXLoader(file_GPX: string): UseGPXLoaderResult {
         const parsedPoints = parseGPX(gpx);
 
         if (!parsedPoints || parsedPoints.length === 0) {
-          throw new Error(
-            "Aucun point GPS valide n'a été trouvé dans le parcours.",
-          );
+          throw new Error("Aucun point GPS valide n'a été trouvé dans le parcours.");
         }
 
         setPoints(parsedPoints);
@@ -60,11 +56,7 @@ export function useGPXLoader(file_GPX: string): UseGPXLoaderResult {
 
         console.error("Erreur chargement GPX :", error);
 
-        setError(
-          error instanceof Error
-            ? error.message
-            : "Impossible de charger le parcours.",
-        );
+        setError(error instanceof Error ? error.message : "Impossible de charger le parcours.");
       } finally {
         if (!controller.signal.aborted) {
           setLoading(false);

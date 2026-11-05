@@ -1,8 +1,4 @@
-import {
-  LegendDot,
-  LegendItemContainer,
-  LegendText,
-} from "./LegendItem.Styles";
+import { LegendDot, LegendItemContainer, LegendText } from "./LegendItem.Styles";
 
 type Props = {
   color: string;

@@ -106,9 +106,7 @@ export const InfoOverlayClose = styled(IconButton)({
   pointerEvents: "auto",
 
   transition:
-    "background .3s ease, " +
-    "color .3s ease, " +
-    "transform .4s cubic-bezier(.22,1,.36,1)",
+    "background .3s ease, " + "color .3s ease, " + "transform .4s cubic-bezier(.22,1,.36,1)",
 
   "&:hover": {
     color: "#fff",

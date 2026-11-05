@@ -30,7 +30,7 @@ export const FooterContainer = styled(Stack)(({ theme }) => ({
 export const ProgressContainer = styled(Box)(({ theme }) => ({
   position: "relative",
   width: "100%",
-maxWidth: "70%",
+  maxWidth: "70%",
   minWidth: 0,
 
   [theme.breakpoints.up("md")]: {
@@ -52,8 +52,7 @@ export const ProgressBar = styled(LinearProgress)(() => ({
 
   "& .MuiLinearProgress-bar": {
     borderRadius: 999,
-    background:
-      "linear-gradient(90deg, #22C55E 0%, #72C889 55%, #B7F34A 100%)",
+    background: "linear-gradient(90deg, #22C55E 0%, #72C889 55%, #B7F34A 100%)",
   },
 
   "@media (prefers-reduced-motion: reduce)": {

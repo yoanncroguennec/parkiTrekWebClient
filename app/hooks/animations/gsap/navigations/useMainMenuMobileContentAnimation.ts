@@ -140,7 +140,7 @@ export function useMainMenuMobileContentAnimation() {
 
           ease: "back.out(2)",
         },
-        "-=0.35",
+        "-=0.35"
       );
 
       // =================================================
@@ -157,7 +157,7 @@ export function useMainMenuMobileContentAnimation() {
 
           ease: "power3.out",
         },
-        "-=0.3",
+        "-=0.3"
       );
 
       // =================================================
@@ -180,7 +180,7 @@ export function useMainMenuMobileContentAnimation() {
 
           ease: "power3.out",
         },
-        "-=0.2",
+        "-=0.2"
       );
 
       // =================================================
@@ -199,7 +199,7 @@ export function useMainMenuMobileContentAnimation() {
 
           ease: "back.out(1.5)",
         },
-        "-=0.15",
+        "-=0.15"
       );
 
       // =================================================
@@ -221,7 +221,7 @@ export function useMainMenuMobileContentAnimation() {
 
           ease: "power3.out",
         },
-        "-=0.25",
+        "-=0.25"
       );
 
       // =================================================
@@ -324,7 +324,7 @@ export function useMainMenuMobileContentAnimation() {
 
         ease: "power3.in",
       },
-      "-=0.25",
+      "-=0.25"
     );
 
     // =================================================
@@ -348,7 +348,7 @@ export function useMainMenuMobileContentAnimation() {
 
         ease: "power3.in",
       },
-      "-=0.2",
+      "-=0.2"
     );
 
     // =================================================
@@ -365,7 +365,7 @@ export function useMainMenuMobileContentAnimation() {
 
         ease: "power3.in",
       },
-      "-=0.2",
+      "-=0.2"
     );
 
     // =================================================
@@ -385,7 +385,7 @@ export function useMainMenuMobileContentAnimation() {
 
         ease: "power3.in",
       },
-      "-=0.2",
+      "-=0.2"
     );
 
     // =================================================
@@ -405,7 +405,7 @@ export function useMainMenuMobileContentAnimation() {
 
         ease: "power4.in",
       },
-      "-=0.15",
+      "-=0.15"
     );
 
     return timeline;

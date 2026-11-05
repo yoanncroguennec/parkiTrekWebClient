@@ -7,10 +7,7 @@ import ProgressRing from "../progressRing";
 // HOOKS
 import { useHeaderAnimation } from "@/app/hooks";
 // ICONS
-import {
-  IoClose,
-  IoLocationOutline,
-} from "@/app/utils/constants/icons";
+import { IoClose, IoLocationOutline } from "@/app/utils/constants/icons";
 // STYLES
 import {
   DepartmentBadge,

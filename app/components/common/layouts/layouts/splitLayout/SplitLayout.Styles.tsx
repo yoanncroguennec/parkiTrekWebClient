@@ -22,8 +22,7 @@ interface SplitMobileOverlayProps {
 }
 
 export const SplitMobileOverlay = styled(Box, {
-  shouldForwardProp: (prop) =>
-    prop !== "overlayColor" && prop !== "overlayBorderRadius",
+  shouldForwardProp: (prop) => prop !== "overlayColor" && prop !== "overlayBorderRadius",
 })<SplitMobileOverlayProps>(
   ({ theme, overlayColor = "rgba(0,0,0,.55)", overlayBorderRadius = 0 }) => ({
     position: "absolute",
@@ -43,7 +42,7 @@ export const SplitMobileOverlay = styled(Box, {
     [theme.breakpoints.up("xl")]: {
       display: "none",
     },
-  }),
+  })
 );
 
 export const SplitContainer = styled(Container)(() => ({
@@ -54,12 +53,7 @@ export const SplitStack = styled(Stack, {
   shouldForwardProp: (prop) =>
     prop !== "reverse" && prop !== "alignItems" && prop !== "mobilePosition",
 })<SplitStackProps>(
-  ({
-    theme,
-    reverse = false,
-    alignItems = "stretch",
-    mobilePosition = "below",
-  }) => ({
+  ({ theme, reverse = false, alignItems = "stretch", mobilePosition = "below" }) => ({
     position: "relative",
 
     width: "100%",
@@ -95,7 +89,7 @@ export const SplitStack = styled(Stack, {
 
       minHeight: "auto",
     },
-  }),
+  })
 );
 
 export const SplitColumn = styled(Box, {
@@ -180,5 +174,5 @@ export const SplitColumn = styled(Box, {
       padding: 0,
       pointerEvents: "auto",
     },
-  }),
+  })
 );

@@ -23,10 +23,7 @@ export const timeoutOptions: Option[] = [
 ];
 
 export const switchOptions: {
-  key: keyof Pick<
-    AccessibilitySettings,
-    "seniorMode" | "reduceMotion" | "highContrast"
-  >;
+  key: keyof Pick<AccessibilitySettings, "seniorMode" | "reduceMotion" | "highContrast">;
   label: string;
 }[] = [
   {

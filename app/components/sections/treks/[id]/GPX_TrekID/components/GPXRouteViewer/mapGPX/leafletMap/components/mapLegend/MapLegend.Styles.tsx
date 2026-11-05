@@ -97,9 +97,7 @@ export const LegendArrow = styled(Box, {
   borderRight: "1px solid rgba(255,255,255,.8)",
   borderBottom: "1px solid rgba(255,255,255,.8)",
 
-  transform: open
-    ? "rotate(225deg) translateY(-2px)"
-    : "rotate(45deg) translateY(-2px)",
+  transform: open ? "rotate(225deg) translateY(-2px)" : "rotate(45deg) translateY(-2px)",
 
   transition: "transform .35s cubic-bezier(.22,1,.36,1)",
 }));
@@ -179,9 +177,7 @@ export const InfoButton = styled(Button, {
 
   color: active ? "#07110b" : "rgba(255,255,255,.75)",
 
-  background: active
-    ? "linear-gradient(135deg, #B4FF39, #22d3ee)"
-    : "rgba(255,255,255,.06)",
+  background: active ? "linear-gradient(135deg, #B4FF39, #22d3ee)" : "rgba(255,255,255,.06)",
 
   border: "1px solid rgba(255,255,255,.08)",
 
@@ -199,9 +195,7 @@ export const InfoButton = styled(Button, {
     "box-shadow .35s ease",
 
   "&:hover": {
-    background: active
-      ? "linear-gradient(135deg, #B4FF39, #22d3ee)"
-      : "rgba(255,255,255,.1)",
+    background: active ? "linear-gradient(135deg, #B4FF39, #22d3ee)" : "rgba(255,255,255,.1)",
 
     transform: "translateY(-2px)",
 

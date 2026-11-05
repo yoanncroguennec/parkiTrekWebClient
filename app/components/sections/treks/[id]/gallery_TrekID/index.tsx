@@ -7,12 +7,7 @@ import useHorizontalGallery from "./hooks/useHorizontalGallery";
 import { Content, Footer, Header } from "./components";
 
 export default function Gallery_TrekID_Section() {
-  const {
-    sectionRef,
-    trackRef,
-    progress,
-    activeIndex,
-  } = useHorizontalGallery();
+  const { sectionRef, trackRef, progress, activeIndex } = useHorizontalGallery();
 
   return (
     // "sectionRef" (Référence) & "<section>" (Élément HTML) : Déplace horizontalement toutes les cartes."
@@ -43,17 +38,11 @@ export default function Gallery_TrekID_Section() {
         backgroundPosition: "0% 50%",
       }}
     >
-      <Header
-        activeIndex={activeIndex}
-        progress={progress}
-        sectionRef={sectionRef}
-      />
+      <Header activeIndex={activeIndex} progress={progress} sectionRef={sectionRef} />
 
       <Content trackRef={trackRef} />
 
-      <Footer
-        progress={progress}
-      />
+      <Footer progress={progress} />
     </Stack>
   );
 }

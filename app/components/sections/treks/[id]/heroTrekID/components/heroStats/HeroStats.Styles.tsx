@@ -53,8 +53,7 @@ export const StatCard = styled(Box)(({ theme }) => ({
   border: "1px solid rgba(255,255,255,.08)",
   borderRadius: 20,
 
-  background:
-    "linear-gradient(180deg, rgba(255,255,255,.08), rgba(255,255,255,.03))",
+  background: "linear-gradient(180deg, rgba(255,255,255,.08), rgba(255,255,255,.03))",
 
   backdropFilter: "blur(24px)",
   WebkitBackdropFilter: "blur(24px)",

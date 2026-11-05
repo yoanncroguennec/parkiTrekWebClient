@@ -32,8 +32,7 @@ export function useMapLibre({ points, currentIndex }: Props) {
   /*
    * Progression
    */
-  const progress =
-    points.length > 1 ? (currentIndex / (points.length - 1)) * 100 : 0;
+  const progress = points.length > 1 ? (currentIndex / (points.length - 1)) * 100 : 0;
 
   /*
    * Style de carte

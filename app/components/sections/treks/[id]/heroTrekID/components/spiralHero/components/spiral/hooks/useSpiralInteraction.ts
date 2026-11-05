@@ -106,7 +106,7 @@ export function useSpiralInteraction({
     const progress = THREE.MathUtils.clamp(
       scrollY.current / (window.innerHeight * CONFIG.scrollMultiplier),
       0,
-      1,
+      1
     );
 
     /*
@@ -114,8 +114,7 @@ export function useSpiralInteraction({
      */
     const targetCameraY = -(progress * CONFIG.revolutions * 2);
 
-    currentCamera.position.y +=
-      (targetCameraY - currentCamera.position.y) * CONFIG.cameraSmoothing;
+    currentCamera.position.y += (targetCameraY - currentCamera.position.y) * CONFIG.cameraSmoothing;
 
     cameraPositionUniform.value.copy(currentCamera.position);
 
@@ -130,17 +129,12 @@ export function useSpiralInteraction({
 
     spinVelocity.current += scrollDelta * CONFIG.scrollRotationMultiplier;
 
-    spinVelocity.current = THREE.MathUtils.clamp(
-      spinVelocity.current,
-      -0.25,
-      0.25,
-    );
+    spinVelocity.current = THREE.MathUtils.clamp(spinVelocity.current, -0.25, 0.25);
 
     /*
      * Rotation
      */
-    group.rotation.y +=
-      (CONFIG.baseRotationSpeed + spinVelocity.current) * delta * 60;
+    group.rotation.y += (CONFIG.baseRotationSpeed + spinVelocity.current) * delta * 60;
 
     /*
      * Mouse smoothing

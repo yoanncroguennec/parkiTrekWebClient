@@ -5,11 +5,4 @@ import MapLegend from "./mapLegend";
 import MapOverlay from "./mapOverlay";
 import MapInfoOverlay from "./mapInfoOverlay";
 
-export {
-  CurrentPositionMarker,
-  GPXRouteLayer,
-  MapControls,
-  MapLegend,
-  MapOverlay,
-  MapInfoOverlay,
-};
+export { CurrentPositionMarker, GPXRouteLayer, MapControls, MapLegend, MapOverlay, MapInfoOverlay };

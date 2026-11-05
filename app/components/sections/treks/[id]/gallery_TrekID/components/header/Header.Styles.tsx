@@ -289,8 +289,7 @@ export const Headline = styled(Typography)<TypographyProps>(({ theme }) => ({
 // MOT MIS EN ÉVIDENCE
 export const HeadlineHighlight = styled("span")({
   display: "inline-block",
-  background:
-    "linear-gradient(110deg, #72C889 0%, #B7F34A 50%, #E1FF8B 100%)",
+  background: "linear-gradient(110deg, #72C889 0%, #B7F34A 50%, #E1FF8B 100%)",
   WebkitBackgroundClip: "text",
   WebkitTextFillColor: "transparent",
   backgroundClip: "text",

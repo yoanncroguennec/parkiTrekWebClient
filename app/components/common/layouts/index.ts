@@ -9,9 +9,4 @@ import Footer from "./footer";
 // //
 // import NavTopScreen from "./navigations/navTopScreen";
 
-export {
-    ContainerApp,
-    SplitLayout,
-    Navbar,
-    Footer
-};
+export { ContainerApp, SplitLayout, Navbar, Footer };

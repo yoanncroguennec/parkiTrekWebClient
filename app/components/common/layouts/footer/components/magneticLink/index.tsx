@@ -11,10 +11,7 @@ type MagneticLinkProps = {
   href?: string;
 };
 
-export default function MagneticLink({
-  children,
-  href = "#",
-}: MagneticLinkProps) {
+export default function MagneticLink({ children, href = "#" }: MagneticLinkProps) {
   const ref = useRef<HTMLAnchorElement>(null);
 
   useEffect(() => {

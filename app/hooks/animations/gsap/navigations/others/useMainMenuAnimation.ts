@@ -1,10 +1,8 @@
-
 "use client";
 
 import type { RefObject } from "react";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
-
 
 export const MAIN_MENU_THUMBNAIL = {
   width: 270,
@@ -33,7 +31,6 @@ export function useMainMenuAnimation({
   modal,
   itemCount,
 }: UseMainMenuAnimationProps) {
-
   // =========================================
   // CURSOR FOLLOW
   // =========================================
@@ -140,12 +137,7 @@ export function useMainMenuAnimation({
       }
     },
     {
-      dependencies: [
-        isDesktop,
-        modal.active,
-        modal.index,
-        itemCount,
-      ],
+      dependencies: [isDesktop, modal.active, modal.index, itemCount],
       scope: containerRef,
       revertOnUpdate: true,
     }

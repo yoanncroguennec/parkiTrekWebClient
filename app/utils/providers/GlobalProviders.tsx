@@ -31,9 +31,7 @@ export default function GlobalProviders({
       <AudioProvider>
         <UIProvider>
           <NextIntlClientProvider locale={locale} messages={messages}>
-            <ThemeProvider initialTheme={initialTheme}>
-              {children}
-            </ThemeProvider>
+            <ThemeProvider initialTheme={initialTheme}>{children}</ThemeProvider>
           </NextIntlClientProvider>
         </UIProvider>
       </AudioProvider>

@@ -5,10 +5,7 @@ import { Dispatch, SetStateAction } from "react";
 // DATAS
 import { TrekCard } from "@/app/utils/constants/data/treks/map/data";
 // STYLES
-import {
-  PaginationContainer,
-  PaginationDot,
-} from "./MapCountryPagination.Styles";
+import { PaginationContainer, PaginationDot } from "./MapCountryPagination.Styles";
 
 type Props = {
   cards: TrekCard[];
@@ -16,11 +13,7 @@ type Props = {
   setCurrentIndex: Dispatch<SetStateAction<number>>;
 };
 
-export default function MapCountryPagination({
-  cards,
-  currentIndex,
-  setCurrentIndex,
-}: Props) {
+export default function MapCountryPagination({ cards, currentIndex, setCurrentIndex }: Props) {
   return (
     <PaginationContainer>
       {cards.map((_, index) => (

@@ -1,10 +1,7 @@
 "use client";
 
 import { useRef } from "react";
-import {
-  ScrollingTextContent,
-  ScrollingTextWrapper,
-} from "./ScrollingText.Styles";
+import { ScrollingTextContent, ScrollingTextWrapper } from "./ScrollingText.Styles";
 import { useScrollingText } from "./hooks/useScrollingText";
 
 type Props = {
@@ -13,11 +10,7 @@ type Props = {
   duration?: number;
 };
 
-export default function ScrollingText({
-  text,
-  pause = 2,
-  duration = 5,
-}: Props) {
+export default function ScrollingText({ text, pause = 2, duration = 5 }: Props) {
   const containerRef = useRef<HTMLDivElement>(null);
 
   const contentRef = useRef<HTMLDivElement>(null);

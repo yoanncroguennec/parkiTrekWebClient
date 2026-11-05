@@ -76,7 +76,7 @@ export default function SliderSelect({
   const sliderValue = isDiscrete
     ? Math.max(
         0,
-        marks.findIndex((mark) => mark.value === value),
+        marks.findIndex((mark) => mark.value === value)
       )
     : value;
 

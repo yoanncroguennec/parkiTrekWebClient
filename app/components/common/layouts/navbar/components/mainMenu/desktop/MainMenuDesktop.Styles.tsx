@@ -20,24 +20,23 @@ export const AnimationCursor = styled(Box)(() => ({
 }));
 
 export const MainMenuDesktopContent = styled(Box)(() => ({
-          position: "relative",
-          zIndex: 9999,
-          width: "100%",
-          height: "100%",
+  position: "relative",
+  zIndex: 9999,
+  width: "100%",
+  height: "100%",
 }));
 
 export const CloseButton = styled(Button)(() => ({
-            position: "absolute",
-            right: 50,
-            top: 50,
-            zIndex: 10000,
-            border: "none",
-            background: "transparent",
-            color: "rgba(255, 0, 0, 1)",
-            cursor: "pointer",
-            padding: 0,
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "center",
+  position: "absolute",
+  right: 50,
+  top: 50,
+  zIndex: 10000,
+  border: "none",
+  background: "transparent",
+  color: "rgba(255, 0, 0, 1)",
+  cursor: "pointer",
+  padding: 0,
+  display: "flex",
+  alignItems: "center",
+  justifyContent: "center",
 }));
-

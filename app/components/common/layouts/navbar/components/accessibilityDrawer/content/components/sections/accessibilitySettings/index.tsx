@@ -14,10 +14,7 @@ import {
 } from "@/app/components/ui";
 
 // DATAS
-import {
-  getSliderOptions,
-  switchOptions,
-} from "./data/AccessibilitySettings.Data";
+import { getSliderOptions, switchOptions } from "./data/AccessibilitySettings.Data";
 
 import type { AccessibilitySettings } from "../../..";
 

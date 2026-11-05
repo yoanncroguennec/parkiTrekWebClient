@@ -14,18 +14,13 @@ import {
   isValidAudioSettings,
 } from "@/app/utils/constants/storage/audioStorage";
 
-export default function useAudioPlayer(
-  audioRef: RefObject<HTMLAudioElement | null>,
-) {
+export default function useAudioPlayer(audioRef: RefObject<HTMLAudioElement | null>) {
   // ---------------------------------------------------------------------------
   // Initialisation depuis le localStorage
   // ---------------------------------------------------------------------------
 
   const [isPlaying, setIsPlaying] = useState<boolean>(() => {
-    const stored = getLocalStorage<unknown>(
-      STORAGE_KEYS.audio,
-      DEFAULT_AUDIO_SETTINGS,
-    );
+    const stored = getLocalStorage<unknown>(STORAGE_KEYS.audio, DEFAULT_AUDIO_SETTINGS);
 
     if (isValidAudioSettings(stored)) {
       return stored.isPlaying;
@@ -35,10 +30,7 @@ export default function useAudioPlayer(
   });
 
   const [volume, setVolume] = useState<number>(() => {
-    const stored = getLocalStorage<unknown>(
-      STORAGE_KEYS.audio,
-      DEFAULT_AUDIO_SETTINGS,
-    );
+    const stored = getLocalStorage<unknown>(STORAGE_KEYS.audio, DEFAULT_AUDIO_SETTINGS);
 
     if (isValidAudioSettings(stored)) {
       return stored.volume;
@@ -59,7 +51,7 @@ export default function useAudioPlayer(
       from: number,
       to: number,
       duration: number,
-      callback?: () => void,
+      callback?: () => void
     ) => {
       const stepTime = 50;
       const steps = duration / stepTime;
@@ -83,7 +75,7 @@ export default function useAudioPlayer(
         }
       }, stepTime);
     },
-    [],
+    []
   );
 
   // ---------------------------------------------------------------------------
@@ -154,7 +146,7 @@ export default function useAudioPlayer(
           });
       }
     },
-    [audioRef, isPlaying],
+    [audioRef, isPlaying]
   );
 
   // ---------------------------------------------------------------------------

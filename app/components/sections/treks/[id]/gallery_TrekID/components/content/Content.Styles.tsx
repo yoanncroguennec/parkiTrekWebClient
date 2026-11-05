@@ -1,11 +1,5 @@
 import Image from "next/image";
-import {
-  styled,
-  Box,
-  IconButton,
-  Stack,
-  Typography,
-} from "@mui/material";
+import { styled, Box, IconButton, Stack, Typography } from "@mui/material";
 import type { BoxProps, TypographyProps } from "@mui/material";
 
 // ======================================================
@@ -51,8 +45,7 @@ export const PhotoCard = styled(Box)<BoxProps>(({ theme }) => ({
   backgroundColor: "#D9DDD5",
   aspectRatio: "2.8 / 1",
 
-  clipPath:
-    "polygon(10% 8%, 96% 0%, 100% 12%, 91% 100%, 3% 100%, 0% 88%)",
+  clipPath: "polygon(10% 8%, 96% 0%, 100% 12%, 91% 100%, 3% 100%, 0% 88%)",
 
   "&:hover .gallery-image": {
     transform: "scale(1.045)",
@@ -178,7 +171,7 @@ export const PhotoCategory = styled(Box)(({ theme }) => ({
 
   [theme.breakpoints.up("md")]: {
     padding: "9px 16px",
-  margin: "15px 150px",
+    margin: "15px 150px",
     "& .MuiTypography-root": {
       fontSize: 11,
       letterSpacing: "0.14em",
@@ -190,21 +183,19 @@ export const PhotoCategory = styled(Box)(({ theme }) => ({
 // NUMÉRO
 // ======================================================
 
-export const PhotoNumber = styled(Typography)<TypographyProps>(
-  ({ theme }) => ({
-    // flexShrink: 0,
+export const PhotoNumber = styled(Typography)<TypographyProps>(({ theme }) => ({
+  // flexShrink: 0,
 
-    color: "#FFFFFF",
-    fontSize: 24,
-    fontWeight: 800,
-    lineHeight: 1,
-    letterSpacing: "-0.05em",
+  color: "#FFFFFF",
+  fontSize: 24,
+  fontWeight: 800,
+  lineHeight: 1,
+  letterSpacing: "-0.05em",
 
-    [theme.breakpoints.up("md")]: {
-      fontSize: 40,
-    },
-  }),
-);
+  [theme.breakpoints.up("md")]: {
+    fontSize: 40,
+  },
+}));
 
 // ======================================================
 // CONTENU EN BAS DE L'IMAGE
@@ -274,24 +265,22 @@ export const PhotoDescription = styled(Typography)(({ theme }) => ({
 // TITRE
 // ======================================================
 
-export const PhotoTitle = styled(Typography)<TypographyProps>(
-  ({ theme }) => ({
-    color: "#FFFFFF",
+export const PhotoTitle = styled(Typography)<TypographyProps>(({ theme }) => ({
+  color: "#FFFFFF",
 
-    fontSize: "clamp(1.35rem, 5vw, 2rem)",
-    fontWeight: 800,
-    letterSpacing: "-0.045em",
-    lineHeight: 1.05,
+  fontSize: "clamp(1.35rem, 5vw, 2rem)",
+  fontWeight: 800,
+  letterSpacing: "-0.045em",
+  lineHeight: 1.05,
 
-    overflowWrap: "anywhere",
-    textWrap: "balance",
+  overflowWrap: "anywhere",
+  textWrap: "balance",
 
-    [theme.breakpoints.up("md")]: {
-      fontSize: "clamp(2.5rem, 4vw, 3.5rem)",
-      letterSpacing: "-0.055em",
-    },
-  }),
-);
+  [theme.breakpoints.up("md")]: {
+    fontSize: "clamp(2.5rem, 4vw, 3.5rem)",
+    letterSpacing: "-0.055em",
+  },
+}));
 
 // ======================================================
 // BOUTON DE NAVIGATION
@@ -311,8 +300,7 @@ export const GalleryArrow = styled(IconButton)(({ theme }) => ({
   backdropFilter: "blur(10px)",
   WebkitBackdropFilter: "blur(10px)",
 
-  transition:
-    "background-color 300ms ease, color 300ms ease, transform 300ms ease",
+  transition: "background-color 300ms ease, color 300ms ease, transform 300ms ease",
 
   margin: "50px",
 
@@ -324,7 +312,7 @@ export const GalleryArrow = styled(IconButton)(({ theme }) => ({
   [theme.breakpoints.up("md")]: {
     width: 56,
     height: 56,
-margin: "100px",
+    margin: "100px",
     "& svg": {
       width: 22,
       height: 22,

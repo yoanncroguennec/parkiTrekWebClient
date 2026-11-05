@@ -1,14 +1,7 @@
 // GOOD
-import {
-  Box,
-  Paper,
-  PaperProps,
-  Stack,
-  styled,
-  Typography,
-} from "@mui/material";
 import Image from "next/image";
-
+import { Link } from "@/i18n/navigation";
+import { Box, Paper, PaperProps, Stack, styled, Typography } from "@mui/material";
 import { mobileDrawerBG_ClipPath } from "../../shapes/mobileDrawerBG";
 
 // IMAGE LOGO
@@ -60,7 +53,7 @@ export const SubTitle = styled(Typography)(() => ({
   fontWeight: "300",
 }));
 
-export const MenuLinkWrapper = styled(Box)(() => ({
+export const MainMenuLink = styled(Link)(() => ({
   width: "min(230px, 65vw)",
   maxWidth: "230px",
   padding: "8px 0",

@@ -4,10 +4,7 @@ import { RefObject } from "react";
 import { useGSAP } from "@gsap/react";
 import { gsap } from "@/app/utils/libs/gsap";
 
-export function useMenuAnimation(
-  rootRef: RefObject<HTMLDivElement | null>,
-  open: boolean,
-) {
+export function useMenuAnimation(rootRef: RefObject<HTMLDivElement | null>, open: boolean) {
   useGSAP(() => {
     if (!rootRef.current) return;
 
@@ -35,7 +32,7 @@ export function useMenuAnimation(
           delay: 0.3,
           duration: 1,
           ease: "power4.out",
-        },
+        }
       );
     } else {
       gsap.to(rootRef.current, {

@@ -6,9 +6,7 @@ import { gsap } from "gsap";
 
 import { livePlatforms } from "../../../../components/ui/live/livePlatform/data";
 
-export function useLivePlatformAnimation(
-  platformNameRef: RefObject<HTMLSpanElement | null>,
-) {
+export function useLivePlatformAnimation(platformNameRef: RefObject<HTMLSpanElement | null>) {
   useEffect(() => {
     const platformElement = platformNameRef.current;
 
@@ -70,7 +68,7 @@ export function useLivePlatformAnimation(
         duration: 0.6,
 
         ease: "power4.out",
-      },
+      }
     );
 
     // =====================================================

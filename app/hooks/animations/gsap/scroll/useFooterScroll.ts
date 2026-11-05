@@ -33,7 +33,7 @@ export default function useFooterScroll() {
             end: "85vh top",
             scrub: 1.5,
           },
-        },
+        }
       );
     }, footer);
 
