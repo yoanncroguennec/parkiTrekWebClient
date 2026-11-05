@@ -6,7 +6,7 @@ import { Area } from "@/app/utils/constants/data/treks/map/data";
 // HELPERS
 import { numberToWords } from "@/app/utils/helpers";
 // ICONS
-import { FaHeart } from 'react-icons/fa'
+import { FaHeart } from '@/app/utils/constants/icons'
 // STYLES
 import { IntroBadge, IntroTitle, IntroTitleHighlight } from './HeroHeader.Styles'
 

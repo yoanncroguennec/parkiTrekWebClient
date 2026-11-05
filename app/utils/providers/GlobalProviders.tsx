@@ -7,9 +7,9 @@ import { NextIntlClientProvider } from "next-intl";
 import { AppRouterCacheProvider } from "@mui/material-nextjs/v15-appRouter";
 
 // PROVIDERS
-// import ThemeProvider from "./styles/ThemeProvider";
-// import { AudioProvider } from "./audios/AudioProvider";
-// import UIProvider from "./ui/UIProvider";
+import ThemeProvider from "./styles/ThemeProvider";
+import { AudioProvider } from "./audios/AudioProvider";
+import UIProvider from "./ui/UIProvider";
 
 type ThemeMode = "light" | "dark";
 
@@ -28,15 +28,15 @@ export default function GlobalProviders({
 }: GlobalProvidersProps) {
   return (
     <AppRouterCacheProvider>
-      {/* <AudioProvider>
-        <UIProvider> */}
+      <AudioProvider>
+        <UIProvider>
           <NextIntlClientProvider locale={locale} messages={messages}>
-            {/* <ThemeProvider initialTheme={initialTheme}> */}
+            <ThemeProvider initialTheme={initialTheme}>
               {children}
-            {/* </ThemeProvider> */}
+            </ThemeProvider>
           </NextIntlClientProvider>
-        {/* </UIProvider>
-      </AudioProvider> */}
+        </UIProvider>
+      </AudioProvider>
     </AppRouterCacheProvider>
   );
 }

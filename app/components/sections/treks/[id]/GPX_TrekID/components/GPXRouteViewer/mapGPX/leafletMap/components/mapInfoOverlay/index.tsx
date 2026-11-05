@@ -1,13 +1,17 @@
 "use client";
 
 import { useEffect, useMemo, useRef } from "react";
-
 import { Box, keyframes, MenuItem } from "@mui/material";
-
-import { IoClose } from "react-icons/io5";
-
 import gsap from "gsap";
-
+// 
+import { StatCard } from "./elevationChart/statCard";
+import { GlassButton } from "./elevationChart/glassButton";
+import ChartContainer from "./chartContainer";
+// TYPES
+import type { GPXViewerProps } from "../../../types/gpxViewer";
+// ICONS
+import { IoClose } from "@/app/utils/constants/icons";
+// STYLES
 import {
   InfoOverlay,
   InfoOverlayHeader,
@@ -20,12 +24,6 @@ import {
   PulseGlow,
 } from "./MapInfoOverlay.Styles";
 
-import { StatCard } from "./elevationChart/statCard";
-import { GlassButton } from "./elevationChart/glassButton";
-
-import ChartContainer from "./chartContainer";
-
-import type { GPXViewerProps } from "../../../types/gpxViewer";
 
 export type MapInfoOverlayProps = GPXViewerProps & {
   open: boolean;

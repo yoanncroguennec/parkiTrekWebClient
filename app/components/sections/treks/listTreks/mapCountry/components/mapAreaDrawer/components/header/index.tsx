@@ -5,9 +5,12 @@ import { useRef } from "react";
 // COMPONENTS
 import ProgressRing from "../progressRing";
 // HOOKS
-import { useHeaderAnimation } from "../../hooks/useHeaderAnimation";
+import { useHeaderAnimation } from "@/app/hooks";
 // ICONS
-import { IoClose, IoLocationOutline } from "react-icons/io5";
+import {
+  IoClose,
+  IoLocationOutline,
+} from "@/app/utils/constants/icons";
 // STYLES
 import {
   DepartmentBadge,

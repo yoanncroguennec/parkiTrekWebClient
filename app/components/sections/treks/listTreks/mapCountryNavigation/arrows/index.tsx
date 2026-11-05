@@ -7,7 +7,7 @@ import { CustomTooltip } from "./customTooltip";
 // HOOKS
 import { useArrowButtonAnimation } from "../hooks/useArrowButtonAnimation";
 // ICONS
-import { MdArrowBackIosNew, MdArrowForwardIos } from "react-icons/md";
+import { MdArrowBackIosNew, MdArrowForwardIos } from "@/app/utils/constants/icons";
 // STYLES
 import { ArrowButtonContainer } from "./ArrowButton.Styles";
 

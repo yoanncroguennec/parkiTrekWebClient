@@ -1,8 +1,12 @@
-import { Typography } from "@mui/material";
-import { photos } from "../../data";
-import { FiArrowUpRight } from "react-icons/fi";
-import type { RefObject } from "react";
+"use client"
 
+import type { RefObject } from "react";
+import { Typography } from "@mui/material";
+// ICONS
+import { FiArrowUpRight } from "@/app/utils/constants/icons";
+// 
+import { photos } from "../../data";
+// STYLES
 import {
   ContentTrack,
   PhotoCard,

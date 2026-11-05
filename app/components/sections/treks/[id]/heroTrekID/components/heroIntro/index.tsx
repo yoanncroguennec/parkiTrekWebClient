@@ -1,12 +1,13 @@
 "use client"
 
 // GOOD
+// import CircleCTA from "@/app/components/common/cta/circleCTA";
+// UI
+import { PrimaryButton } from "@/app/components/ui";
 // DATAS
 import { Area } from "@/app/utils/constants/data/treks/map/data";
 // ICONS
-import { LiaMountainSolid } from "react-icons/lia";
-// import CircleCTA from "@/app/components/common/cta/circleCTA";
-import { PrimaryButton } from "@/app/components/ui";
+import { LiaMountainSolid } from "@/app/utils/constants/icons";
 // STYLES
 import {
   HeroIntroRoot,

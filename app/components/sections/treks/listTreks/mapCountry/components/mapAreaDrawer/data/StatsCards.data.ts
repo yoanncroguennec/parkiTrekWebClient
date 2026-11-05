@@ -1,5 +1,9 @@
-import { IoCalendarOutline, IoFootstepsOutline, IoLocationOutline } from "react-icons/io5";
-import type { IconType } from "react-icons";
+import {
+    type IconType,
+    IoCalendarOutline,
+    IoFootstepsOutline,
+    IoLocationOutline,
+} from "@/app/utils/constants/icons";
 
 export interface StatsCard {
   value: number;

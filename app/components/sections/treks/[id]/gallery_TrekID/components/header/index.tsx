@@ -1,11 +1,15 @@
 "use client";
 
-import { FiArrowLeft, FiArrowRight } from "react-icons/fi";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
 import type { RefObject } from "react";
-
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+// DATA
 import { photos } from "../../data";
-
+// ICONS
+import {
+  FiArrowLeft,
+  FiArrowRight,
+} from "@/app/utils/constants/icons";
+// STYLES
 import {
   HeaderContainer,
   HeaderTop,

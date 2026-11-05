@@ -1,14 +1,14 @@
 "use client";
 
 import type { RefObject } from "react";
-import type { ButtonProps } from "@mui/material/Button";
-import type { IconType } from "react-icons";
-
+import type { ButtonProps } from "@mui/material";
+// ICONS
+import { type IconType } from "@/app/utils/constants/icons";
 // ANIMATIONS
 import {
   animatePrimaryButtonHover,
   animatePrimaryButtonLeave,
-} from "./animations/primaryButtonHover";
+} from "@/app/utils/animations";
 
 // STYLES
 import { PrimaryButtonRoot, PrimaryButtonGroup } from "./PrimaryButton.Styles";

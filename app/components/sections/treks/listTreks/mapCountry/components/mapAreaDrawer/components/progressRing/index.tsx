@@ -3,7 +3,7 @@
 
 import { useRef, useState } from "react";
 // HOOKS
-import { useProgressRingAnimation } from "../../hooks/useProgressRingAnimation";
+import { useProgressRingAnimation } from "@/app/hooks";
 // STYLES
 import {
   ProgressLabel,

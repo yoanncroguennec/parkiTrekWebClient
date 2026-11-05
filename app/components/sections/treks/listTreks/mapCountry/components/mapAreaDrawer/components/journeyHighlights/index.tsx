@@ -2,11 +2,10 @@
 "use client";
 
 import { createRef, useMemo } from "react";
-import { IconType } from "react-icons";
-
 // HOOKS
-import { useJourneyHighlightsAnimation } from "../../hooks/useJourneyHighlightsAnimation";
-
+import { useJourneyHighlightsAnimation } from "@/app/hooks";
+// ICONS
+import { type IconType } from "@/app/utils/constants/icons";
 // STYLES
 import {
   HighlightAccent,

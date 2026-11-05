@@ -1,14 +1,14 @@
-import type { IconType } from "react-icons";
-
+// ICONS
 import {
-  IoFlagOutline,
-  IoLocationOutline,
-  IoPeopleOutline,
-  IoTrophyOutline,
-  IoVideocamOutline,
-  IoWalkOutline,
-  IoWaterOutline,
-} from "react-icons/io5";
+    type IconType,
+    IoFlagOutline,
+    IoLocationOutline,
+    IoPeopleOutline,
+    IoTrophyOutline,
+    IoVideocamOutline,
+    IoWalkOutline,
+    IoWaterOutline,
+} from "@/app/utils/constants/icons";
 
 export type TrekStep = {
   title: string;

@@ -1,3 +1,7 @@
 import GlobalProviders from "./GlobalProviders";
+import { AudioProvider, useAudio } from "./audios/AudioProvider";
 
-export { GlobalProviders };
+export {
+    GlobalProviders,
+    AudioProvider, useAudio,
+};

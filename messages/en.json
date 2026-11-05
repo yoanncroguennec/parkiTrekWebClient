@@ -4,49 +4,49 @@
       "title": "HOME",
       "subtitle": "The project at a glance",
       "alt": "home",
-      "img": "/assets/imgs/components/common/layouts/navbar/navbarApp/menu/img_home_2.png"
+      "img": "/assets/imgs/menu/desktop/img_home_2.png"
     },
     "trek": {
       "title": "THE TREK",
       "subtitle": "Crossing France on foot",
       "alt": "The Trek",
-      "img": "/assets/imgs/components/common/layouts/navbar/navbarApp/menu/img_theTrek_2.png"
+      "img": "/assets/imgs/menu/desktop/img_theTrek_2.png"
     },
     "parkinson": {
       "title": "PARKINSON'S DISEASE",
       "subtitle": "Understanding the condition",
       "alt": "Parkinson’s disease",
-      "img": "/assets/imgs/components/common/layouts/navbar/navbarApp/menu/img_parkinson_2.png"
+      "img": "/assets/imgs/menu/desktop/img_parkinson_2.png"
     },
     "story": {
       "title": "MY STORY",
       "subtitle": "My life journey",
       "alt": "My story",
-      "img": "/assets/imgs/components/common/layouts/navbar/navbarApp/menu/img_myStory_2.png"
+      "img": "/assets/imgs/menu/desktop/img_myStory_2.png"
     },
     "gallery": {
       "title": "GALLERY",
       "subtitle": "Photos & videos of treks, talks...",
       "alt": "Gallery",
-      "img": "/assets/imgs/components/common/layouts/navbar/navbarApp/menu/img_galery_2.png"
+      "img": "/assets/imgs/menu/desktop/img_galery_2.png"
     },
     "journal": {
       "title": "TRAVEL DIARY",
       "subtitle": "Day-to-day updates",
       "alt": "Travel diary",
-      "img": "/assets/imgs/components/common/layouts/navbar/navbarApp/menu/img_travelJournal.png"
+      "img": "/assets/imgs/menu/desktop/img_travelJournal.png"
     },
     "support": {
       "title": "SUPPPORT",
       "subtitle": "Advancing the cause",
       "alt": "Support",
-      "img": "/assets/imgs/components/common/layouts/navbar/navbarApp/menu/img_support_2.png"
+      "img": "/assets/imgs/menu/desktop/img_support_2.png"
     },
     "contact": {
       "title": "CONTACT",
       "subtitle": "Let’s stay in touch",
       "alt": "Contact",
-      "img": "/assets/imgs/components/common/layouts/navbar/navbarApp/menu/img_contact_2.png"
+      "img": "/assets/imgs/menu/desktop/img_contact_2.png"
     }
   },
   "HomePage": {

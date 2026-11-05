@@ -4,49 +4,49 @@
       "title": "ACCUEIL",
       "subtitle": "Le projet en un regard",
       "alt": "accueil",
-      "img": "/assets/imgs/components/common/layouts/navbar/navbarApp/menu/img_home_2.png"
+      "img": "/assets/imgs/menu/desktop/img_home_2.png"
     },
     "trek": {
       "title": "LE TREK",
       "subtitle": "Traverser la France à pied",
       "alt": "Le Trek",
-      "img": "/assets/imgs/components/common/layouts/navbar/navbarApp/menu/img_theTrek_2.png"
+      "img": "/assets/imgs/menu/desktop/img_theTrek_2.png"
     },
     "parkinson": {
       "title": "LA MALADIE DE PARKINSON",
       "subtitle": "Comprendre la maladie",
       "alt": "La maladie de Parkinson",
-      "img": "/assets/imgs/components/common/layouts/navbar/navbarApp/menu/img_parkinson_2.png"
+      "img": "/assets/imgs/menu/desktop/img_parkinson_2.png"
     },
     "story": {
       "title": "MON HISTOIRE",
       "subtitle": "Mon parcours de vie",
       "alt": "Mon histoire",
-      "img": "/assets/imgs/components/common/layouts/navbar/navbarApp/menu/img_myStory_2.png"
+      "img": "/assets/imgs/menu/desktop/img_myStory_2.png"
     },
     "gallery": {
       "title": "GALERIE",
       "subtitle": "Photos & vidéos des treks, conférences...",
       "alt": "Galerie",
-      "img": "/assets/imgs/components/common/layouts/navbar/navbarApp/menu/img_galery_2.png"
+      "img": "/assets/imgs/menu/desktop/img_galery_2.png"
     },
     "journal": {
       "title": "JOURNAL DE BORD",
       "subtitle": "Les étapes au quotidien",
       "alt": "Journal de bord",
-      "img": "/assets/imgs/components/common/layouts/navbar/navbarApp/menu/img_travelJournal.png"
+      "img": "/assets/imgs/menu/desktop/img_travelJournal.png"
     },
     "support": {
       "title": "SOUTENIR",
       "subtitle": "Faire avancer la cause",
       "alt": "Soutenir",
-      "img": "/assets/imgs/components/common/layouts/navbar/navbarApp/menu/img_support_2.png"
+      "img": "/assets/imgs/menu/desktop/img_support_2.png"
     },
     "contact": {
       "title": "CONTACT",
       "subtitle": "Restons en contact",
       "alt": "Contact",
-      "img": "/assets/imgs/components/common/layouts/navbar/navbarApp/menu/img_contact_2.png"
+      "img": "/assets/imgs/menu/desktop/img_contact_2.png"
     }
   },
   "HomePage": {

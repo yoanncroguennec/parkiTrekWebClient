@@ -2,11 +2,10 @@
 
 import { createRef, useMemo } from "react";
 import { Box } from "@mui/material";
-import type { IconType } from "react-icons";
-
 // HOOKS
-import { useTimelineAnimation } from "../../hooks/useTimelineAnimation";
-
+import { useTimelineAnimation } from "@/app/hooks";
+// ICONS
+import { type IconType } from "@/app/utils/constants/icons";
 // STYLES
 import {
   TimelineContainer,

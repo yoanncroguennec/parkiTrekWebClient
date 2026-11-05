@@ -2,7 +2,9 @@
 
 import { useState } from "react";
 import { useMediaQuery, useTheme } from "@mui/material";
-
+// ICONS
+import { MdInfoOutline } from "@/app/utils/constants/icons";
+// STYLES
 import {
   LegendContainer,
   LegendTrigger,
@@ -16,7 +18,6 @@ import {
   LegendLabel,
   InfoButton,
 } from "./MapLegend.Styles";
-import { MdInfoOutline } from "react-icons/md";
 
 const legendItems = [
   ["#8B0000", "> 15 %"],

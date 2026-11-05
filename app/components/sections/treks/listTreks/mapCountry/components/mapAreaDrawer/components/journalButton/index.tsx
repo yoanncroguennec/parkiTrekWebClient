@@ -1,17 +1,15 @@
 // GOOD
 "use client";
 
-import { useRef } from "react";
 import Link from "next/link";
 import { useLocale } from "next-intl";
-import { IoArrowForward } from "react-icons/io5";
-
+import { useRef } from "react";
 // DATA
 import { Area } from "@/app/utils/constants/data/treks/map/data";
-
 // HOOKS
-import { useJournalButtonAnimation } from "../../hooks/useJournalButtonAnimation";
-
+import { useJournalButtonAnimation } from "@/app/hooks"
+// ICONS
+import { IoArrowForward } from "@/app/utils/constants/icons";
 // STYLES
 import { JournalButtonAction, JournalButtonContainer } from "./JournalButton.Styles";
 

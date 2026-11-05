@@ -1,3 +1,6 @@
+// DATA
+import { Area } from "@/app/utils/constants/data/treks/map/data";
+// ICONS
 import {
   FaRoute,
   FaCalendarAlt,
@@ -5,9 +8,7 @@ import {
   FaHeart,
   FaMapMarkerAlt,
   FaFlagCheckered,
-} from "react-icons/fa";
-
-import { Area } from "@/app/utils/constants/data/treks/map/data";
+} from "@/app/utils/constants/icons";
 
 export const heroStats = (selectedArea: Area) => [
   {

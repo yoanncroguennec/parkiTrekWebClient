@@ -1,7 +1,11 @@
 "use client";
 
-import { MdMap, MdSatelliteAlt } from "react-icons/md";
-
+// ICONS
+import {
+  MdMap,
+  MdSatelliteAlt,
+} from "@/app/utils/constants/icons";
+// STYLES
 import {
   ControlsContainer,
   ActiveBackground,

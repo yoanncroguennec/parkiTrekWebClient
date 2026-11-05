@@ -1,10 +1,9 @@
 "use client";
 
 import { forwardRef, type ReactNode } from "react";
-
-// import { Navbar, Footer } from "@/app/components/common/layouts";
-
 import { Box } from "@mui/material";
+// LAYOUTS
+import { Navbar, Footer } from "@/app/components/common/layouts";
 
 type Props = {
   children: ReactNode;
@@ -17,7 +16,7 @@ const ContainerApp = forwardRef<HTMLDivElement, Props>(
   ({ children, displayNavbar = true, displayFooter = true, className }, ref) => {
     return (
       <Box ref={ref} className={className}>
-        {/* {displayNavbar && <Navbar />} */}
+        {displayNavbar && <Navbar />}
 
         {children}
 
