@@ -1,3 +1,5 @@
+"use client"
+
 import { Stack, Typography, TypographyProps, styled } from "@mui/material";
 
 export const Quote = styled(Stack)(({ theme }) => ({

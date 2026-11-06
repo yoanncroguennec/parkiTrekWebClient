@@ -2,6 +2,7 @@
 import { Box, BoxProps, Stack, StackProps, styled } from "@mui/material";
 // SHAPES
 import { menuMobileDrawerBG_ClipPath } from "@/app/components/common/shapes";
+import { zIndex } from "@/app/utils/constants/styles/theme/ZIndex";
 
 const bgImgMainMenuCellular = "/assets/imgs/menu/mobile/bgImgMainMenuCellular.png";
 
@@ -11,7 +12,7 @@ export const MainMenuContainer = styled(Stack)<StackProps>(() => ({
   overflow: "hidden",
   position: "fixed",
   width: "100vw",
-  zIndex: 9999,
+  zIndex: zIndex.fullScreenMenu,
 }));
 
 export const Background = styled(Box)<BoxProps>(() => ({

@@ -1,9 +1,10 @@
+import { zIndex } from "@/app/utils/constants/styles/theme/ZIndex";
 import { Box, Button, Stack, styled } from "@mui/material";
 
 export const MainMenuDesktopContainer = styled(Stack)(() => ({
   position: "fixed",
   inset: 0,
-  zIndex: 999,
+  zIndex: zIndex.fullScreenMenu,
   background: "#050505",
   overflow: "hidden",
   clipPath: "circle(0% at 100% 0%)",

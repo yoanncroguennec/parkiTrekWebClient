@@ -1,6 +1,6 @@
 import { Drawer, useMediaQuery, useTheme } from "@mui/material";
 //
-import AccessibilityDrawerContent from "./content";
+import Content from "./content";
 
 interface AccessibilityDrawerProps {
   open: boolean;
@@ -59,7 +59,7 @@ export default function AccessibilityDrawer({ open, onClose }: AccessibilityDraw
         },
       }}
     >
-      <AccessibilityDrawerContent />
+      <Content />
     </Drawer>
   );
 }

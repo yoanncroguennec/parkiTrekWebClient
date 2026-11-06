@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import { Stack, StackProps, styled } from "@mui/material";
+import { zIndex } from "@/app/utils/constants/styles/theme/ZIndex";
 
 export const NavbarContainer = styled(Stack)<StackProps>(({ theme }) => ({
   alignItems: "center",
@@ -13,7 +14,7 @@ export const NavbarContainer = styled(Stack)<StackProps>(({ theme }) => ({
   top: 0,
   left: 0,
   width: "100%",
-  zIndex: 9999,
+  zIndex: zIndex.appBar,
   [theme.breakpoints.up("md")]: {
     background: "rgba(255,255,255,.08)",
     backdropFilter: "blur(24px)",

@@ -1,6 +1,6 @@
 // ACCESSIBILITY
 import useIdle from "./accessibility/idle/useIdle";
-import { useIdleTimeout } from "./accessibility/idle/useIdleTimeout";
+import { default as useIdleTimeout } from "./accessibility/idle/useIdleTimeout";
 
 // ANIMATIONS
 import { useAnimationCursor } from "./animations/cursor/useAnimationCursor";

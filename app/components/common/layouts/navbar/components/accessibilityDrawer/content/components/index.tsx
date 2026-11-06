@@ -1,6 +1,6 @@
 import LocalClock from "./clock";
-import AccessibilitySettingsSection from "./sections/accessibilitySettings";
-import AudioSection from "./sections/audio";
-import MusicWavesAnimation from "./animations/musicWavesAnimation";
+import AccessibilitySettingsSection from "./accessibilitySettings";
+import AudioSection from "./audio";
+import MusicWavesAnimation from "./audio/musicWavesAnimation";
 
 export { LocalClock, AccessibilitySettingsSection, AudioSection, MusicWavesAnimation };

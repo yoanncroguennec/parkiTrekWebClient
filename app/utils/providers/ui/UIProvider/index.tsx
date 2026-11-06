@@ -1,8 +1,8 @@
-// providers/UIProvider.tsx
 "use client";
 
-import { UIContext } from "@/app/utils/contexts/ui/UIContext";
 import { ReactNode, useState } from "react";
+// 
+import { UIContext } from "@/app/utils/contexts/ui/UIContext";
 
 export default function UIProvider({ children }: { children: ReactNode }) {
   const [accessibilityOpen, setAccessibilityOpen] = useState(false);

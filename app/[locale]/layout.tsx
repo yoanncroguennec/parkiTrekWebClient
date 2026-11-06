@@ -8,6 +8,10 @@ import { getMessages, getLocale } from "next-intl/server";
 import { canela, dahlia, neon } from "@/app/utils/constants/styles/fonts";
 import { cookies } from "next/headers";
 import { GlobalProviders } from "../utils/providers";
+// UI
+import { GlobalFeedback } from "../components/ui";
+// EFFECTS
+import { GlobalEffects } from "../components/effects";
 // STYLES
 import "@/app/utils/constants/styles/globals.css";
 
@@ -32,7 +36,16 @@ export default async function LocaleLayout({ children }: { children: React.React
   return (
     <html lang={locale} className={`${dahlia.variable} ${canela.variable} ${neon.variable}`}>
       <body cz-shortcut-listen="true">
-        <GlobalProviders locale={locale} messages={messages} initialTheme={initialTheme}>
+        {/* AUDIO SOUND BG + LANGUAGES */}
+        <GlobalProviders
+          locale={locale}
+          messages={messages}
+          initialTheme={initialTheme}
+        >
+          {/* IDLE + CUSTOM CURSOR */}
+          <GlobalEffects />
+          {/* NOTIFICATIONS */}
+          <GlobalFeedback />
           {children}
         </GlobalProviders>
       </body>
