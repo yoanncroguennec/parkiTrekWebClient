@@ -22,10 +22,10 @@ import { CircleReveal } from "@/app/components/effects";
 
 // SECTIONS
 import {
-  // DonationSelection,
   PaymentsDonationsHero,
-  // ListSponsors,
   SupportShowcase,
+  DonationSelection,
+  ListSponsors,
 } from "@/app/components/sections/payments-donations";
 
 export default function PaymentsDonationsClient() {
@@ -36,8 +36,8 @@ export default function PaymentsDonationsClient() {
   const sections = [
     <PaymentsDonationsHero key="hero" animationReady={animationReady} />,
     <SupportShowcase key="support" />,
-    // <DonationSelection key="donation" />,
-    // <ListSponsors key="sponsors" />,
+    <DonationSelection key="donation" />,
+    <ListSponsors key="sponsors" />,
   ];
 
   return (

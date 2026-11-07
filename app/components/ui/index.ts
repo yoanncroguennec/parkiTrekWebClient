@@ -18,7 +18,10 @@ import {
 } from "./data-display"
 
 // FEEDBACK
-import GlobalFeedback from "./feedback/globalFeedback";
+import {
+    GlobalFeedback,
+    Tooltip,
+} from "./feedback"
 
 // FORMS
 import SliderSelect from "./forms/sliders/sliderSelect";
@@ -59,8 +62,8 @@ export {
     QuoteDefault,
 
   // FEEDBACK
-  GlobalFeedback,
-
+    GlobalFeedback,
+    Tooltip,
   // FORMS
   SliderSelect,
 
