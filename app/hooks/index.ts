@@ -17,6 +17,11 @@ import useTrekAnimation from "./animations/gsap/trek/useTrekAnimation";
 import { useLivePlatformAnimation } from "./animations/gsap/text/useLivePlatformAnimation";
 import { useCloseButtonAnimation } from "./animations/gsap/ui/buttons/useCloseButtonAnimation";
 import { useMainMenuMobileContentAnimation } from "./animations/gsap/navigations/useMainMenuMobileContentAnimation";
+import { useCircleReveal } from "./animations/gsap/transitions/reveal/useCircleReveal";
+import { useFadeInUp } from "./animations/gsap/fadeInUp/useFadeInUp";
+import { useCounterAnimation } from "./animations/gsap/counter/useCounterAnimation";
+import { useSlideInRotate } from "./animations/gsap/sideInRotate/useSlideInRotate";
+import { useSplitText } from "./animations/gsap/text/splitText/useSplitText";
 
 // AUDIOS
 import useAudioPlayer from "./audios/useAudioPlayer";
@@ -50,6 +55,11 @@ export {
   useLivePlatformAnimation,
   useCloseButtonAnimation,
   useMainMenuMobileContentAnimation,
+  useCircleReveal,
+  useCounterAnimation,
+  useFadeInUp,
+  useSlideInRotate,
+  useSplitText,
 
   // AUDIOS
   useAudioPlayer,

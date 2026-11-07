@@ -1,7 +1,7 @@
 // GOOD
 "use client";
 
-import { Box, Typography, TypographyProps, styled } from "@mui/material";
+import { Box, styled } from "@mui/material";
 
 export const IntroSection = styled(Box)(() => ({
   position: "relative",

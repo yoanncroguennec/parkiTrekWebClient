@@ -1,13 +1,35 @@
-import React from 'react'
-import { Stack, Typography } from '@mui/material'
-import { ContainerApp } from '@/app/components/common/layouts'
+import type { Metadata } from "next";
+import { getTranslations } from "next-intl/server";
+import PaymentsDonationsClient from "./PaymentsDonationsClient";
 
-export default function Page() {
-  return (
-    <ContainerApp>
-        <Stack sx={{ alignItems: "center", height: "100vh", justifyContent: "center", width: "100vw" }}>
-            <Typography sx={{ fontSize: "20px" }}>PAGE</Typography>
-        </Stack>
-    </ContainerApp>
-  )
+type Props = {
+  params: Promise<{
+    locale: string;
+  }>;
+};
+
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const { locale } = await params;
+
+  const t = await getTranslations({
+    locale,
+    namespace: "PaymentsDonationsPage",
+  });
+
+  return {
+    title: t("metadata.title"),
+    description: t("metadata.desc"),
+    alternates: {
+      canonical: `/${locale}/payments-donations`,
+      languages: {
+        fr: "/fr/payments-donations",
+        en: "/en/payments-donations",
+        "x-default": "/fr/payments-donations",
+      },
+    },
+  };
+}
+
+export default function PaymentsDonationsPage() {
+  return <PaymentsDonationsClient />;
 }

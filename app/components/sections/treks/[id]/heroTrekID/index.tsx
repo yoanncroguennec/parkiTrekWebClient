@@ -3,7 +3,7 @@ import { SplitLayout } from "@/app/components/common/layouts";
 // DATAS
 import { Area } from "@/app/utils/constants/data/treks/map/data";
 // COMPONENTS
-import { BackgroundImage } from "@/app/components/common/medias";
+import { BackgroundImage } from "@/app/components/common/media";
 // COMPONENTS
 import { HeroHeader, HeroIntro, HeroStats, SpiralHero } from "./components";
 
