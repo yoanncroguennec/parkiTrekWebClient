@@ -32,38 +32,8 @@ import {
 
 // STYLES
 import { DrawerContent } from "../AccessibilityDrawerContent.Styles";
-
-// -----------------------------------------------------------------------------
-// CONSTANTS
-// -----------------------------------------------------------------------------
-
-export const DEFAULT_ZOOM = 100;
-
-// -----------------------------------------------------------------------------
-// TYPES
-// -----------------------------------------------------------------------------
-
-export interface AccessibilitySettings {
-  seniorMode: boolean;
-  zoom: number;
-  reduceMotion: boolean;
-  highContrast: boolean;
-}
-
-// -----------------------------------------------------------------------------
-// DEFAULT SETTINGS
-// -----------------------------------------------------------------------------
-
-const DEFAULT_SETTINGS: AccessibilitySettings = {
-  seniorMode: false,
-  zoom: DEFAULT_ZOOM,
-  reduceMotion: false,
-  highContrast: false,
-};
-
-// -----------------------------------------------------------------------------
-// COMPONENT
-// -----------------------------------------------------------------------------
+import { AccessibilitySettings } from "./components/accessibilitySettings/types";
+import { DEFAULT_SETTINGS } from "./components/accessibilitySettings/constants";
 
 export default function Content() {
   // HOOKS

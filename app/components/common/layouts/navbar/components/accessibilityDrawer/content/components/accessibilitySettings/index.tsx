@@ -12,11 +12,10 @@ import {
   SectionTitle,
   SettingsCard,
 } from "@/app/components/ui";
+import { AccessibilitySettings } from "./types";
+import { getSliderOptions } from "./utils/getSliderOptions";
+import { switchOptions } from "./constants";
 
-// DATAS
-import { getSliderOptions, switchOptions } from "./data/AccessibilitySettings.Data";
-
-import type { AccessibilitySettings } from "../../..";
 
 interface Props {
   settings: AccessibilitySettings;
