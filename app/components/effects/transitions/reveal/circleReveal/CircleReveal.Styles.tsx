@@ -20,6 +20,8 @@ export const CircleRevealRoot = styled(Box)(({ theme }) => ({
 
 // CIRCLE
 
+const imgBG_circleRevealCircle = "/assets/imgs/payments-donations/intro/img2.jpg"
+
 export const CircleRevealCircle = styled(Box)(({ theme }) => ({
   position: "absolute",
   left: "50%",
@@ -27,7 +29,7 @@ export const CircleRevealCircle = styled(Box)(({ theme }) => ({
   width: "24px",
   height: "24px",
   borderRadius: "50%",
-  backgroundImage: "url('/assets/imgs/img1.jpg')",
+  backgroundImage: `url("${imgBG_circleRevealCircle}")`,
   backgroundSize: "cover",
   backgroundPosition: "center",
   overflow: "visible",

@@ -1,8 +1,11 @@
 "use client";
 
-import { Stack, StackProps, styled } from "@mui/material";
+import { Stack, styled } from "@mui/material";
+import type { StackProps } from "@mui/material";
 
-export const Root = styled(Stack)<StackProps>(({ theme }) => ({
+const imgBG_container = "/assets/imgs/payments-donations/donationSelection/bg_1.png"
+
+export const RoDonationSelectionContainerot = styled(Stack)<StackProps>(({ theme }) => ({
   width: "100%",
   minHeight: "100vh",
   padding: "150px 50px",
@@ -11,7 +14,7 @@ export const Root = styled(Stack)<StackProps>(({ theme }) => ({
   justifyContent: "space-around",
   alignItems: "center",
 
-  backgroundImage: "url('/assets/imgs/payments-donations/bg_1.png')",
+  backgroundImage: `url("${imgBG_container}")`,
   backgroundRepeat: "no-repeat",
   backgroundPosition: "center",
   backgroundSize: "cover",
