@@ -5,7 +5,7 @@ import type { StackProps } from "@mui/material";
 
 const imgBG_container = "/assets/imgs/payments-donations/donationSelection/bg_1.png"
 
-export const RoDonationSelectionContainerot = styled(Stack)<StackProps>(({ theme }) => ({
+export const DonationSelectionContainer  = styled(Stack)<StackProps>(({ theme }) => ({
   width: "100%",
   minHeight: "100vh",
   padding: "150px 50px",
