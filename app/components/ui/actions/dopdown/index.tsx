@@ -4,14 +4,10 @@ import Link from "next/link";
 import { MouseEvent, ReactNode, useState } from "react";
 
 import { Menu } from "@mui/material";
-import { IoChevronDown } from "react-icons/io5";
+// ICONS
+import { IoChevronDown } from "@/app/utils/constants/icons";
 // STYLES
-import {
-  DropdownButton,
-  DropdownIcon,
-  DropdownItem,
-  DropdownLabel,
-} from "./Dropdown.Styles";
+import { DropdownButton, DropdownIcon, DropdownItem, DropdownLabel } from "./Dropdown.Styles";
 
 export type DropdownItem = {
   label: string;
@@ -25,12 +21,7 @@ type Props = {
   icon?: ReactNode;
 };
 
-export default function PrimaryDropdown({
-  label,
-  items,
-  isDesktop = true,
-  icon,
-}: Props) {
+export default function PrimaryDropdown({ label, items, isDesktop = true, icon }: Props) {
   const [anchorEl, setAnchorEl] = useState<null | HTMLElement>(null);
 
   const open = Boolean(anchorEl);

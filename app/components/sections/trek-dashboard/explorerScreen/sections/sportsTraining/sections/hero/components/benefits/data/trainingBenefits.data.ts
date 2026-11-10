@@ -1,9 +1,11 @@
-import type { IconType } from "react-icons";
-
-import { GiRunningShoe } from "react-icons/gi";
-import { LuBrain } from "react-icons/lu";
-import { IoHeartOutline } from "react-icons/io5";
-import { TiGroupOutline } from "react-icons/ti";
+// ICONS
+import {
+  type IconType,
+  IoHeartOutline,
+  GiRunningShoe,
+  LuBrain,
+  TiGroupOutline,
+} from "@/app/utils/constants/icons";
 
 export interface TrainingBenefit {
   id: string;

@@ -30,7 +30,7 @@ export default function AutoScrollingText() {
                 <Icon size={isDesktop ? 28 : 24} />
               </TrainingMarqueeIcon>
             </MarqueeItem>
-          ),
+          )
         )}
       </MarqueeTrack>
     </Marquee>

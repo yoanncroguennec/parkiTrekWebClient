@@ -39,6 +39,5 @@ export const Overlay = styled(Box, {
   zIndex: 1,
 
   background:
-    overlayBackground ??
-    "linear-gradient(180deg, rgba(0,0,0,0.25) 0%, rgba(0,0,0,0.55) 100%)",
+    overlayBackground ?? "linear-gradient(180deg, rgba(0,0,0,0.25) 0%, rgba(0,0,0,0.55) 100%)",
 }));

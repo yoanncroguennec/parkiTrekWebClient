@@ -8,33 +8,32 @@ import ThemeSwitcher from "./actions/switcher/themeSwitcher";
 
 // DATA DISPLAY
 import {
-    CircularCarouselImages,
-    DonationGrowthChart,
-    Donut,
-    LineChart,
-    InspirationalQuote,
-    TestimonialQuote,
-    QuoteDefault    
-} from "./data-display"
+  CircularCarouselImages,
+  DonationGrowthChart,
+  Donut,
+  LineChart,
+  InspirationalQuote,
+  TestimonialQuote,
+  QuoteDefault,
+} from "./data-display";
+
+// DECORATIVES ELEMENTS
+import { CurvedArrowBottomLeft, CurvedArrowDownLeft, CurvedLine } from "./decoratives_elements";
 
 // FEEDBACK
-import {
-    GlobalFeedback,
-    Tooltip,
-} from "./feedback"
+import { GlobalFeedback, Tooltip } from "./feedback";
 
 // FORMS
-import SliderSelect from "./forms/sliders/sliderSelect";
-
-// ILLUSTRATIONS
-import { CurvedArrowBottomLeft, CurvedArrowDownLeft } from "./illustrations"
+import { PrimarySelectField, SliderSelect, PrimaryTextAreaField } from "./forms";
 
 // LIVE
 import LivePlatform from "./live/livePlatform";
 
 // OVERLAYS
+import { Overlay } from "./overlays";
 
 // PRELOADERS
+import { ContactPreloader } from "./preloaders";
 
 // SURFACES
 import BlobCard from "./surfaces/card/blobCard";
@@ -53,30 +52,35 @@ export {
   // BACKGROUND
 
   // DATA DISPLAY
-    CircularCarouselImages,
-    DonationGrowthChart,
-    Donut,
-    LineChart,
-    InspirationalQuote,
-    TestimonialQuote,
-    QuoteDefault,
+  CircularCarouselImages,
+  DonationGrowthChart,
+  Donut,
+  LineChart,
+  InspirationalQuote,
+  TestimonialQuote,
+  QuoteDefault,
 
-  // FEEDBACK
-    GlobalFeedback,
-    Tooltip,
-  // FORMS
-  SliderSelect,
-
-  // ILLUSTRATIONS
+  // DECORATIVES ELEMENTS
   CurvedArrowBottomLeft,
   CurvedArrowDownLeft,
+  CurvedLine,
+
+  // FEEDBACK
+  GlobalFeedback,
+  Tooltip,
+  // FORMS
+  PrimarySelectField,
+  SliderSelect,
+  PrimaryTextAreaField,
 
   // LIVE
   LivePlatform,
 
   // OVERLAYS
+  Overlay,
 
   // PRELOADERS
+  ContactPreloader,
 
   // SURFACES
   BlobCard,

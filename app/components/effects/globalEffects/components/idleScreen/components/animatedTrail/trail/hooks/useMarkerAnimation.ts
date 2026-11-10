@@ -25,8 +25,7 @@ export default function useMarkerAnimation({
     }
 
     if (materialRef.current) {
-      materialRef.current.emissiveIntensity =
-        4 + Math.sin(clock.elapsedTime * 3) * 1.5;
+      materialRef.current.emissiveIntensity = 4 + Math.sin(clock.elapsedTime * 3) * 1.5;
     }
 
     if (markerRef.current) {

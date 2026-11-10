@@ -100,21 +100,19 @@ export const BrandName = styled(Typography)<TypographyProps>(({ theme }) => ({
   },
 }));
 
-export const BrandTagline = styled(Typography)<TypographyProps>(
-  ({ theme }) => ({
-    fontSize: "14px",
-    fontWeight: 400,
+export const BrandTagline = styled(Typography)<TypographyProps>(({ theme }) => ({
+  fontSize: "14px",
+  fontWeight: 400,
 
-    color: "#66736B",
+  color: "#66736B",
 
-    letterSpacing: "0.04em",
-    lineHeight: 1.2,
+  letterSpacing: "0.04em",
+  lineHeight: 1.2,
 
-    [theme.breakpoints.up("md")]: {
-      fontSize: "15px",
-    },
-  }),
-);
+  [theme.breakpoints.up("md")]: {
+    fontSize: "15px",
+  },
+}));
 
 /* =========================================================
    TYPOGRAPHY

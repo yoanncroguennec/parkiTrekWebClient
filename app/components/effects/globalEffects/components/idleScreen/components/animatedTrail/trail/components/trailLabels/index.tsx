@@ -45,11 +45,7 @@ export default function TrailLabel({ label, index, setLabelRef }: Props) {
           onUpdate={(geometry) => {
             geometry.setFromPoints([
               new THREE.Vector3(0, 0, 0),
-              new THREE.Vector3(
-                TRAIL_CONFIG.labelLineLength,
-                TRAIL_CONFIG.labelLineHeight,
-                0,
-              ),
+              new THREE.Vector3(TRAIL_CONFIG.labelLineLength, TRAIL_CONFIG.labelLineHeight, 0),
             ]);
           }}
         />
@@ -58,11 +54,7 @@ export default function TrailLabel({ label, index, setLabelRef }: Props) {
       </line>
 
       {/* Textes */}
-      <TrailLabelText
-        city={label.city}
-        distance={label.distance}
-        time={label.time}
-      />
+      <TrailLabelText city={label.city} distance={label.distance} time={label.time} />
     </group>
   );
 }

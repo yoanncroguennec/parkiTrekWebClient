@@ -59,24 +59,18 @@ export default function Content({ isDesktop }: ContentProps) {
      qui provoque l'erreur react-hooks/refs.
   ======================================================= */
 
-  const cardsRef = useMemo(
-    () => data_SupportShowcase.map(() => createRef<HTMLDivElement>()),
-    [],
-  );
+  const cardsRef = useMemo(() => data_SupportShowcase.map(() => createRef<HTMLDivElement>()), []);
 
-  const iconsRef = useMemo(
-    () => data_SupportShowcase.map(() => createRef<HTMLDivElement>()),
-    [],
-  );
+  const iconsRef = useMemo(() => data_SupportShowcase.map(() => createRef<HTMLDivElement>()), []);
 
   const titlesRef = useMemo(
     () => data_SupportShowcase.map(() => createRef<HTMLHeadingElement>()),
-    [],
+    []
   );
 
   const valuesRef = useMemo(
     () => data_SupportShowcase.map(() => createRef<HTMLParagraphElement>()),
-    [],
+    []
   );
 
   /* =======================================================
@@ -162,7 +156,6 @@ export default function Content({ isDesktop }: ContentProps) {
       ================================================= */}
 
       {!isDesktop && <InspirationalQuote />}
-
     </ContentContainer>
   );
 }

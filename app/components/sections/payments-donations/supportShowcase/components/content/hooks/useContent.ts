@@ -28,13 +28,7 @@ interface Props {
    HOOK
 ========================================================= */
 
-export function useContent({
-  container,
-  cardsRef,
-  iconsRef,
-  titlesRef,
-  valuesRef,
-}: Props) {
+export function useContent({ container, cardsRef, iconsRef, titlesRef, valuesRef }: Props) {
   useGSAP(
     () => {
       /* ===================================================
@@ -142,7 +136,7 @@ export function useContent({
 
               ease: "elastic.out(1,.45)",
             },
-            "-=0.7",
+            "-=0.7"
           );
         }
 
@@ -162,7 +156,7 @@ export function useContent({
 
               ease: "power3.out",
             },
-            "-=0.5",
+            "-=0.5"
           );
         }
 
@@ -182,7 +176,7 @@ export function useContent({
 
               ease: "back.out(2)",
             },
-            "-=0.4",
+            "-=0.4"
           );
         }
 
@@ -213,9 +207,7 @@ export function useContent({
             },
 
             onUpdate: () => {
-              value.textContent = Math.floor(counter.value).toLocaleString(
-                "fr-FR",
-              );
+              value.textContent = Math.floor(counter.value).toLocaleString("fr-FR");
             },
           });
         }
@@ -243,6 +235,6 @@ export function useContent({
     {
       scope: container,
       dependencies: [cardsRef, iconsRef, titlesRef, valuesRef],
-    },
+    }
   );
 }

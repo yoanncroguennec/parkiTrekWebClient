@@ -16,16 +16,8 @@ type Props = {
 
 const LiquidImageTransition = forwardRef<HTMLDivElement, Props>(
   (
-    {
-      width = 800,
-      height = 500,
-      image1,
-      image2,
-      displacementMap,
-      intensity = 120,
-      speed = 0.15,
-    },
-    ref,
+    { width = 800, height = 500, image1, image2, displacementMap, intensity = 120, speed = 0.15 },
+    ref
   ) => {
     // =====================================================
     // REFS
@@ -146,9 +138,7 @@ const LiquidImageTransition = forwardRef<HTMLDivElement, Props>(
 
         displacementSprite.texture.baseTexture.wrapMode = "repeat";
 
-        const displacementFilter = new PIXI.DisplacementFilter(
-          displacementSprite,
-        );
+        const displacementFilter = new PIXI.DisplacementFilter(displacementSprite);
 
         displacementFilter.scale.set(0);
 
@@ -198,10 +188,7 @@ const LiquidImageTransition = forwardRef<HTMLDivElement, Props>(
           // ENTERING → FULL
           // =============================================
 
-          if (
-            phase === "entering" &&
-            Math.abs(currentScale - targetScale) < 0.5
-          ) {
+          if (phase === "entering" && Math.abs(currentScale - targetScale) < 0.5) {
             phase = "full";
 
             targetScale = 0;
@@ -212,10 +199,7 @@ const LiquidImageTransition = forwardRef<HTMLDivElement, Props>(
           // LEAVING → IDLE
           // =============================================
 
-          if (
-            phase === "leaving" &&
-            Math.abs(currentScale - targetScale) < 0.5
-          ) {
+          if (phase === "leaving" && Math.abs(currentScale - targetScale) < 0.5) {
             phase = "idle";
 
             targetScale = 0;
@@ -326,7 +310,7 @@ const LiquidImageTransition = forwardRef<HTMLDivElement, Props>(
         }}
       />
     );
-  },
+  }
 );
 
 LiquidImageTransition.displayName = "LiquidImageTransition";

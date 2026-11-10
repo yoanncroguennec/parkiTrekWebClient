@@ -37,11 +37,11 @@ export function useCounterAnimation({
             innerText: 1,
           },
           ease: "power2.out",
-        },
+        }
       );
     },
     {
       dependencies: [enabled],
-    },
+    }
   );
 }

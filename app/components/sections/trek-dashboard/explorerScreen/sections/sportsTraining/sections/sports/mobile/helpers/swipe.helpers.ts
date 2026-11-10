@@ -10,17 +10,14 @@ export function getSwipeRotation(deltaX: number): number {
   return deltaX * 0.08;
 }
 
-export function getNextIndex(
-  currentIndex: number,
-  direction: SwipeDirection,
-): number {
+export function getNextIndex(currentIndex: number, direction: SwipeDirection): number {
   return direction === "next" ? currentIndex + 1 : currentIndex - 1;
 }
 
 export function canNavigate(
   currentIndex: number,
   totalItems: number,
-  direction: SwipeDirection,
+  direction: SwipeDirection
 ): boolean {
   if (direction === "previous") {
     return currentIndex > 0;

@@ -46,11 +46,11 @@ export function useSlideInRotate({
           rotation: toRotation,
           duration,
           ease: "power3.out",
-        },
+        }
       );
     },
     {
       dependencies: [enabled],
-    },
+    }
   );
 }

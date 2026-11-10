@@ -48,8 +48,7 @@ export default function CinematicDonut() {
         <DonutInfoTitle component="h3">Parki Trek</DonutInfoTitle>
 
         <DonutInfoDescription component="p">
-          Une aventure pour sensibiliser, informer et faire avancer les
-          consciences.
+          Une aventure pour sensibiliser, informer et faire avancer les consciences.
         </DonutInfoDescription>
       </DonutInfo>
     </CardContainer>

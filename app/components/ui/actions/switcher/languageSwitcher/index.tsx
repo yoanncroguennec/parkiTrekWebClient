@@ -1,7 +1,7 @@
 "use client";
 
 import { useMediaQuery, useTheme } from "@mui/material";
-import { IoChevronDown, IoChevronUp } from "react-icons/io5";
+import { IoChevronDown, IoChevronUp } from "@/app/utils/constants/icons";
 import { gsap } from "gsap";
 import { useState, useRef, useLayoutEffect } from "react";
 

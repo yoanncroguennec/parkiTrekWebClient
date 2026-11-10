@@ -39,24 +39,22 @@ export const IntroTitleHighlight = styled(Box)<BoxProps>(({ theme }) => ({
   },
 }));
 
-export const IntroDescription = styled(Typography)<TypographyProps>(
-  ({ theme }) => ({
-    color: "#FFF",
-    fontFamily: "canela",
-    fontSize: "16px",
-    letterSpacing: "0.3px",
-    lineHeight: 1.5,
-    textAlign: "center",
-    overflowWrap: "break-word",
-    textShadow: "2px 2px 5px rgba(0,0,0,0.9)",
+export const IntroDescription = styled(Typography)<TypographyProps>(({ theme }) => ({
+  color: "#FFF",
+  fontFamily: "canela",
+  fontSize: "16px",
+  letterSpacing: "0.3px",
+  lineHeight: 1.5,
+  textAlign: "center",
+  overflowWrap: "break-word",
+  textShadow: "2px 2px 5px rgba(0,0,0,0.9)",
 
-    [theme.breakpoints.up("md")]: {
-      fontSize: "20px",
-      letterSpacing: "1px",
-      textAlign: "left",
-    },
-  }),
-);
+  [theme.breakpoints.up("md")]: {
+    fontSize: "20px",
+    letterSpacing: "1px",
+    textAlign: "left",
+  },
+}));
 
 export const HeroChips = styled(Stack)(({ theme }) => ({
   width: "100%",

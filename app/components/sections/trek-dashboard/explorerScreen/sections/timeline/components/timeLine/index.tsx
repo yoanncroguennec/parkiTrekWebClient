@@ -7,11 +7,7 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 import { TimelineDataItem } from "../../data";
 
-import {
-  TimelineLine,
-  TimelineProgress,
-  TimelineWrapper,
-} from "./Timeline.Styles";
+import { TimelineLine, TimelineProgress, TimelineWrapper } from "./Timeline.Styles";
 
 import { TimelineContent } from "..";
 
@@ -47,7 +43,7 @@ export default function Timeline({ timelineData }: Props) {
             end: "bottom 80%",
             scrub: true,
           },
-        },
+        }
       );
     }, wrapper);
 

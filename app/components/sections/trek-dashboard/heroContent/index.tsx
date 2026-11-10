@@ -81,11 +81,7 @@ export default function HeroContent({ onExplore }: HeroContentProps) {
 
         <SignatureLine ref={signatureLineRef} />
 
-        <ExploreButton
-          ref={exploreButtonRef}
-          variant="contained"
-          onClick={onExplore}
-        >
+        <ExploreButton ref={exploreButtonRef} variant="contained" onClick={onExplore}>
           Explorer
         </ExploreButton>
       </ContentWrapper>

@@ -15,11 +15,7 @@ interface Props {
   };
 }
 
-export default function CompassDirections({
-  directions,
-  color,
-  typography,
-}: Props) {
+export default function CompassDirections({ directions, color, typography }: Props) {
   return (
     <>
       {directions.map(({ key, label, x, y }) => (

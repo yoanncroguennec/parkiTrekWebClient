@@ -6,8 +6,7 @@
 // import CircleCTA from "@/app/components/common/cta/circleCTA";
 
 // Videos
-const mediaDesktopVideo =
-  "/assets/videos/Summiting the Matterhorn with an FPV Drone.mp4";
+const mediaDesktopVideo = "/assets/videos/Summiting the Matterhorn with an FPV Drone.mp4";
 
 export default function MediaDesktop() {
   // const t = useTranslations("PaymentsDonationsPage.supportShowCase.circleCTA");
@@ -49,13 +48,7 @@ export default function MediaDesktop() {
         foreignObject permet d'intégrer du HTML
         (ici une vidéo) directement dans le SVG.
       */}
-      <foreignObject
-        x="0"
-        y="0"
-        width="1000"
-        height="1000"
-        clipPath="url(#test)"
-      >
+      <foreignObject x="0" y="0" width="1000" height="1000" clipPath="url(#test)">
         <video
           autoPlay
           muted

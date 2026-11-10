@@ -60,7 +60,7 @@ export function useExplorerScrollAnimation({
               end: "top 55%",
               toggleActions: "play reverse play reverse",
             },
-          },
+          }
         );
       }
 
@@ -68,7 +68,7 @@ export function useExplorerScrollAnimation({
        * SPORTS CARDS
        */
       const sportsCards = sportsCardRefs.current.filter(
-        (element): element is HTMLDivElement => element !== null,
+        (element): element is HTMLDivElement => element !== null
       );
 
       if (sportsCards.length > 0) {
@@ -94,7 +94,7 @@ export function useExplorerScrollAnimation({
               end: "top 55%",
               toggleActions: "play reverse play reverse",
             },
-          },
+          }
         );
       }
 
@@ -123,7 +123,7 @@ export function useExplorerScrollAnimation({
               end: "top 55%",
               toggleActions: "play reverse play reverse",
             },
-          },
+          }
         );
       }
 
@@ -131,7 +131,7 @@ export function useExplorerScrollAnimation({
        * TIMELINE ITEMS
        */
       const timelineItems = timelineItemRefs.current.filter(
-        (element): element is HTMLDivElement => element !== null,
+        (element): element is HTMLDivElement => element !== null
       );
 
       if (timelineItems.length > 0) {
@@ -155,7 +155,7 @@ export function useExplorerScrollAnimation({
               end: "top 55%",
               toggleActions: "play reverse play reverse",
             },
-          },
+          }
         );
       }
 

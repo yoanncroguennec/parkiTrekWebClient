@@ -37,11 +37,7 @@ export default async function LocaleLayout({ children }: { children: React.React
     <html lang={locale} className={`${dahlia.variable} ${canela.variable} ${neon.variable}`}>
       <body cz-shortcut-listen="true">
         {/* AUDIO SOUND BG + LANGUAGES */}
-        <GlobalProviders
-          locale={locale}
-          messages={messages}
-          initialTheme={initialTheme}
-        >
+        <GlobalProviders locale={locale} messages={messages} initialTheme={initialTheme}>
           {/* IDLE + CUSTOM CURSOR */}
           <GlobalEffects />
           {/* NOTIFICATIONS */}

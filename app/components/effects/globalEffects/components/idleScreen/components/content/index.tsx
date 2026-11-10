@@ -15,8 +15,7 @@ import {
 } from "./Content.Styles";
 
 const altImg = "Logo Parkinson";
-const srcImg =
-  "/assets/imgs/components/effects/idleScreen/logo_redTulipParkinson.png";
+const srcImg = "/assets/imgs/components/effects/idleScreen/logo_redTulipParkinson.png";
 
 export default function Content() {
   // Refs

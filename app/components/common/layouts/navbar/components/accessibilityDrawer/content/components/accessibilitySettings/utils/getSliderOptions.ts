@@ -1,9 +1,6 @@
 import type { GetSliderOptionsProps, SliderOption } from "../types";
 
-import {
-  zoomOptions,
-  timeoutOptions,
-} from "../constants";
+import { zoomOptions, timeoutOptions } from "../constants";
 
 export const getSliderOptions = ({
   zoom,

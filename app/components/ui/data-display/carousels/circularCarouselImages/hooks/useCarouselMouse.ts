@@ -15,7 +15,7 @@ export function useCarouselMouse(
   wheelRef: RefObject<HTMLDivElement | null>,
   initialRotationX = INITIAL_ROTATION,
   rotationXIntensity = MOUSE_ROTATION_X,
-  rotationZIntensity = MOUSE_ROTATION_Z,
+  rotationZIntensity = MOUSE_ROTATION_Z
 ): void {
   useEffect(() => {
     const wheel = wheelRef.current;

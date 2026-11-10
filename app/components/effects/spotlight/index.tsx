@@ -13,11 +13,7 @@ interface SpotlightProps {
   blur?: number;
 }
 
-export default function Spotlight({
-  containerRef,
-  size = 450,
-  blur = 80,
-}: SpotlightProps) {
+export default function Spotlight({ containerRef, size = 450, blur = 80 }: SpotlightProps) {
   const spotlightRef = useRef<HTMLDivElement>(null);
 
   useSpotlight({

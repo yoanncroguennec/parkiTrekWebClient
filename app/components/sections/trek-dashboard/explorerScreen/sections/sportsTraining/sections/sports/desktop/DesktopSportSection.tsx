@@ -10,9 +10,7 @@ interface DesktopSportSectionProps {
   sportsCardRefs: RefObject<(HTMLDivElement | null)[]>;
 }
 
-export default function DesktopSportSection({
-  sportsCardRefs,
-}: DesktopSportSectionProps) {
+export default function DesktopSportSection({ sportsCardRefs }: DesktopSportSectionProps) {
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
 
   const cardsPerRow = 3;
@@ -40,10 +38,7 @@ export default function DesktopSportSection({
         {sportsTrainingSessions.map((item, index) => {
           const currentRow = Math.floor(index / cardsPerRow);
 
-          const hoveredRow =
-            hoveredIndex !== null
-              ? Math.floor(hoveredIndex / cardsPerRow)
-              : null;
+          const hoveredRow = hoveredIndex !== null ? Math.floor(hoveredIndex / cardsPerRow) : null;
 
           return (
             <Box
@@ -55,9 +50,7 @@ export default function DesktopSportSection({
               <SportTrainingCard
                 item={item}
                 isHovered={hoveredIndex === index}
-                isRowExpanded={
-                  hoveredIndex !== null && currentRow === hoveredRow
-                }
+                isRowExpanded={hoveredIndex !== null && currentRow === hoveredRow}
                 onHover={() => setHoveredIndex(index)}
                 onLeave={() => setHoveredIndex(null)}
               />

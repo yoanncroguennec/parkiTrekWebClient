@@ -5,10 +5,7 @@ import {
 
 import type { Particle } from "../types/particleSystem.types";
 
-export default function renderParticle(
-  context: CanvasRenderingContext2D,
-  particle: Particle,
-) {
+export default function renderParticle(context: CanvasRenderingContext2D, particle: Particle) {
   context.beginPath();
 
   context.globalAlpha = particle.life;

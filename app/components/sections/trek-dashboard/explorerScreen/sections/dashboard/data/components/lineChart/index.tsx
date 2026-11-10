@@ -4,12 +4,7 @@ import { LineChart } from "@/app/components/ui";
 // DATAS
 import { lineChartData } from "./data/lineChart.data";
 // STYLES
-import {
-  CardContainer,
-  Header,
-  LineChartWrapper,
-  TextHeader,
-} from "./LineChart.Styles";
+import { CardContainer, Header, LineChartWrapper, TextHeader } from "./LineChart.Styles";
 
 export default function CardLineChart() {
   return (

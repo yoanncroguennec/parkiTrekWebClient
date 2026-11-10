@@ -1,13 +1,17 @@
 "use client";
 
 import { useRef } from "react";
-import gsap from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
-// DATAS
+import { useMediaQuery, useTheme } from "@mui/material";
+
+// DATA
 import { marquees } from "./data";
+
 // HOOKS
+import { useSponsorAnimations } from "@/app/hooks";
+
 // ICONS
-import { MdArrowForwardIos } from "react-icons/md";
+import { MdArrowForwardIos } from "@/app/utils/constants/icons";
+
 // STYLES
 import {
   ArrowContainer,
@@ -21,99 +25,159 @@ import {
   LogoImage,
   Marquee,
   MarqueeContent,
-  Root,
+  ListSponsorsContainer,
   Row,
   SponsorImage,
   Wrapper,
 } from "./ListSponsors.Styles";
-// import { useSponsorAnimations } from "@/app/hooks/animations/scroll/useScrollAnimations";
-
-gsap.registerPlugin(ScrollTrigger);
+import { AnimatedBackground, MagneticPopTitle } from "@/app/components/common/animations";
 
 export default function ListSponsors() {
-  // Refs
-  const rowsRef = useRef<HTMLDivElement[]>([]);
+  // ==========================================
+  // RESPONSIVE
+  // ==========================================
+
+  const theme = useTheme();
+  const isDesktop = useMediaQuery(theme.breakpoints.up("md"));
+
+  // ==========================================
+  // REFERENCES
+  // ==========================================
+
+  // Références des lignes de sponsors
+  const rowsRef = useRef<(HTMLDivElement | null)[]>([]);
+
+  // État de pause individuel de chaque ligne
   const pausedRows = useRef<boolean[]>([]);
-  const titlesRef = useRef<HTMLElement[]>([]);
-  const infosRef = useRef<HTMLDivElement[]>([]);
-  const arrowsRef = useRef<HTMLDivElement[]>([]);
 
-  // Funcions
-  function registerArrow(el: HTMLDivElement | null) {
-    if (!el) return;
+  // Références des titres
+  const titlesRef = useRef<(HTMLElement | null)[]>([]);
 
-    if (!arrowsRef.current.includes(el)) {
-      arrowsRef.current.push(el);
-    }
-  }
+  // Références des informations
+  const infosRef = useRef<(HTMLDivElement | null)[]>([]);
 
-  // Hooks
-  // useSponsorAnimations({ rowsRef, pausedRows, titlesRef, infosRef, arrowsRef });
+  // Références des flèches
+  const arrowsRef = useRef<(HTMLDivElement | null)[]>([]);
+
+  // Références des logos
+  const logosRef = useRef<(HTMLImageElement | null)[]>([]);
+
+  // ==========================================
+  // REF INDEXES
+  // Calcul de l'index global de chaque carte
+  // ==========================================
+
+  const rowOffsets = marquees.map((_, rowIndex) =>
+    marquees.slice(0, rowIndex).reduce((total, row) => total + row.data.length * 2, 0)
+  );
+
+  // ==========================================
+  // GSAP ANIMATIONS
+  // ==========================================
+
+  useSponsorAnimations({
+    rowsRef,
+    pausedRows,
+    titlesRef,
+    infosRef,
+    arrowsRef,
+    logosRef,
+  });
 
   return (
-    <Root>
-      <Wrapper spacing={1}>
-        {marquees.map((row, index) => (
-          <Row key={index}>
-            <Category variant="h4">{row.category}</Category>
-            <Marquee>
-              <MarqueeContent
-                direction="row"
-                ref={(el) => {
-                  if (el) rowsRef.current[index] = el;
-                }}
-              >
-                {[...row.data, ...row.data].map((item, i) => (
-                  <Card
-                    key={i}
-                    onMouseEnter={() => (pausedRows.current[index] = true)}
-                    onMouseLeave={() => (pausedRows.current[index] = false)}
-                  >
-                    <SponsorImage
-                      src={item.img}
-                      alt={item.text}
-                      width={260}
-                      height={180}
-                    />
+    <ListSponsorsContainer>
+      <AnimatedBackground>
+        <MagneticPopTitle
+          text="Sponsors"
+          fontSize="96px !important"
+          scrollStart="top 85%"
+          scrollEnd="top 35%"
+        />
 
-                    <CardHeader>
-                      {item.logo && (
-                        <LogoImage
-                          src={item.logo}
-                          alt={item.text}
-                          width={30}
-                          height={30}
-                          className="sponsor-logo"
-                        />
-                      )}
+        <Wrapper spacing={1}>
+          {marquees.map((row, rowIndex) => (
+            <Row key={rowIndex}>
+              {/* CATÉGORIE */}
+              <Category variant="h4">{row.category}</Category>
 
-                      <CardTitle
-                        ref={(el) => {
-                          if (el) titlesRef.current.push(el);
+              {/* MARQUEE */}
+              <Marquee>
+                <MarqueeContent
+                  direction="row"
+                  ref={(element) => {
+                    rowsRef.current[rowIndex] = element;
+                  }}
+                >
+                  {[...row.data, ...row.data].map((item, itemIndex) => {
+                    // Index global de la carte
+                    const refIndex = (rowOffsets[rowIndex] ?? 0) + itemIndex;
+
+                    return (
+                      <Card
+                        key={`${rowIndex}-${itemIndex}`}
+                        onMouseEnter={() => {
+                          pausedRows.current[rowIndex] = true;
+                        }}
+                        onMouseLeave={() => {
+                          pausedRows.current[rowIndex] = false;
                         }}
                       >
-                        {item.text}
-                      </CardTitle>
-                    </CardHeader>
+                        {/* IMAGE DU SPONSOR */}
+                        <SponsorImage src={item.img} alt={item.text} width={260} height={180} />
 
-                    <CardInfos
-                      ref={(el) => {
-                        if (el) infosRef.current.push(el);
-                      }}
-                    >
-                      <CardAmount variant="h6">12 500 €</CardAmount>
-                      <CardSubtitle variant="h6">Collectés</CardSubtitle>
-                    </CardInfos>
-                    <ArrowContainer ref={registerArrow}>
-                      <MdArrowForwardIos color="#FFF" size={40} />
-                    </ArrowContainer>
-                  </Card>
-                ))}
-              </MarqueeContent>
-            </Marquee>
-          </Row>
-        ))}
-      </Wrapper>
-    </Root>
+                        {/* HEADER */}
+                        <CardHeader>
+                          {item.logo && (
+                            <LogoImage
+                              ref={(element) => {
+                                logosRef.current[refIndex] = element;
+                              }}
+                              src={item.logo}
+                              alt={item.text}
+                              width={30}
+                              height={30}
+                              className="sponsor-logo"
+                            />
+                          )}
+
+                          {/* TITRE */}
+                          <CardTitle
+                            ref={(element) => {
+                              titlesRef.current[refIndex] = element;
+                            }}
+                          >
+                            {item.text}
+                          </CardTitle>
+                        </CardHeader>
+
+                        {/* INFORMATIONS */}
+                        <CardInfos
+                          ref={(element) => {
+                            infosRef.current[refIndex] = element;
+                          }}
+                        >
+                          <CardAmount variant="h6">12 500 €</CardAmount>
+
+                          <CardSubtitle variant="h6">Collectés</CardSubtitle>
+                        </CardInfos>
+
+                        {/* ARROW */}
+                        <ArrowContainer
+                          ref={(element) => {
+                            arrowsRef.current[refIndex] = element;
+                          }}
+                        >
+                          <MdArrowForwardIos color="#FFF" size={isDesktop ? 24 : 20} />
+                        </ArrowContainer>
+                      </Card>
+                    );
+                  })}
+                </MarqueeContent>
+              </Marquee>
+            </Row>
+          ))}
+        </Wrapper>
+      </AnimatedBackground>
+    </ListSponsorsContainer>
   );
 }

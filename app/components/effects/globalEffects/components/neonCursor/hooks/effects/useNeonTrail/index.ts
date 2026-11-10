@@ -3,10 +3,7 @@
 import type { RefObject } from "react";
 import { useEffect } from "react";
 import gsap from "gsap";
-import {
-  DEFAULT_TRAIL_EASE,
-  DEFAULT_TRAIL_POINTS,
-} from "./constants/neonTrail.constant";
+import { DEFAULT_TRAIL_EASE, DEFAULT_TRAIL_POINTS } from "./constants/neonTrail.constant";
 import type { TrailPoint } from "./types/neonTrail.types";
 
 interface UseNeonTrailProps {

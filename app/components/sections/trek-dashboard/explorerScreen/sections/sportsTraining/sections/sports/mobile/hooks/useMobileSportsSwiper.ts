@@ -75,48 +75,42 @@ export function useMobileSportsSwiper({
         },
       });
     },
-    [currentIndex, totalItems, onChange, resetCard],
+    [currentIndex, totalItems, onChange, resetCard]
   );
 
   /**
    * Pointer down
    */
-  const handlePointerDown = useCallback(
-    (event: PointerEvent<HTMLDivElement>) => {
-      if (!cardRef.current) return;
+  const handlePointerDown = useCallback((event: PointerEvent<HTMLDivElement>) => {
+    if (!cardRef.current) return;
 
-      dragging.current = true;
+    dragging.current = true;
 
-      startX.current = event.clientX;
-      currentX.current = event.clientX;
+    startX.current = event.clientX;
+    currentX.current = event.clientX;
 
-      cardRef.current.setPointerCapture(event.pointerId);
+    cardRef.current.setPointerCapture(event.pointerId);
 
-      gsap.killTweensOf(cardRef.current);
-    },
-    [],
-  );
+    gsap.killTweensOf(cardRef.current);
+  }, []);
 
   /**
    * Pointer move
    */
-  const handlePointerMove = useCallback(
-    (event: PointerEvent<HTMLDivElement>) => {
-      if (!dragging.current || !cardRef.current) {
-        return;
-      }
+  const handlePointerMove = useCallback((event: PointerEvent<HTMLDivElement>) => {
+    if (!dragging.current || !cardRef.current) {
+      return;
+    }
 
-      currentX.current = event.clientX;
+    currentX.current = event.clientX;
 
-      const deltaX = currentX.current - startX.current;
+    const deltaX = currentX.current - startX.current;
 
-      gsap.set(cardRef.current, {
-        x: deltaX,
-        rotation: getSwipeRotation(deltaX),
-      });
-    },
-    [],
-  );
+    gsap.set(cardRef.current, {
+      x: deltaX,
+      rotation: getSwipeRotation(deltaX),
+    });
+  }, []);
 
   /**
    * Pointer up

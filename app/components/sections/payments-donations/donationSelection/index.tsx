@@ -1,14 +1,18 @@
-import PanelRight from "./panelRight";
-import PanelLeft from "./panelLeft";
+// LAYOUTS
+import { SplitLayout } from "@/app/components/common/layouts";
+// COMPONENTS
+import { DonationPresentation, DonationOptions } from "./components";
 // STYLES
 import { DonationSelectionContainer } from "./DonationSelection.Styles";
 
 export default function DonationSelection() {
   return (
     <DonationSelectionContainer>
-      <PanelLeft />
-
-      <PanelRight />
+      <SplitLayout
+        left={<DonationPresentation />}
+        right={<DonationOptions />}
+        mobilePosition="below"
+      />
     </DonationSelectionContainer>
   );
 }

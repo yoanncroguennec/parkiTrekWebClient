@@ -16,7 +16,6 @@ import { AccessibilitySettings } from "./types";
 import { getSliderOptions } from "./utils/getSliderOptions";
 import { switchOptions } from "./constants";
 
-
 interface Props {
   settings: AccessibilitySettings;
   setSettings: Dispatch<SetStateAction<AccessibilitySettings>>;

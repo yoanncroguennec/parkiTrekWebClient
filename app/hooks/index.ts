@@ -3,6 +3,7 @@ import useIdle from "./accessibility/idle/useIdle";
 import { default as useIdleTimeout } from "./accessibility/idle/useIdleTimeout";
 
 // ANIMATIONS
+import useAnimatedBackground from "./animations/gsap/background/useAnimatedBackground";
 import { useAnimationCursor } from "./animations/cursor/useAnimationCursor";
 import { useFadeInUpSequence } from "./animations/gsap/fadeInUp/fadeInUpSequence/useFadeInUpSequence";
 import { useMenuAnimation } from "./animations/gsap/navigations/useMenuAnimation";
@@ -22,6 +23,9 @@ import { useFadeInUp } from "./animations/gsap/fadeInUp/useFadeInUp";
 import { useCounterAnimation } from "./animations/gsap/counter/useCounterAnimation";
 import { useSlideInRotate } from "./animations/gsap/sideInRotate/useSlideInRotate";
 import { useSplitText } from "./animations/gsap/text/splitText/useSplitText";
+import { useSponsorAnimations } from "./animations/gsap/pages/payments-donations/listSponsors";
+import useMagneticPopTitle from "./animations/gsap/text/magneticPop/useMagneticPopTitle";
+import { useContactAnimation } from "./animations/gsap/pages/contact/useContactAnimation";
 
 // AUDIOS
 import useAudioPlayer from "./audios/useAudioPlayer";
@@ -41,6 +45,7 @@ export {
   useIdleTimeout,
 
   // ANIMATIONS
+  useAnimatedBackground,
   useAnimationCursor,
   useFadeInUpSequence,
   useMenuAnimation,
@@ -60,6 +65,9 @@ export {
   useFadeInUp,
   useSlideInRotate,
   useSplitText,
+  useSponsorAnimations,
+  useMagneticPopTitle,
+  useContactAnimation,
 
   // AUDIOS
   useAudioPlayer,
@@ -72,5 +80,4 @@ export {
   // PAGES
   useExplorerScrollAnimation,
   useTrekJournalTransition,
-
 };

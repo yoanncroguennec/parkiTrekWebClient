@@ -20,7 +20,7 @@ export const CircleRevealRoot = styled(Box)(({ theme }) => ({
 
 // CIRCLE
 
-const imgBG_circleRevealCircle = "/assets/imgs/payments-donations/intro/img2.jpg"
+const imgBG_circleRevealCircle = "/assets/imgs/payments-donations/intro/img2.jpg";
 
 export const CircleRevealCircle = styled(Box)(({ theme }) => ({
   position: "absolute",
@@ -43,28 +43,26 @@ export const CircleRevealCircle = styled(Box)(({ theme }) => ({
 
 // TEXT
 
-export const CircleRevealText = styled(Typography)<TypographyProps>(
-  ({ theme }) => ({
-    position: "absolute",
-    left: "50%",
-    top: "50%",
-    transformOrigin: "center",
-    color: "#FFF",
-    fontSize: "16px",
-    fontWeight: 700,
-    lineHeight: 1.2,
-    letterSpacing: "1.6px",
-    whiteSpace: "nowrap",
-    userSelect: "none",
-    pointerEvents: "none",
-    textTransform: "uppercase",
+export const CircleRevealText = styled(Typography)<TypographyProps>(({ theme }) => ({
+  position: "absolute",
+  left: "50%",
+  top: "50%",
+  transformOrigin: "center",
+  color: "#FFF",
+  fontSize: "16px",
+  fontWeight: 700,
+  lineHeight: 1.2,
+  letterSpacing: "1.6px",
+  whiteSpace: "nowrap",
+  userSelect: "none",
+  pointerEvents: "none",
+  textTransform: "uppercase",
 
-    [theme.breakpoints.up("md")]: {
-      fontSize: "20px",
-      letterSpacing: "2px",
-    },
-  }),
-);
+  [theme.breakpoints.up("md")]: {
+    fontSize: "20px",
+    letterSpacing: "2px",
+  },
+}));
 
 // CONTENT
 

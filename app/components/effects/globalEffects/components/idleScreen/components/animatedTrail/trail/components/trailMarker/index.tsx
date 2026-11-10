@@ -20,12 +20,7 @@ export default function TrailMarker({ markerRef, haloRef }: Props) {
       <mesh ref={haloRef}>
         <sphereGeometry args={[0.28, 32, 32]} />
 
-        <meshBasicMaterial
-          color="#8BC34A"
-          transparent
-          opacity={0.25}
-          toneMapped={false}
-        />
+        <meshBasicMaterial color="#8BC34A" transparent opacity={0.25} toneMapped={false} />
       </mesh>
     </>
   );

@@ -81,5 +81,4 @@ export const COMPASS_DIRECTIONS = [
   },
 ] as const;
 
-export const round = (value: number, precision = 6) =>
-  Number(value.toFixed(precision));
+export const round = (value: number, precision = 6) => Number(value.toFixed(precision));

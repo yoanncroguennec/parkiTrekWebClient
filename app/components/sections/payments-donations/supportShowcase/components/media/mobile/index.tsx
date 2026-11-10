@@ -2,8 +2,7 @@
 "use client";
 
 // Videos
-const mediaCellularVideo =
-  "/assets/videos/Summiting the Matterhorn with an FPV Drone.mp4";
+const mediaCellularVideo = "/assets/videos/Summiting the Matterhorn with an FPV Drone.mp4";
 
 export default function MediaCellular() {
   return (
@@ -37,13 +36,7 @@ export default function MediaCellular() {
         foreignObject permet d'intégrer du HTML (ici une balise <video>)
         directement dans un SVG.
       */}
-      <foreignObject
-        x="0"
-        y="0"
-        width="1000"
-        height="1000"
-        clipPath="url(#test)"
-      >
+      <foreignObject x="0" y="0" width="1000" height="1000" clipPath="url(#test)">
         <video
           autoPlay
           muted

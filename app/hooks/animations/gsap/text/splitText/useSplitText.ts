@@ -37,6 +37,6 @@ export function useSplitText({ ref, enabled = true }: UseSplitTextProps) {
     },
     {
       dependencies: [enabled],
-    },
+    }
   );
 }

@@ -20,11 +20,7 @@ interface Props {
   trekRef: RefObject<HTMLElement | null>;
 }
 
-export default function useContentAnimation({
-  containerRef,
-  parkRef,
-  trekRef,
-}: Props) {
+export default function useContentAnimation({ containerRef, parkRef, trekRef }: Props) {
   useEffect(() => {
     const container = containerRef.current;
 
@@ -65,7 +61,7 @@ export default function useContentAnimation({
             ease: "power1.inOut",
             repeat: -1,
             yoyo: true,
-          },
+          }
         );
       });
     }, container);

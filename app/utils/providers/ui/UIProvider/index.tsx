@@ -1,7 +1,7 @@
 "use client";
 
 import { ReactNode, useState } from "react";
-// 
+//
 import { UIContext } from "@/app/utils/contexts/ui/UIContext";
 
 export default function UIProvider({ children }: { children: ReactNode }) {

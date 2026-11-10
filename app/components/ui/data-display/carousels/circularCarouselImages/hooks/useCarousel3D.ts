@@ -2,11 +2,7 @@ import { RefObject, useEffect, useRef } from "react";
 import gsap from "gsap";
 
 // CONSTANTS
-import {
-  CAROUSEL_RADIUS,
-  INITIAL_ROTATION,
-  INITIAL_SPEED,
-} from "../constants/carousel.constants";
+import { CAROUSEL_RADIUS, INITIAL_ROTATION, INITIAL_SPEED } from "../constants/carousel.constants";
 
 export interface RotationState {
   speed: number;
@@ -17,7 +13,7 @@ export function useCarousel3D(
   wheelRef: RefObject<HTMLDivElement | null>,
   totalImages: number,
   radius = CAROUSEL_RADIUS,
-  initialRotationX = INITIAL_ROTATION,
+  initialRotationX = INITIAL_ROTATION
 ): RefObject<RotationState> {
   const rotationState = useRef<RotationState>({
     speed: INITIAL_SPEED,
@@ -29,9 +25,7 @@ export function useCarousel3D(
 
     if (!wheel || totalImages === 0) return;
 
-    const cards = wheel.querySelectorAll<HTMLDivElement>(
-      ".circular-carousel-card",
-    );
+    const cards = wheel.querySelectorAll<HTMLDivElement>(".circular-carousel-card");
 
     cards.forEach((card, index) => {
       const angle = (360 / totalImages) * index;

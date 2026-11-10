@@ -2,12 +2,12 @@ import type { PrimaryButtonItem } from "@/app/components/ui/actions/buttons/prim
 
 // ICONS
 import {
-  LuLayoutGrid,
-  LuHeartPulse,
   LuDumbbell,
+  LuHeartPulse,
+  LuLayoutGrid,
   LuPersonStanding,
   LuStretchHorizontal,
-} from "react-icons/lu";
+} from "@/app/utils/constants/icons";
 
 export const trainingFilterButtons: PrimaryButtonItem[] = [
   {

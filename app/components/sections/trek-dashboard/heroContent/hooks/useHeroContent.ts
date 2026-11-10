@@ -107,7 +107,7 @@ export function useHeroContentAnimation({
             duration: 0.6,
             ease: "power2.out",
           },
-          "-=0.45",
+          "-=0.45"
         )
 
         // Titre
@@ -119,7 +119,7 @@ export function useHeroContentAnimation({
             duration: 0.9,
             ease: "power3.out",
           },
-          "-=0.2",
+          "-=0.2"
         )
 
         // Description
@@ -131,7 +131,7 @@ export function useHeroContentAnimation({
             duration: 0.65,
             ease: "power2.out",
           },
-          "-=0.5",
+          "-=0.5"
         )
 
         // Signature
@@ -144,7 +144,7 @@ export function useHeroContentAnimation({
             duration: 0.55,
             ease: "power2.out",
           },
-          "-=0.35",
+          "-=0.35"
         )
 
         // Ligne
@@ -156,7 +156,7 @@ export function useHeroContentAnimation({
             duration: 0.45,
             ease: "power2.out",
           },
-          "-=0.25",
+          "-=0.25"
         )
 
         // CTA
@@ -168,7 +168,7 @@ export function useHeroContentAnimation({
             duration: 0.65,
             ease: "back.out(1.4)",
           },
-          "-=0.15",
+          "-=0.15"
         );
     });
 

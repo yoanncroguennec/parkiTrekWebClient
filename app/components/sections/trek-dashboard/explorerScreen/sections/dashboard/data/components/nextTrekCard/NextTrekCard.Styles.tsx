@@ -70,8 +70,7 @@ export const ImageContainer = styled(Box)(({ theme }) => ({
 
   boxShadow: "0 25px 50px rgba(0, 0, 0, 0.18)",
 
-  transition:
-    "transform 0.5s cubic-bezier(0.22, 1, 0.36, 1), box-shadow 0.5s ease",
+  transition: "transform 0.5s cubic-bezier(0.22, 1, 0.36, 1), box-shadow 0.5s ease",
 
   /* Image Next.js */
   "& img": {
@@ -116,8 +115,7 @@ export const FloatingDateCard = styled(Stack)(({ theme }) => ({
 
   transform: "rotate(3deg) translateY(0)",
 
-  transition:
-    "transform 0.45s cubic-bezier(0.22, 1, 0.36, 1), box-shadow 0.45s ease",
+  transition: "transform 0.45s cubic-bezier(0.22, 1, 0.36, 1), box-shadow 0.45s ease",
 
   animation: "floatingDate 4s ease-in-out infinite",
 
@@ -265,8 +263,7 @@ export const DetailsButton = styled(Button)(({ theme }) => ({
   color: "#71966C",
   borderColor: "#71966C",
 
-  transition:
-    "transform 0.3s ease, background-color 0.3s ease, border-color 0.3s ease",
+  transition: "transform 0.3s ease, background-color 0.3s ease, border-color 0.3s ease",
 
   "&:hover": {
     borderColor: "#5F825A",

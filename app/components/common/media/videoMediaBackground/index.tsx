@@ -6,11 +6,7 @@ import { forwardRef, type ReactNode, useImperativeHandle, useRef } from "react";
 // EFFECTS
 import { Spotlight } from "@/app/components/effects";
 // STYLES
-import {
-  MediaContainer,
-  BackgroundVideo,
-  Overlay,
-} from "./VideoMediaBackground.Styles";
+import { MediaContainer, BackgroundVideo, Overlay } from "./VideoMediaBackground.Styles";
 
 interface VideoMediaBackgroundProps {
   desktopVideo: string;
@@ -20,14 +16,8 @@ interface VideoMediaBackgroundProps {
   children?: ReactNode;
 }
 
-const VideoMediaBackground = forwardRef<
-  HTMLDivElement,
-  VideoMediaBackgroundProps
->(
-  (
-    { desktopVideo, mobileVideo, isDesktop, overlayBackground, children },
-    forwardedRef,
-  ) => {
+const VideoMediaBackground = forwardRef<HTMLDivElement, VideoMediaBackgroundProps>(
+  ({ desktopVideo, mobileVideo, isDesktop, overlayBackground, children }, forwardedRef) => {
     const containerRef = useRef<HTMLDivElement>(null);
 
     useImperativeHandle(forwardedRef, () => containerRef.current!);
@@ -50,7 +40,7 @@ const VideoMediaBackground = forwardRef<
         {children}
       </MediaContainer>
     );
-  },
+  }
 );
 
 VideoMediaBackground.displayName = "VideoMediaBackground";

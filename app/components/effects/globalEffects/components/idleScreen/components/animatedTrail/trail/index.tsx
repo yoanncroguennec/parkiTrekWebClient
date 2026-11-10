@@ -5,12 +5,7 @@ import * as THREE from "three";
 
 import { TRAIL_CONFIG, labels, trailCurve } from "./constants";
 
-import {
-  useLabelAnimation,
-  useMarkerAnimation,
-  useTrailAnimation,
-  useTrailMotion,
-} from "./hooks";
+import { useLabelAnimation, useMarkerAnimation, useTrailAnimation, useTrailMotion } from "./hooks";
 
 import { TrailLabels, TrailMarker, TrailMesh } from "./components";
 
@@ -32,9 +27,9 @@ export default function Trail() {
         TRAIL_CONFIG.tubularSegments,
         TRAIL_CONFIG.radius,
         TRAIL_CONFIG.radialSegments,
-        false,
+        false
       ),
-    [],
+    []
   );
 
   useTrailAnimation({
@@ -66,21 +61,12 @@ export default function Trail() {
 
   return (
     <group ref={groupRef}>
-      <TrailMesh
-        geometry={geometry}
-        meshRef={meshRef}
-        materialRef={materialRef}
-      />
+      <TrailMesh geometry={geometry} meshRef={meshRef} materialRef={materialRef} />
 
       <TrailMarker markerRef={markerRef} haloRef={haloRef} />
 
       {labels.map((label, index) => (
-        <TrailLabels
-          key={label.city}
-          label={label}
-          index={index}
-          setLabelRef={setLabelRef}
-        />
+        <TrailLabels key={label.city} label={label} index={index} setLabelRef={setLabelRef} />
       ))}
     </group>
   );

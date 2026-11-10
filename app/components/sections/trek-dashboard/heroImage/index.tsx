@@ -12,8 +12,7 @@ import { ImageContainer, HeroBackgroundImage } from "./HeroImage.styles";
 
 const bg_HeroDesktop = "/assets/imgs/trek-dashboard/heroImage/imgDestop_1.jpg";
 
-const bg_HeroCellular =
-  "/assets/imgs/trek-dashboard/heroImage/imgCellular_1.jpg";
+const bg_HeroCellular = "/assets/imgs/trek-dashboard/heroImage/imgCellular_1.jpg";
 
 export default function HeroImage() {
   const theme = useTheme();

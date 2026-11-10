@@ -110,7 +110,7 @@ export default function TimelineContent({ timelineData }: Props) {
               start: "top 80%",
               toggleActions: "play none none reverse",
             },
-          },
+          }
         );
 
         /* ==========================================
@@ -148,7 +148,7 @@ export default function TimelineContent({ timelineData }: Props) {
               end: "bottom top",
               scrub: true,
             },
-          },
+          }
         );
 
         /* ==========================================
@@ -218,10 +218,7 @@ export default function TimelineContent({ timelineData }: Props) {
               <TimelineDot className="timeline-dot" />
             </TimelineDotWrapper>
 
-            <TimelineCard
-              className="timeline-card"
-              onMouseLeave={() => setActiveCard(null)}
-            >
+            <TimelineCard className="timeline-card" onMouseLeave={() => setActiveCard(null)}>
               <ImageWrapper onMouseEnter={() => setActiveCard(index)}>
                 <TimelineImage
                   className="timeline-image"

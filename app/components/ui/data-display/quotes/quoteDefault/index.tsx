@@ -6,14 +6,9 @@ import Tilt from "react-parallax-tilt";
 // DATAS
 
 // ICONS
-import { ImQuotesLeft, ImQuotesRight } from "react-icons/im";
+import { ImQuotesLeft, ImQuotesRight } from "@/app/utils/constants/icons";
 // STYLES
-import {
-  QuoteContainer,
-  QuoteIconLeft,
-  QuoteIconRight,
-  QuoteLine,
-} from "./QuoteDefault.Styles";
+import { QuoteContainer, QuoteIconLeft, QuoteIconRight, QuoteLine } from "./QuoteDefault.Styles";
 import { QuoteData } from "@/app/components/sections/trek-dashboard/explorerScreen/sections/dashboard/data/data.quoteLines";
 
 interface QuoteDefaultProps {

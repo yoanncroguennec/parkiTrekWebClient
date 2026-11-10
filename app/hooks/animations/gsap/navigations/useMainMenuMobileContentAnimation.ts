@@ -1,4 +1,3 @@
-
 "use client";
 
 import { useCallback, useLayoutEffect, useRef } from "react";
@@ -116,7 +115,7 @@ export function useMainMenuMobileContentAnimation() {
           duration: 0.5,
           ease: "back.out(2)",
         },
-        "-=0.35",
+        "-=0.35"
       );
 
       // 3 — TITLE
@@ -129,7 +128,7 @@ export function useMainMenuMobileContentAnimation() {
           duration: 0.5,
           ease: "power3.out",
         },
-        "-=0.3",
+        "-=0.3"
       );
 
       // 4 — LINKS
@@ -147,7 +146,7 @@ export function useMainMenuMobileContentAnimation() {
           },
           ease: "power3.out",
         },
-        "-=0.2",
+        "-=0.2"
       );
 
       // 5 — LIVE CARD
@@ -162,7 +161,7 @@ export function useMainMenuMobileContentAnimation() {
           duration: 0.65,
           ease: "back.out(1.5)",
         },
-        "-=0.15",
+        "-=0.15"
       );
 
       // 6 — DECOR
@@ -178,7 +177,7 @@ export function useMainMenuMobileContentAnimation() {
           duration: 0.7,
           ease: "power3.out",
         },
-        "-=0.25",
+        "-=0.25"
       );
 
       // LIVE DOT
@@ -251,7 +250,7 @@ export function useMainMenuMobileContentAnimation() {
         duration: 0.45,
         ease: "power3.in",
       },
-      "-=0.25",
+      "-=0.25"
     );
 
     // 3 — LINKS
@@ -269,7 +268,7 @@ export function useMainMenuMobileContentAnimation() {
         },
         ease: "power3.in",
       },
-      "-=0.2",
+      "-=0.2"
     );
 
     // 4 — TITLE
@@ -282,7 +281,7 @@ export function useMainMenuMobileContentAnimation() {
         duration: 0.35,
         ease: "power3.in",
       },
-      "-=0.2",
+      "-=0.2"
     );
 
     // 5 — LOGO
@@ -296,7 +295,7 @@ export function useMainMenuMobileContentAnimation() {
         duration: 0.4,
         ease: "power3.in",
       },
-      "-=0.2",
+      "-=0.2"
     );
 
     // 6 — PANEL
@@ -310,7 +309,7 @@ export function useMainMenuMobileContentAnimation() {
         duration: 0.6,
         ease: "power4.in",
       },
-      "-=0.15",
+      "-=0.15"
     );
 
     return timeline;

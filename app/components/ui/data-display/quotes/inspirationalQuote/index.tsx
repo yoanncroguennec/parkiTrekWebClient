@@ -4,9 +4,7 @@ import { useTranslations } from "next-intl";
 import HeartAnimation from "@/app/components/common/animations/heart";
 
 export default function InspirationalQuote() {
-  const t = useTranslations(
-    "PaymentsDonationsPage.supportShowCase.hero.inspirationalQuote",
-  );
+  const t = useTranslations("PaymentsDonationsPage.supportShowCase.hero.inspirationalQuote");
 
   return (
     <Quote>

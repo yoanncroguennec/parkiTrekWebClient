@@ -27,24 +27,22 @@ export const HeroSection = styled(Stack)(({ theme }) => ({
   },
 }));
 
-export const TitleHeroSection = styled(Typography)<TypographyProps>(
-  ({ theme }) => ({
-    color: "#FFF",
-    fontFamily: "dahlia",
-    fontSize: "30px",
-    fontWeight: 900,
-    letterSpacing: "2px",
-    margin: "8px 0 24px",
-    textAlign: "center",
-    lineHeight: 1.1,
+export const TitleHeroSection = styled(Typography)<TypographyProps>(({ theme }) => ({
+  color: "#FFF",
+  fontFamily: "dahlia",
+  fontSize: "30px",
+  fontWeight: 900,
+  letterSpacing: "2px",
+  margin: "8px 0 24px",
+  textAlign: "center",
+  lineHeight: 1.1,
 
-    [theme.breakpoints.up("md")]: {
-      fontSize: "48px",
-      letterSpacing: "5px",
-      margin: "25px 0 40px",
-    },
-  }),
-);
+  [theme.breakpoints.up("md")]: {
+    fontSize: "48px",
+    letterSpacing: "5px",
+    margin: "25px 0 40px",
+  },
+}));
 
 export const HeroContent = styled(Stack)(({ theme }) => ({
   width: "100%",

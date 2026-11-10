@@ -7,9 +7,7 @@ interface UseHeroImageIntroAnimationProps {
   containerRef: RefObject<HTMLDivElement | null>;
 }
 
-export function useHeroImageIntroAnimation({
-  containerRef,
-}: UseHeroImageIntroAnimationProps) {
+export function useHeroImageIntroAnimation({ containerRef }: UseHeroImageIntroAnimationProps) {
   useEffect(() => {
     const container = containerRef.current;
 
@@ -27,7 +25,7 @@ export function useHeroImageIntroAnimation({
           opacity: 1,
           duration: 1.4,
           ease: "power2.out",
-        },
+        }
       );
     }, container);
 

@@ -1,12 +1,5 @@
 // GOOD
-import {
-  styled,
-  Box,
-  Stack,
-  StackProps,
-  Typography,
-  TypographyProps,
-} from "@mui/material";
+import { styled, Box, Stack, StackProps, Typography, TypographyProps } from "@mui/material";
 
 /* =========================================================
    ROOT

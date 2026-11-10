@@ -39,7 +39,7 @@ export default function CircleCTA(
     // strokeWidth = 5,
     // backgroundType = "gradient",
     // videoSrc,
-  }: CircleCTAProps,
+  }: CircleCTAProps
 ) {
   // const router = useRouter();
 

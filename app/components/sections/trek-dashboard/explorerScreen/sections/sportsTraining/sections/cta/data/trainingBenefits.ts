@@ -1,8 +1,11 @@
-import type { IconType } from "react-icons";
-
-import { LuMountain, LuBrain } from "react-icons/lu";
-import { TiGroupOutline } from "react-icons/ti";
-import { IoHeartOutline } from "react-icons/io5";
+// ICONS
+import {
+  type IconType,
+  IoHeartOutline,
+  LuMountain,
+  LuBrain,
+  TiGroupOutline,
+} from "@/app/utils/constants/icons";
 
 export interface TrainingBenefit {
   id: string;

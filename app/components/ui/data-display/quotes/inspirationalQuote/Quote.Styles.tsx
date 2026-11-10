@@ -1,4 +1,4 @@
-"use client"
+"use client";
 
 import { Stack, Typography, TypographyProps, styled } from "@mui/material";
 

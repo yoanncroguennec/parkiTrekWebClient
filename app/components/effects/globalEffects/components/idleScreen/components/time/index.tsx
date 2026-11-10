@@ -2,14 +2,13 @@
 
 import { useEffect, useRef, useState } from "react";
 import { Stack, Typography } from "@mui/material";
-import { GiRunningShoe } from "react-icons/gi";
-import { GrMapLocation } from "react-icons/gr";
-
-import { TimeCard, TimeContainer, TimeRow, TimeSeparator } from "./Time.Styles";
-
 import { TIME_CONFIG, TIME_DATA } from "./constants/Time.constants";
 
 import useTimeAnimation from "./hooks/useTimeAnimation";
+// ICONS
+import { GiRunningShoe, GrMapLocation } from "@/app/utils/constants/icons";
+// STYLES
+import { TimeCard, TimeContainer, TimeRow, TimeSeparator } from "./Time.Styles";
 
 export default function Time() {
   const [time, setTime] = useState("");
@@ -31,7 +30,7 @@ export default function Time() {
         now.toLocaleTimeString("fr-FR", {
           hour: "2-digit",
           minute: "2-digit",
-        }),
+        })
       );
     };
 
@@ -70,10 +69,7 @@ export default function Time() {
 
         {/* Pas */}
         <TimeRow ref={addPulseRef}>
-          <GiRunningShoe
-            color={TIME_CONFIG.colors.primary}
-            size={TIME_CONFIG.icons.size}
-          />
+          <GiRunningShoe color={TIME_CONFIG.colors.primary} size={TIME_CONFIG.icons.size} />
 
           <Typography
             sx={{
@@ -101,10 +97,7 @@ export default function Time() {
 
         {/* Coordonnées */}
         <TimeRow ref={addPulseRef}>
-          <GrMapLocation
-            color={TIME_CONFIG.colors.primary}
-            size={TIME_CONFIG.icons.size}
-          />
+          <GrMapLocation color={TIME_CONFIG.colors.primary} size={TIME_CONFIG.icons.size} />
 
           <Stack>
             <Typography

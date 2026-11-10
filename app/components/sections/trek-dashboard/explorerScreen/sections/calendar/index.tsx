@@ -1,65 +1,122 @@
 "use client";
 
 import { useState } from "react";
-import { Box } from "@mui/material";
 import type { View } from "react-big-calendar";
-import { addMonths, format, subMonths } from "date-fns";
-import { fr } from "date-fns/locale";
-import { Header, Grid, Footer } from "./components";
+
+// COMPONENTS
+import {
+  EventDetailsCard,
+  Header,
+  CalendarSignature,
+  Toolbar,
+  CalendarView,
+  CalendarLegendFooter,
+} from "./components";
+// DATA
 import { initialEvents, type CalendarEvent } from "./data/calendar.data";
 
-import { calendarRootSx } from "./Calendar.styles";
+// STYLES
+import {
+  CalendarEventDetailsContainer,
+  CalendarGridContainer,
+  CalendarSectionContainer,
+  Separator,
+} from "./CalendarSection.Styles";
 
-import "react-big-calendar/lib/css/react-big-calendar.css";
-
-export default function ParkiTrekCalendar() {
-  const [date, setDate] = useState(new Date());
-  const [view, setView] = useState<View>("month");
+export default function CalendarSection() {
+  // ==========================================
+  // EVENTS
+  // ==========================================
 
   const [events] = useState<CalendarEvent[]>(initialEvents);
 
-  const monthLabel = format(date, "MMMM yyyy", {
-    locale: fr,
-  });
+  // Événement actuellement sélectionné
+  const [selectedEvent, setSelectedEvent] = useState<CalendarEvent | null>(null);
 
-  const navigatePrevious = () => {
-    setDate((current) => {
-      if (view === "month") return subMonths(current, 1);
+  // ==========================================
+  // CALENDAR STATE
+  // ==========================================
 
-      const next = new Date(current);
-      next.setDate(next.getDate() + (view === "week" ? -7 : -1));
+  // Date actuellement affichée
+  const [currentCalendarDate, setCurrentCalendarDate] = useState(new Date());
 
-      return next;
-    });
-  };
+  // Vue active : mois, semaine, jour ou agenda
+  const [activeCalendarView, setActiveCalendarView] = useState<View>("month");
 
-  const navigateNext = () => {
-    setDate((current) => {
-      if (view === "month") return addMonths(current, 1);
+  // ==========================================
+  // EVENT DETAILS STATE
+  // ==========================================
 
-      const next = new Date(current);
-      next.setDate(next.getDate() + (view === "week" ? 7 : 1));
+  // Contrôle de l'ouverture de la fiche événement
+  const [isEventDetailsOpen, setIsEventDetailsOpen] = useState<boolean>(false);
 
-      return next;
-    });
-  };
+  // Clé permettant de relancer l'animation
+  const [eventDetailsAnimationKey, setEventDetailsAnimationKey] = useState<number>(0);
+
+  // ==========================================
+  // CHANGE VIEW
+  // ==========================================
+
+  function handleViewChange(nextView: View) {
+    setActiveCalendarView(nextView);
+  }
+
+  // ==========================================
+  // SELECT EVENT
+  // ==========================================
+
+  function handleSelectEvent(event: CalendarEvent) {
+    setSelectedEvent(event);
+    setEventDetailsAnimationKey((previous) => previous + 1);
+    setIsEventDetailsOpen(true);
+  }
 
   return (
-    <Box sx={calendarRootSx}>
+    <>
       <Header />
 
-      <Grid
-        date={date}
-        view={view}
-        events={events}
-        onNavigate={setDate}
-        onViewChange={setView}
-        PreviousMonth={navigatePrevious}
-        NextMonth={navigateNext}
-        monthLabel={monthLabel}
-      />
+      <CalendarSectionContainer isEventDetailsOpen={isEventDetailsOpen}>
+        <CalendarSignature events={events} />
 
-      <Footer />
-    </Box>
+        <CalendarGridContainer>
+          {/* NAVIGATION ET SÉLECTEUR DE VUE */}
+          <Toolbar
+            currentCalendarDate={currentCalendarDate}
+            setCurrentCalendarDate={setCurrentCalendarDate}
+            activeCalendarView={activeCalendarView}
+            onViewChange={handleViewChange}
+          />
+
+          {/* CALENDRIER */}
+          <CalendarView
+            events={events}
+            currentCalendarDate={currentCalendarDate}
+            setCurrentCalendarDate={setCurrentCalendarDate}
+            activeCalendarView={activeCalendarView}
+            handleViewChange={handleViewChange}
+            onSelectEvent={handleSelectEvent}
+          />
+
+          {/* LÉGENDE DES ÉVÉNEMENTS + FOOTER */}
+          <CalendarLegendFooter />
+
+          {/* FICHE DÉTAILLÉE DE L'ÉVÉNEMENT */}
+          {selectedEvent && (
+            <CalendarEventDetailsContainer
+              key={eventDetailsAnimationKey}
+              isEventDetailsOpen={isEventDetailsOpen}
+            >
+              <EventDetailsCard
+                event={selectedEvent}
+                isEventDetailsOpen={isEventDetailsOpen}
+                onClose={() => setIsEventDetailsOpen(false)}
+              />
+            </CalendarEventDetailsContainer>
+          )}
+        </CalendarGridContainer>
+      </CalendarSectionContainer>
+
+      <Separator />
+    </>
   );
 }

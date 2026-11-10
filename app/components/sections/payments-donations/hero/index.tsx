@@ -35,9 +35,7 @@ interface HeroPaymentsDonationsProps {
   animationReady: boolean;
 }
 
-export default function PaymentsDonationsHero({
-  animationReady,
-}: HeroPaymentsDonationsProps) {
+export default function PaymentsDonationsHero({ animationReady }: HeroPaymentsDonationsProps) {
   const t = useTranslations("PaymentsDonationsPage.hero");
 
   // RESPONSIVE
@@ -136,9 +134,7 @@ export default function PaymentsDonationsHero({
               transitionSpeed={1500}
             >
               <LiquidImageTransition
-                displacementMap={
-                  paymentsDonationsHeroMedia.images.displacementMap
-                }
+                displacementMap={paymentsDonationsHeroMedia.images.displacementMap}
                 height={300}
                 image1={paymentsDonationsHeroMedia.images.transitionPrimary}
                 image2={paymentsDonationsHeroMedia.images.transitionSecondary}

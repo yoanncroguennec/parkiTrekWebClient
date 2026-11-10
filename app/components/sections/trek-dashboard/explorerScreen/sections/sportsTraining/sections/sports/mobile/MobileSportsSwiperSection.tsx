@@ -11,7 +11,7 @@ import SportTrainingCard from "../sportTrainingCard";
 import { useMobileSportsSwiper } from "./hooks/useMobileSportsSwiper";
 
 // ICONS
-import { FiChevronLeft, FiChevronRight } from "react-icons/fi";
+import { FiChevronLeft, FiChevronRight } from "@/app/utils/constants/icons";
 // DATAS
 import { sportsTrainingSessions } from "../../../data";
 // STYLES
@@ -70,9 +70,7 @@ export default function MobileSportsSwiperSection() {
   if (!currentItem) {
     return (
       <SwipeContainer>
-        <Typography variant="h6">
-          Toutes les activités ont été découvertes.
-        </Typography>
+        <Typography variant="h6">Toutes les activités ont été découvertes.</Typography>
       </SwipeContainer>
     );
   }
@@ -136,10 +134,7 @@ export default function MobileSportsSwiperSection() {
         {/* PREVIOUS */}
 
         {currentIndex > 0 && (
-          <SwipeButton
-            onClick={() => navigateCard("previous")}
-            aria-label="Activité précédente"
-          >
+          <SwipeButton onClick={() => navigateCard("previous")} aria-label="Activité précédente">
             <FiChevronLeft />
           </SwipeButton>
         )}
@@ -147,10 +142,7 @@ export default function MobileSportsSwiperSection() {
         {/* NEXT */}
 
         {currentIndex < sportsTrainingSessions.length - 1 && (
-          <SwipeButton
-            onClick={() => navigateCard("next")}
-            aria-label="Activité suivante"
-          >
+          <SwipeButton onClick={() => navigateCard("next")} aria-label="Activité suivante">
             <FiChevronRight />
           </SwipeButton>
         )}

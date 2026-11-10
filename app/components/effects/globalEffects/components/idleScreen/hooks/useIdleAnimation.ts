@@ -3,10 +3,7 @@
 import { useLayoutEffect, useRef } from "react";
 import gsap from "gsap";
 
-export default function useIdleAnimation(
-  idle: boolean,
-  initialVisible = false,
-) {
+export default function useIdleAnimation(idle: boolean, initialVisible = false) {
   const overlayRef = useRef<HTMLDivElement>(null);
   const haloRef = useRef<HTMLDivElement>(null);
   const grainRef = useRef<HTMLDivElement>(null);

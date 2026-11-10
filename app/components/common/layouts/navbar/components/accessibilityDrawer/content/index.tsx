@@ -7,11 +7,7 @@ import { Divider } from "@mui/material";
 import { PrimaryButton } from "@/app/components/ui";
 
 // COMPONENTS
-import {
-  AccessibilitySettingsSection,
-  AudioSection,
-  LocalClock,
-} from "./components";
+import { AccessibilitySettingsSection, AudioSection, LocalClock } from "./components";
 
 // HOOKS
 import { useIdleTimeout } from "@/app/hooks";
@@ -37,28 +33,17 @@ import { DEFAULT_SETTINGS } from "./components/accessibilitySettings/constants";
 
 export default function Content() {
   // HOOKS
-  const {
-    timeout,
-    setTimeout,
-  } = useIdleTimeout();
+  const { timeout, setTimeout } = useIdleTimeout();
 
   // AUDIO PROVIDER
-  const {
-    isPlaying,
-    volume,
-    togglePlay,
-    handleVolumeChange,
-  } = useAudio();
+  const { isPlaying, volume, togglePlay, handleVolumeChange } = useAudio();
 
   // ---------------------------------------------------------------------------
   // STATE
   // ---------------------------------------------------------------------------
 
   const [settings, setSettings] = useState<AccessibilitySettings>(() => {
-    return getLocalStorage(
-      STORAGE_KEYS.accessibility,
-      DEFAULT_SETTINGS,
-    );
+    return getLocalStorage(STORAGE_KEYS.accessibility, DEFAULT_SETTINGS);
   });
 
   // ---------------------------------------------------------------------------

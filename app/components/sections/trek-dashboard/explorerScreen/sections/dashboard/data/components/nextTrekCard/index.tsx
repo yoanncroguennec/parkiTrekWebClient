@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import { IoArrowForward } from "react-icons/io5";
+import { IoArrowForward } from "@/app/utils/constants/icons";
 
 // STYLES
 import {
@@ -90,11 +90,10 @@ export default function NextTrekCard() {
       </Destination>
 
       <Description component="p">
-        Un nouveau trek à travers les{" "}
-        <strong>paysages sauvages de Bretagne</strong>, entre sentiers côtiers,
-        vallées verdoyantes et panoramas ouverts sur l&apos;océan.{" "}
-        <strong>150 km de marche</strong> au cœur d&apos;une nature préservée,
-        entre effort, découverte et dépassement de soi.
+        Un nouveau trek à travers les <strong>paysages sauvages de Bretagne</strong>, entre sentiers
+        côtiers, vallées verdoyantes et panoramas ouverts sur l&apos;océan.{" "}
+        <strong>150 km de marche</strong> au cœur d&apos;une nature préservée, entre effort,
+        découverte et dépassement de soi.
       </Description>
 
       {/* =====================================================

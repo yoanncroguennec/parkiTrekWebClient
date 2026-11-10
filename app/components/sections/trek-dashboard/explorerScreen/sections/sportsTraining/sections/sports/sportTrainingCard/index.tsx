@@ -22,8 +22,7 @@ import gsap from "gsap";
 // HOOKS
 
 // ICONS
-import { IoIosTimer } from "react-icons/io";
-import { FiCheck } from "react-icons/fi";
+import { IoIosTimer, FiCheck } from "@/app/utils/constants/icons";
 
 // STYLES
 import {
@@ -126,12 +125,7 @@ export default function SportTrainingCard({
       <CardActionArea>
         {/* IMAGE */}
         <ImageContainer ref={categoryRef}>
-          <CardMedia
-            component="img"
-            height="140"
-            image={item.mainImage}
-            alt={item.sport}
-          />
+          <CardMedia component="img" height="140" image={item.mainImage} alt={item.sport} />
 
           <CategoryChips>
             {item.categories.map((category) => (

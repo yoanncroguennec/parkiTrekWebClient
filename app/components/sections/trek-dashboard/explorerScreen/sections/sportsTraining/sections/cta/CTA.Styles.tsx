@@ -27,46 +27,32 @@ export const CTATitle = styled(Stack)(({ theme }) => ({
 export const CTAItems = styled(Box, {
   shouldForwardProp: (prop) => prop !== "itemCount",
 })<{ itemCount: number }>(({ theme, itemCount }) => ({
-  width: "100%",
-
   display: "grid",
-
-  gridTemplateColumns: "repeat(2, minmax(0, 1fr))",
-
   gap: "20px",
-
+  gridTemplateColumns: "repeat(2, minmax(0, 1fr))",
+  width: "100%",
   [theme.breakpoints.up("md")]: {
-    gridTemplateColumns: `repeat(${itemCount}, minmax(0, 1fr))`,
     gap: "30px",
+    gridTemplateColumns: `repeat(${itemCount}, minmax(0, 1fr))`,
   },
 }));
 
 export const CTAItem = styled(Stack)(({ theme }) => ({
   alignItems: "center",
-  justifyContent: "center",
-  textAlign: "center",
-  gap: theme.spacing(1),
-
-  // Mobile : aspect Card
-  padding: theme.spacing(2),
-
-  borderRadius: "16px",
   backgroundColor: theme.palette.background.paper,
-
-  boxShadow: theme.shadows[2],
-
   border: `1px solid ${theme.palette.divider}`,
-
-  // Desktop : suppression de l'aspect Card
-  [theme.breakpoints.up("md")]: {
-    padding: 0,
-
-    borderRadius: 0,
-    backgroundColor: "transparent",
-
-    boxShadow: "none",
-    border: "none",
+  borderRadius: "16px",
+  boxShadow: "0 8px 30px rgba(0, 0, 0, 0.08)",
+  gap: theme.spacing(1),
+  justifyContent: "center",
+  padding: theme.spacing(2),
+  textAlign: "center",
+  transition: "transform 0.25s ease, box-shadow 0.25s ease",
+  "&:hover": {
+    transform: "translateY(-3px)",
+    boxShadow: "0 12px 35px rgba(0, 0, 0, 0.12)",
   },
+  [theme.breakpoints.up("md")]: {},
 }));
 
 export const CTAIcon = styled(Box)<{

@@ -1,13 +1,13 @@
 // GOOD
-import type { IconType } from "react-icons";
-import { GiMountainRoad } from "react-icons/gi";
 import {
-  FaUsers,
+  type IconType,
+  FaPersonWalking,
   FaComments,
-  FaHeart,
   FaHandHoldingHeart,
-} from "react-icons/fa";
-import { FaPersonWalking } from "react-icons/fa6";
+  FaHeart,
+  FaUsers,
+  GiMountainRoad,
+} from "@/app/utils/constants/icons";
 
 export interface TrainingBenefit {
   id: string;

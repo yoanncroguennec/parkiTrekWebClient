@@ -1,182 +1,340 @@
 import Image from "next/image";
 import { Box, Stack, Typography, styled } from "@mui/material";
 
-export const Root = styled(Box)(() => ({
-  background: "#fff",
-  overflow: "hidden",
+/* =========================================================
+   01 — ROOT
+   Conteneur principal de la section sponsors
+========================================================= */
+
+export const ListSponsorsContainer = styled(Box)(() => ({
   width: "100%",
+  minWidth: 0,
+  overflow: "hidden",
+  backgroundColor: "#FFFFFF",
 }));
+
+/* =========================================================
+   02 — WRAPPER
+   Conteneur des différentes lignes de sponsors
+========================================================= */
 
 export const Wrapper = styled(Stack)(({ theme }) => ({
-  // background: "green",
-  margin: "30px 0",
+  width: "100%",
+  margin: "25px 0",
+  gap: theme.spacing(2),
+
   [theme.breakpoints.up("md")]: {
     margin: "50px 0",
+    gap: theme.spacing(3),
   },
 }));
 
-/////////
-// ROW //
-/////////
+/* =========================================================
+   03 — ROW
+   Ligne regroupant une catégorie et son marquee
+========================================================= */
+
 export const Row = styled(Box)(() => ({
-  alignItems: "center",
-  // background: "red",
   display: "flex",
+  alignItems: "center",
   width: "100%",
+  minWidth: 0,
 }));
 
-//////////////
-// CATEGORY //
-//////////////
+/* =========================================================
+   04 — CATEGORY
+   Libellé vertical de la catégorie
+========================================================= */
+
 export const Category = styled(Typography)(({ theme }) => ({
-  background: "rgba(0,0,0,.1)",
-  borderBottomLeftRadius: 25,
-  borderTopLeftRadius: 25,
+  // MOBILE
+  display: "flex",
+  alignItems: "center",
+  justifyContent: "center",
   flexShrink: 0,
-  fontsize: "1rem",
-  fontWeight: 900,
-  padding: "20px 0px",
+
+  minWidth: "38px",
+  maxWidth: "38px",
+
+  padding: "15px 5px",
+
+  backgroundColor: "rgba(0,0,0,.1)",
+  borderTopLeftRadius: "18px",
+  borderBottomLeftRadius: "18px",
+
+  writingMode: "vertical-rl",
   textOrientation: "mixed",
   transform: "rotate(180deg)",
-  writingMode: "vertical-rl",
+
+  fontSize: "0.85rem",
+  fontWeight: 900,
+  lineHeight: 1.2,
+  textAlign: "center",
+
+  // DESKTOP
   [theme.breakpoints.up("md")]: {
-    fontSize: "2rem",
+    minWidth: "65px",
+    maxWidth: "65px",
     padding: "30px 10px",
+
+    borderTopLeftRadius: "25px",
+    borderBottomLeftRadius: "25px",
+
+    fontSize: "2rem",
   },
 }));
 
-export const Marquee = styled(Box)(() => ({
-  overflowX: "hidden",
-  overflowY: "visible",
-  paddingBottom: 50,
-  paddingTop: 50,
-  width: "100vw",
+/* =========================================================
+   05 — MARQUEE
+   Zone de défilement horizontal
+========================================================= */
+
+export const Marquee = styled(Box)(({ theme }) => ({
+  // MOBILE
+  position: "relative",
+  width: "100%",
+  minWidth: 0,
+
+  overflow: "hidden",
+
+  paddingTop: "30px",
+  paddingBottom: "30px",
+
+  // DESKTOP
+  [theme.breakpoints.up("md")]: {
+    paddingTop: "55px",
+    paddingBottom: "55px",
+  },
 }));
+
+/* =========================================================
+   06 — MARQUEE CONTENT
+   Contenu animé par GSAP
+========================================================= */
 
 export const MarqueeContent = styled(Stack)(() => ({
+  display: "flex",
+  flexDirection: "row",
   flexWrap: "nowrap",
-  overflow: "visible",
+
   width: "max-content",
+  minWidth: "max-content",
+
+  overflow: "visible",
 }));
 
-//////////
-// CARD //
-//////////
+/* =========================================================
+   07 — SPONSOR CARD
+   Carte individuelle du sponsor
+========================================================= */
+
 export const Card = styled(Box)(({ theme }) => ({
-  borderRadius: 25,
-  boxShadow: "0 20px 40px rgba(0,0,0,.15)",
-  cursor: "pointer",
-  margin: "0 12px",
-  overflow: "hidden",
+  // MOBILE
   position: "relative",
+  flex: "0 0 auto",
+
+  width: "220px",
+
+  margin: "0 8px",
+
+  borderRadius: "18px",
+  overflow: "hidden",
+
+  boxShadow: "0 12px 25px rgba(0,0,0,.12)",
+
+  cursor: "pointer",
+
   transformOrigin: "center",
   transition: "transform .4s ease, box-shadow .4s ease",
+
   zIndex: 1,
-  "&:hover": {
-    transform: "scale(1.15)",
-    zIndex: 100,
-  },
-  "&:hover ~ *": {
-    zIndex: 1,
-  },
+
+  // DESKTOP
   [theme.breakpoints.up("md")]: {
-    margin: "0 35px",
+    width: "260px",
+    margin: "0 24px",
+    borderRadius: "25px",
 
     "&:hover": {
       transform: "scale(1.25)",
+      boxShadow: "0 25px 50px rgba(0,0,0,.20)",
+      zIndex: 100,
+    },
+
+    "&:hover ~ *": {
+      zIndex: 1,
     },
   },
 }));
 
+/* =========================================================
+   08 — SPONSOR IMAGE
+   Image principale de la carte
+========================================================= */
+
 export const SponsorImage = styled(Image)(({ theme }) => ({
   display: "block",
-  height: 140,
+
+  width: "100%",
+  height: "140px",
+
   objectFit: "cover",
-  width: 220,
+  objectPosition: "center",
+
   [theme.breakpoints.up("md")]: {
-    height: 180,
-    width: 260,
+    height: "180px",
   },
 }));
+
+/* =========================================================
+   09 — CARD HEADER
+   Logo et titre du sponsor
+========================================================= */
 
 export const CardHeader = styled(Stack)(({ theme }) => ({
-  alignItems: "center",
-  flexDirection: "row",
-  gap: 6,
-  left: 12,
   position: "absolute",
-  top: 12,
+  top: "12px",
+  left: "12px",
   zIndex: 2,
+
+  display: "flex",
+  flexDirection: "row",
+  alignItems: "center",
+  gap: theme.spacing(0.75),
+
+  maxWidth: "calc(100% - 24px)",
+
   [theme.breakpoints.up("md")]: {
-    gap: 8,
-    left: 20,
-    top: 20,
+    top: "20px",
+    left: "20px",
+    gap: theme.spacing(1),
+    maxWidth: "calc(100% - 40px)",
   },
 }));
+
+/* =========================================================
+   10 — SPONSOR LOGO
+   Logo secondaire du sponsor
+========================================================= */
 
 export const LogoImage = styled(Image)(({ theme }) => ({
-  height: 24,
-  width: 24,
+  display: "block",
+  flexShrink: 0,
+
+  width: "24px",
+  height: "24px",
+
+  objectFit: "contain",
+
   [theme.breakpoints.up("md")]: {
-    height: 30,
-    width: 30,
+    width: "30px",
+    height: "30px",
   },
 }));
 
+/* =========================================================
+   11 — CARD TITLE
+   Nom du sponsor
+========================================================= */
+
 export const CardTitle = styled(Typography)(({ theme }) => ({
-  color: "#fff",
-  fontsize: "0.95rem",
+  minWidth: 0,
+
+  color: "#FFFFFF",
+  fontSize: "0.85rem",
   fontWeight: 200,
-  pointerEvents: "none",
+  lineHeight: 1.2,
+
   textShadow: "0 4px 12px rgba(0,0,0,.6)",
+
+  overflow: "hidden",
+  textOverflow: "ellipsis",
+  whiteSpace: "nowrap",
+
+  pointerEvents: "none",
+
   [theme.breakpoints.up("md")]: {
     fontSize: "1.15rem",
   },
 }));
 
+/* =========================================================
+   12 — CARD INFOS
+   Informations financières du sponsor
+========================================================= */
+
 export const CardInfos = styled(Stack)(({ theme }) => ({
-  bottom: 12,
-  left: 12,
   position: "absolute",
+  left: "12px",
+  bottom: "12px",
+
+  alignItems: "flex-start",
+  gap: theme.spacing(0.5),
+
   [theme.breakpoints.up("md")]: {
-    bottom: 20,
-    left: 20,
+    left: "20px",
+    bottom: "20px",
   },
 }));
 
+/* =========================================================
+   13 — CARD AMOUNT
+   Montant collecté
+========================================================= */
+
 export const CardAmount = styled(Typography)(({ theme }) => ({
-  color: "#fff",
+  color: "#FFFFFF",
   fontSize: "1.15rem",
   fontWeight: 900,
-  lineHeight: 1,
+  lineHeight: 1.1,
+
   [theme.breakpoints.up("md")]: {
     fontSize: "1.8rem",
   },
 }));
 
+/* =========================================================
+   14 — CARD SUBTITLE
+   Libellé du montant collecté
+========================================================= */
+
 export const CardSubtitle = styled(Typography)(({ theme }) => ({
-  color: "#fff",
-  fontSize: ".8rem",
+  color: "#FFFFFF",
+  fontSize: "0.75rem",
   fontWeight: 500,
+  lineHeight: 1.3,
+
   [theme.breakpoints.up("md")]: {
     fontSize: "1rem",
   },
 }));
 
+/* =========================================================
+   15 — ARROW CONTAINER
+   Indicateur de navigation de la carte
+========================================================= */
+
 export const ArrowContainer = styled(Box)(({ theme }) => ({
-  bottom: 10,
   position: "absolute",
-  right: 10,
+  right: "10px",
+  bottom: "10px",
+
+  display: "flex",
+  alignItems: "center",
+  justifyContent: "center",
+
   "& svg": {
-    height: 22,
-    width: 22,
+    width: "22px",
+    height: "22px",
   },
+
   [theme.breakpoints.up("md")]: {
-    bottom: 20,
-    right: 15,
+    right: "15px",
+    bottom: "20px",
+
     "& svg": {
-      height: 36,
-      width: 36,
+      width: "36px",
+      height: "36px",
     },
   },
 }));

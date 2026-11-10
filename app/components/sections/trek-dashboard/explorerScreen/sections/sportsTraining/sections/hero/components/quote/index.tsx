@@ -1,7 +1,8 @@
 "use client";
 
-import { ImQuotesLeft, ImQuotesRight } from "react-icons/im";
-
+// ICONS
+import { ImQuotesLeft, ImQuotesRight } from "@/app/utils/constants/icons";
+// STYLES
 import {
   QuoteCard,
   QuoteIconLeft,

@@ -21,46 +21,37 @@ interface StatsSectionProps {
   statCardRefs: RefObject<(HTMLDivElement | null)[]>;
 }
 
-export default function StatsSection({
-  statsRef,
-  statCardRefs,
-}: StatsSectionProps) {
+export default function StatsSection({ statsRef, statCardRefs }: StatsSectionProps) {
   return (
     <div ref={statsRef}>
       <StatsGrid>
-        {trekStats.map(
-          ({ id, icon: IconType, title, value, background }, index) => {
-            const isTrekDays = title === "Jours de trek";
+        {trekStats.map(({ id, icon: IconType, title, value, background }, index) => {
+          const isTrekDays = title === "Jours de trek";
 
-            const trekDuration =
-              isTrekDays && typeof value === "number"
-                ? formatTrekDuration(value)
-                : null;
+          const trekDuration =
+            isTrekDays && typeof value === "number" ? formatTrekDuration(value) : null;
 
-            const formattedTitle = trekDuration?.title ?? title;
+          const formattedTitle = trekDuration?.title ?? title;
 
-            return (
-              <StatCard
-                key={id}
-                ref={(element) => {
-                  statCardRefs.current[index] = element;
-                }}
-              >
-                <StatIcon $background={background}>
-                  <IconType />
-                </StatIcon>
+          return (
+            <StatCard
+              key={id}
+              ref={(element) => {
+                statCardRefs.current[index] = element;
+              }}
+            >
+              <StatIcon $background={background}>
+                <IconType />
+              </StatIcon>
 
-                <StatContent>
-                  <StatTitle>{formattedTitle}</StatTitle>
+              <StatContent>
+                <StatTitle>{formattedTitle}</StatTitle>
 
-                  {(!trekDuration || trekDuration.showValue) && (
-                    <StatValue>{value}</StatValue>
-                  )}
-                </StatContent>
-              </StatCard>
-            );
-          },
-        )}
+                {(!trekDuration || trekDuration.showValue) && <StatValue>{value}</StatValue>}
+              </StatContent>
+            </StatCard>
+          );
+        })}
       </StatsGrid>
     </div>
   );

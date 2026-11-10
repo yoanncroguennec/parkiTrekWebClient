@@ -1,18 +1,13 @@
 import { useLayoutEffect, type RefObject } from "react";
 import gsap from "gsap";
 
-export function useCategoryChipAnimation(
-  containerRef: RefObject<HTMLDivElement | null>,
-) {
+export function useCategoryChipAnimation(containerRef: RefObject<HTMLDivElement | null>) {
   useLayoutEffect(() => {
     const container = containerRef.current;
 
     if (!container) return;
 
-    const chips = gsap.utils.toArray<HTMLElement>(
-      "[data-category-chip]",
-      container,
-    );
+    const chips = gsap.utils.toArray<HTMLElement>("[data-category-chip]", container);
 
     if (!chips.length) return;
 

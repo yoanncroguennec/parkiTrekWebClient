@@ -59,35 +59,37 @@ export const HeroBenefitsBackground = styled("svg")(({ theme }) => ({
   [theme.breakpoints.down("md")]: {},
 }));
 
-export const BenefitIcon = styled(Box)<{ iconColor: string }>(
-  ({ theme, iconColor }) => ({
-    width: "42px",
-    height: "42px",
-    flexShrink: 0,
-    display: "flex",
-    alignItems: "center",
-    justifyContent: "center",
-    color: iconColor,
-    border: `1px solid ${iconColor}`,
-    background: `linear-gradient(135deg, ${iconColor}20, ${iconColor}05)`,
-    borderRadius: "50%",
+export const BenefitIcon = styled(Box, {
+  // Bloquer la transmission de iconColor au DOM
+  shouldForwardProp: (prop) => prop !== "iconColor",
+})<{ iconColor: string }>(({ theme, iconColor }) => ({
+  width: "42px",
+  height: "42px",
+  flexShrink: 0,
+  display: "flex",
+  alignItems: "center",
+  justifyContent: "center",
+
+  color: iconColor,
+  border: `1px solid ${iconColor}`,
+  background: `linear-gradient(135deg, ${iconColor}20, ${iconColor}05)`,
+  borderRadius: "50%",
+
+  "& svg": {
+    width: "20px",
+    height: "20px",
+  },
+
+  [theme.breakpoints.up("md")]: {
+    width: "55px",
+    height: "55px",
 
     "& svg": {
-      width: "20px",
-      height: "20px",
+      width: "24px",
+      height: "24px",
     },
-
-    [theme.breakpoints.up("md")]: {
-      width: "55px",
-      height: "55px",
-
-      "& svg": {
-        width: "24px",
-        height: "24px",
-      },
-    },
-  }),
-);
+  },
+}));
 
 export const BenefitText = styled(Typography, {
   shouldForwardProp: (prop) => prop !== "textColor",

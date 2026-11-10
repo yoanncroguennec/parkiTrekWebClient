@@ -41,22 +41,12 @@ export default function Compass() {
 
   return (
     <CompassContainer>
-      <svg
-        viewBox={`0 0 ${size} ${size}`}
-        width="100%"
-        height="100%"
-        aria-hidden="true"
-      >
+      <svg viewBox={`0 0 ${size} ${size}`} width="100%" height="100%" aria-hidden="true">
         <CompassCircle center={center} radius={radius} color={colors.circle} />
 
         <CompassTicks ticks={ticks} color={colors.tick} />
 
-        <CompassAxes
-          center={center}
-          size={size}
-          offset={axisOffset}
-          color={colors.axis}
-        />
+        <CompassAxes center={center} size={size} offset={axisOffset} color={colors.axis} />
 
         <CompassDirections
           directions={directions}
@@ -66,11 +56,7 @@ export default function Compass() {
 
         <CompassNeedle needle={needle} colors={colors} />
 
-        <CompassCenter
-          center={center}
-          radius={centerDotRadius}
-          color={colors.center}
-        />
+        <CompassCenter center={center} radius={centerDotRadius} color={colors.center} />
       </svg>
     </CompassContainer>
   );

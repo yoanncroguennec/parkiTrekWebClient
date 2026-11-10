@@ -13,7 +13,7 @@ export interface RotationState {
 export function useCarouselScroll(
   rotationState: RefObject<RotationState>,
   scrollSpeed = SCROLL_SPEED,
-  defaultSpeed = DEFAULT_SPEED,
+  defaultSpeed = DEFAULT_SPEED
 ): void {
   useEffect(() => {
     let lastScrollY = window.scrollY;

@@ -7,13 +7,13 @@ import { Stack } from "@mui/material";
 import { ContainerApp } from "@/app/components/common/layouts";
 // SECTIONS
 import {
+  CalendarSection,
   DashboardSection,
   HeaderSection,
   SportsTrainingSection,
   StatsSection,
   // TimelineSection,
 } from "./sections";
-import CalendarSection from "./sections/calendar";
 
 interface ExplorerScreenProps {
   onBack: () => void;
@@ -66,15 +66,9 @@ export default function ExplorerScreen({
 
         <StatsSection statsRef={statsRef} statCardRefs={statCardRefs} />
 
-        <DashboardSection
-          dashboardRef={dashboardRef}
-          dashboardCardRefs={dashboardCardRefs}
-        />
+        <DashboardSection dashboardRef={dashboardRef} dashboardCardRefs={dashboardCardRefs} />
 
-        <SportsTrainingSection
-          sportsRef={sportsRef}
-          sportsCardRefs={sportsCardRefs}
-        />
+        <SportsTrainingSection sportsRef={sportsRef} sportsCardRefs={sportsCardRefs} />
 
         <CalendarSection />
 

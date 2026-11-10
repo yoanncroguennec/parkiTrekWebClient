@@ -70,9 +70,7 @@ export function useCircleReveal({
       // CIRCLE SCALE
       // --------------------------------
 
-      const diagonal = Math.sqrt(
-        window.innerWidth ** 2 + window.innerHeight ** 2,
-      );
+      const diagonal = Math.sqrt(window.innerWidth ** 2 + window.innerHeight ** 2);
 
       const size = 24;
 
@@ -130,7 +128,7 @@ export function useCircleReveal({
         {},
         {
           duration: 0.6,
-        },
+        }
       )
 
         // --------------------------------
@@ -177,7 +175,7 @@ export function useCircleReveal({
             duration: 0.8,
             ease: "power3.inOut",
           },
-          "-=1.5",
+          "-=1.5"
         )
 
         // --------------------------------
@@ -198,7 +196,7 @@ export function useCircleReveal({
               callbackStartRef.current?.();
             },
           },
-          "-=0.8",
+          "-=0.8"
         )
 
         // --------------------------------

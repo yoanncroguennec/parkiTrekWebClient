@@ -3,11 +3,7 @@
 import { useState } from "react";
 import { useMediaQuery, useTheme } from "@mui/material";
 // UI
-import {
-  PrimaryButton,
-  CurvedArrowDownLeft,
-  PrimaryDropdown,
-} from "@/app/components/ui";
+import { PrimaryButton, CurvedArrowDownLeft, PrimaryDropdown } from "@/app/components/ui";
 // DATA
 import { trainingFilterButtons } from "./data/trainingFilters.data";
 // STYLES
@@ -47,11 +43,7 @@ export default function Filters() {
         </FilterButtons>
       ) : (
         <FilterDropdownContainer>
-          <PrimaryDropdown
-            label={selectedFilter}
-            items={dropdownItems}
-            isDesktop={false}
-          />
+          <PrimaryDropdown label={selectedFilter} items={dropdownItems} isDesktop={false} />
         </FilterDropdownContainer>
       )}
 

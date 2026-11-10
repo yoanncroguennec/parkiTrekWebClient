@@ -18,17 +18,13 @@ import {
 import gsap from "gsap";
 
 // DATA
-import {
-  sportsTrainingSessions,
-  trainingCategoryColors,
-} from "../../../../data";
+import { sportsTrainingSessions, trainingCategoryColors } from "../../../../data";
 
 // HOOK
 import { useCategoryChipAnimation } from "../../../../hooks/useCategoryChip";
 
 // ICONS
-import { IoIosTimer } from "react-icons/io";
-import { FiCheck } from "react-icons/fi";
+import { FiCheck, IoIosTimer } from "@/app/utils/constants/icons";
 
 // STYLES
 import {
@@ -187,12 +183,7 @@ export default function SportTrainingCard({
         {/* ================================================== */}
 
         <ImageContainer ref={categoryRef}>
-          <CardMedia
-            component="img"
-            height="140"
-            image={item.mainImage}
-            alt={item.sport}
-          />
+          <CardMedia component="img" height="140" image={item.mainImage} alt={item.sport} />
 
           {/* ================================================== */}
           {/* CATEGORIES */}

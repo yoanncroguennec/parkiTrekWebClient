@@ -1,12 +1,5 @@
 // GOOD
-import {
-  styled,
-  Box,
-  Stack,
-  Typography,
-  TypographyProps,
-  type StackProps,
-} from "@mui/material";
+import { styled, Box, Stack, Typography, TypographyProps, type StackProps } from "@mui/material";
 
 export const CardContainer = styled(Stack)<StackProps>(({ theme }) => ({
   width: "100%",
@@ -90,44 +83,40 @@ export const DonutInfo = styled(Box)(({ theme }) => ({
    INFO TITLE
 ========================================================= */
 
-export const DonutInfoTitle = styled(Typography)<TypographyProps>(
-  ({ theme }) => ({
+export const DonutInfoTitle = styled(Typography)<TypographyProps>(({ theme }) => ({
+  fontSize: "10px",
+
+  fontWeight: 500,
+
+  textTransform: "uppercase",
+
+  letterSpacing: ".2em",
+
+  opacity: 0.4,
+
+  [theme.breakpoints.up("md")]: {
     fontSize: "10px",
-
-    fontWeight: 500,
-
-    textTransform: "uppercase",
-
-    letterSpacing: ".2em",
-
-    opacity: 0.4,
-
-    [theme.breakpoints.up("md")]: {
-      fontSize: "10px",
-    },
-  }),
-);
+  },
+}));
 
 /* =========================================================
    INFO DESCRIPTION
 ========================================================= */
 
-export const DonutInfoDescription = styled(Typography)<TypographyProps>(
-  ({ theme }) => ({
-    marginTop: "8px",
+export const DonutInfoDescription = styled(Typography)<TypographyProps>(({ theme }) => ({
+  marginTop: "8px",
 
-    fontSize: "13px",
+  fontSize: "13px",
+
+  lineHeight: 1.5,
+
+  opacity: 0.6,
+
+  [theme.breakpoints.up("md")]: {
+    marginTop: "10px",
+
+    fontSize: "14px",
 
     lineHeight: 1.5,
-
-    opacity: 0.6,
-
-    [theme.breakpoints.up("md")]: {
-      marginTop: "10px",
-
-      fontSize: "14px",
-
-      lineHeight: 1.5,
-    },
-  }),
-);
+  },
+}));

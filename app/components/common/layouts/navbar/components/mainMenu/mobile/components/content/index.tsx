@@ -27,7 +27,7 @@ import {
 
 // Imgs
 const logoParkiTrek = "/assets/imgs/share/logoParki_1.png";
-const bgImgCellularDecoration = "/assets/imgs/menu/desktop/bgImgCellularDecoration.png";
+const bgImgCellularDecoration = "/assets/imgs/menu/mobile/bgImgCellularDecoration.png";
 
 export default function Content() {
   const t = useTranslations("Menu");

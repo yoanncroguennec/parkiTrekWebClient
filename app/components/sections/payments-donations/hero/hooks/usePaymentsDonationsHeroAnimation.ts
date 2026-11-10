@@ -2,12 +2,7 @@
 
 import type { RefObject } from "react";
 
-import {
-  useCounterAnimation,
-  useFadeInUp,
-  useSlideInRotate,
-  useSplitText,
-} from "@/app/hooks";
+import { useCounterAnimation, useFadeInUp, useSlideInRotate, useSplitText } from "@/app/hooks";
 
 interface UsePaymentsDonationsHeroAnimationProps {
   animationReady: boolean;

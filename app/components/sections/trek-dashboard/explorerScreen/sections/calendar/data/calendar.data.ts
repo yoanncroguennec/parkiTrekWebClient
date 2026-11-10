@@ -31,8 +31,7 @@ export const localizer = dateFnsLocalizer({
 
 // TYPES
 
-export type Category =
-  "Trek" | "Sport" | "Sensibilisation" | "Live" | "Rencontre";
+export type Category = "Trek" | "Sport" | "Sensibilisation" | "Live" | "Rencontre";
 
 export type CalendarEvent = Event & {
   id: number;
@@ -60,13 +59,7 @@ export const categoryTextColors: Record<Category, string> = {
 
 // CATÉGORIES
 
-export const categories: Category[] = [
-  "Trek",
-  "Sport",
-  "Sensibilisation",
-  "Live",
-  "Rencontre",
-];
+export const categories: Category[] = ["Trek", "Sport", "Sensibilisation", "Live", "Rencontre"];
 
 // ÉVÉNEMENTS DE DÉMONSTRATION
 

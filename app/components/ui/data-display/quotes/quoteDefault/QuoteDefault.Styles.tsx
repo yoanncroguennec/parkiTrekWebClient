@@ -30,10 +30,7 @@ export const QuoteContainer = styled(Stack, {
    * 1. Image
    * 2. Gradient
    */
-  backgroundImage: [
-    backgroundImage ? `url("${backgroundImage}")` : null,
-    bgColor,
-  ]
+  backgroundImage: [backgroundImage ? `url("${backgroundImage}")` : null, bgColor]
     .filter(Boolean)
     .join(", "),
 

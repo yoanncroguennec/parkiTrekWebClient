@@ -3,14 +3,10 @@
 import { RefObject } from "react";
 
 import { useMediaQuery, useTheme } from "@mui/material";
-
-import { IoArrowBack } from "react-icons/io5";
-
-import {
-  BackButton,
-  HeaderContainer,
-  HeaderTitle,
-} from "./HeaderSection.Styles";
+// ICONS
+import { IoArrowBack } from "@/app/utils/constants/icons";
+// STYLES
+import { BackButton, HeaderContainer, HeaderTitle } from "./HeaderSection.Styles";
 
 interface Props {
   onBack: () => void;

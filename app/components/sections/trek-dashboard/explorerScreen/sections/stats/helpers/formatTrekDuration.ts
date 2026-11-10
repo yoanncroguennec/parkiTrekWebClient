@@ -24,12 +24,8 @@ export const formatTrekDuration = (days: number): TrekDuration => {
   return {
     title:
       months === 1
-        ? `1 mois et ${remainingDays} jour${
-            remainingDays > 1 ? "s" : ""
-          } de trek`
-        : `${months} mois et ${remainingDays} jour${
-            remainingDays > 1 ? "s" : ""
-          } de trek`,
+        ? `1 mois et ${remainingDays} jour${remainingDays > 1 ? "s" : ""} de trek`
+        : `${months} mois et ${remainingDays} jour${remainingDays > 1 ? "s" : ""} de trek`,
     showValue: false,
   };
 };

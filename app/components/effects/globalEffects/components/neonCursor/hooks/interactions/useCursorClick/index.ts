@@ -10,10 +10,7 @@ interface UseCursorClickProps {
   circleRef: RefObject<HTMLDivElement | null>;
 }
 
-export default function useCursorClick({
-  dotRef,
-  circleRef,
-}: UseCursorClickProps) {
+export default function useCursorClick({ dotRef, circleRef }: UseCursorClickProps) {
   useEffect(() => {
     const dot = dotRef.current;
     const circle = circleRef.current;

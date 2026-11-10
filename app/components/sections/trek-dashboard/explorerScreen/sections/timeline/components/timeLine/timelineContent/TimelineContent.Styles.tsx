@@ -1,11 +1,5 @@
 import Image from "next/image";
-import {
-  styled,
-  Box,
-  Typography,
-  BoxProps,
-  TypographyProps,
-} from "@mui/material";
+import { styled, Box, Typography, BoxProps, TypographyProps } from "@mui/material";
 
 type TimelineItem_Props = {
   left: boolean;
@@ -128,8 +122,7 @@ export const ImageWrapper = styled(Box)<BoxProps>(({ theme }) => ({
     height: "100%",
     zIndex: 10,
 
-    background:
-      "linear-gradient(90deg, transparent, rgba(255,255,255,0.45), transparent)",
+    background: "linear-gradient(90deg, transparent, rgba(255,255,255,0.45), transparent)",
 
     transform: "skewX(-20deg)",
 
@@ -170,8 +163,7 @@ export const TimelineImage = styled(Image)({
 export const ImageOverlay = styled(Box)<BoxProps>({
   position: "absolute",
   inset: 0,
-  background:
-    "linear-gradient(to bottom, transparent 50%, rgba(0, 0, 0, 0.75))",
+  background: "linear-gradient(to bottom, transparent 50%, rgba(0, 0, 0, 0.75))",
 });
 
 export const ImageNumber = styled(Typography)<TypographyProps>({

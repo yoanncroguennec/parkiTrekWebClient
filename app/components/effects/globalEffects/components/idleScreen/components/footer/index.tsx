@@ -1,7 +1,7 @@
 "use client";
 
 import { useMediaQuery, useTheme } from "@mui/material";
-import { PiMouseSimpleBold } from "react-icons/pi";
+import { PiMouseSimpleBold } from "@/app/utils/constants/icons";
 
 import {
   Container,

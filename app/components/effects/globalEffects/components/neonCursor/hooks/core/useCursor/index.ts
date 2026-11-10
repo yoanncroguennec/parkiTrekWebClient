@@ -11,11 +11,7 @@ interface UseCursorProps {
   circleEase?: number;
 }
 
-export default function useCursor({
-  dotRef,
-  circleRef,
-  circleEase = 0.15,
-}: UseCursorProps) {
+export default function useCursor({ dotRef, circleRef, circleEase = 0.15 }: UseCursorProps) {
   useEffect(() => {
     document.body.style.cursor = "none";
 

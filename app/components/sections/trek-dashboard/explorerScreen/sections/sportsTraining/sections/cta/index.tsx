@@ -2,7 +2,7 @@ import { Divider, Stack, Typography } from "@mui/material";
 // DATAS
 import { trainingBenefits } from "./data/trainingBenefits";
 // ICONS
-import { BsArrowRight } from "react-icons/bs";
+import { BsArrowRight } from "@/app/utils/constants/icons";
 // STYLES
 import {
   CTASection,

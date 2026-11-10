@@ -13,4 +13,4 @@ export const zIndex = {
   cursor: 999999, // Conteneur principal du curseur personnalisé
   cursorCircle: 1000000, // Cercle principal du curseur
   cursorDot: 1000001, // Point central lumineux du curseur
-  } as const;
+} as const;

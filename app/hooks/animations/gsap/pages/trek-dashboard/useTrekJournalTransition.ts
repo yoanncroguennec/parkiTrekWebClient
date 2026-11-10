@@ -49,14 +49,12 @@ export function useTrekJournalTransition({
   ======================================================= */
 
   const getStatCards = useCallback(() => {
-    return statCardRefs.current.filter(
-      (element): element is HTMLDivElement => element !== null,
-    );
+    return statCardRefs.current.filter((element): element is HTMLDivElement => element !== null);
   }, [statCardRefs]);
 
   const getDashboardCards = useCallback(() => {
     return dashboardCardRefs.current.filter(
-      (element): element is HTMLDivElement => element !== null,
+      (element): element is HTMLDivElement => element !== null
     );
   }, [dashboardCardRefs]);
 
@@ -82,13 +80,7 @@ export function useTrekJournalTransition({
        Vérification
     ------------------------------------------------------- */
 
-    if (
-      isAnimatingRef.current ||
-      !heroContent ||
-      !heroImage ||
-      !explorerScreen ||
-      !header
-    ) {
+    if (isAnimatingRef.current || !heroContent || !heroImage || !explorerScreen || !header) {
       return;
     }
 
@@ -148,7 +140,7 @@ export function useTrekJournalTransition({
         duration: 0.8,
         ease: "power2.inOut",
       },
-      0,
+      0
     );
 
     /* -------------------------------------------------------
@@ -162,7 +154,7 @@ export function useTrekJournalTransition({
         duration: 1.2,
         ease: "power3.inOut",
       },
-      0,
+      0
     );
 
     /* -------------------------------------------------------
@@ -176,7 +168,7 @@ export function useTrekJournalTransition({
         duration: 0.8,
         ease: "power2.out",
       },
-      0.3,
+      0.3
     );
 
     /* -------------------------------------------------------
@@ -191,7 +183,7 @@ export function useTrekJournalTransition({
         duration: 0.8,
         ease: "power3.out",
       },
-      0.8,
+      0.8
     );
 
     /* -------------------------------------------------------
@@ -208,7 +200,7 @@ export function useTrekJournalTransition({
         ease: "power3.out",
         stagger: 0.15,
       },
-      1.05,
+      1.05
     );
 
     /* -------------------------------------------------------
@@ -225,7 +217,7 @@ export function useTrekJournalTransition({
         ease: "power3.out",
         stagger: 0.18,
       },
-      1.8,
+      1.8
     );
   }, [
     heroContentRef,
@@ -254,13 +246,7 @@ export function useTrekJournalTransition({
        Vérification
     ------------------------------------------------------- */
 
-    if (
-      isAnimatingRef.current ||
-      !heroContent ||
-      !heroImage ||
-      !explorerScreen ||
-      !header
-    ) {
+    if (isAnimatingRef.current || !heroContent || !heroImage || !explorerScreen || !header) {
       return;
     }
 
@@ -298,7 +284,7 @@ export function useTrekJournalTransition({
         ease: "power2.in",
         stagger: 0.08,
       },
-      0,
+      0
     );
 
     /* -------------------------------------------------------
@@ -315,7 +301,7 @@ export function useTrekJournalTransition({
         ease: "power2.in",
         stagger: 0.08,
       },
-      0.15,
+      0.15
     );
 
     /* -------------------------------------------------------
@@ -330,7 +316,7 @@ export function useTrekJournalTransition({
         duration: 0.5,
         ease: "power2.in",
       },
-      0,
+      0
     );
 
     /* -------------------------------------------------------
@@ -344,7 +330,7 @@ export function useTrekJournalTransition({
         duration: 0.7,
         ease: "power2.inOut",
       },
-      0.2,
+      0.2
     );
 
     /* -------------------------------------------------------
@@ -358,7 +344,7 @@ export function useTrekJournalTransition({
         duration: 1.2,
         ease: "power3.inOut",
       },
-      0.1,
+      0.1
     );
 
     /* -------------------------------------------------------
@@ -372,7 +358,7 @@ export function useTrekJournalTransition({
         duration: 0.8,
         ease: "power2.out",
       },
-      0.3,
+      0.3
     );
   }, [
     heroContentRef,

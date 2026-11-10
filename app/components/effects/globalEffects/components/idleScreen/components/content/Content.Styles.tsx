@@ -31,23 +31,20 @@ export const Subtitle = styled(Box)(() => ({
 
 export const Separator = styled(Box)({
   height: "4px",
-  background:
-    "linear-gradient(to right, transparent, rgba(139,146,112,.5), transparent)",
+  background: "linear-gradient(to right, transparent, rgba(139,146,112,.5), transparent)",
 });
 
-export const SubtitleText = styled(Typography)<TypographyProps>(
-  ({ theme }) => ({
-    color: "#8B9270",
-    fontSize: "20px",
-    fontWeight: 900,
-    letterSpacing: "0.8em",
-    textAlign: "center",
-    textTransform: "uppercase",
-    [theme.breakpoints.up("md")]: {
-      fontSize: "30px",
-    },
-  }),
-);
+export const SubtitleText = styled(Typography)<TypographyProps>(({ theme }) => ({
+  color: "#8B9270",
+  fontSize: "20px",
+  fontWeight: 900,
+  letterSpacing: "0.8em",
+  textAlign: "center",
+  textTransform: "uppercase",
+  [theme.breakpoints.up("md")]: {
+    fontSize: "30px",
+  },
+}));
 
 export const LogoContainer = styled(Box)({
   display: "flex",

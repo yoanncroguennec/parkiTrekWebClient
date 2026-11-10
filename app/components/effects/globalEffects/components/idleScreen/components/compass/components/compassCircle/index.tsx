@@ -4,19 +4,6 @@ interface CompassCircleProps {
   color: string;
 }
 
-export default function CompassCircle({
-  center,
-  radius,
-  color,
-}: CompassCircleProps) {
-  return (
-    <circle
-      cx={center}
-      cy={center}
-      r={radius}
-      fill="none"
-      stroke={color}
-      strokeWidth="2"
-    />
-  );
+export default function CompassCircle({ center, radius, color }: CompassCircleProps) {
+  return <circle cx={center} cy={center} r={radius} fill="none" stroke={color} strokeWidth="2" />;
 }

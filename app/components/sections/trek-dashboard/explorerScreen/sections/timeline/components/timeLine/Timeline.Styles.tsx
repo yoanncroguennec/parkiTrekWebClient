@@ -24,6 +24,5 @@ export const TimelineProgress = styled(Box)<BoxProps>({
   background: "rgba(60, 253, 12, 0.13)",
   transform: "translateX(-50%) scaleY(0)",
   transformOrigin: "top center",
-  boxShadow:
-    "0 0 12px rgba(255, 255, 255, 0.5), 0 0 30px rgba(255, 255, 255, 0.15)",
+  boxShadow: "0 0 12px rgba(255, 255, 255, 0.5), 0 0 30px rgba(255, 255, 255, 0.15)",
 });

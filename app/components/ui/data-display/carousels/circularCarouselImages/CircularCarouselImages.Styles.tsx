@@ -14,8 +14,7 @@ export const CarouselContainer = styled(Box)<BoxProps>(() => ({
 }));
 
 export const RightFogOverlay = styled(Box)<BoxProps>(({}) => ({
-  background:
-    "linear-gradient(to left, #000 0%, rgba(0,0,0,.85) 30%, rgba(0,0,0,0) 100%)",
+  background: "linear-gradient(to left, #000 0%, rgba(0,0,0,.85) 30%, rgba(0,0,0,0) 100%)",
   height: "100%",
   pointerEvents: "none",
   position: "absolute",
@@ -26,8 +25,7 @@ export const RightFogOverlay = styled(Box)<BoxProps>(({}) => ({
 }));
 
 export const BackgroundHalo = styled(Box)<BoxProps>(({}) => ({
-  background:
-    "radial-gradient(circle, rgba(238, 23, 23, 0.12) 0%, transparent 70%)",
+  background: "radial-gradient(circle, rgba(238, 23, 23, 0.12) 0%, transparent 70%)",
   borderRadius: "50%",
   filter: "blur(180px)",
   height: "1200px",

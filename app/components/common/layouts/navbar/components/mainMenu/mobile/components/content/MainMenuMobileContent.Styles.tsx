@@ -59,6 +59,7 @@ export const MainMenuLink = styled(Link)(() => ({
   maxWidth: "230px",
   padding: "8px 0",
   boxSizing: "border-box",
+  textDecoration: "none",
 
   "& a": {
     display: "block",

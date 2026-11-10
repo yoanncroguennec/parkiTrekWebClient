@@ -81,15 +81,13 @@ export const Objective = styled(Typography)<TypographyProps>(({ theme }) => ({
   },
 }));
 
-export const AmountObjective = styled(Typography)<TypographyProps>(
-  ({ theme }) => ({
-    color: "#0FF",
-    fontSize: "44.8px",
-    textAlign: "left",
-    textShadow: "4px 4px 5px #333",
+export const AmountObjective = styled(Typography)<TypographyProps>(({ theme }) => ({
+  color: "#0FF",
+  fontSize: "44.8px",
+  textAlign: "left",
+  textShadow: "4px 4px 5px #333",
 
-    [theme.breakpoints.up("md")]: {
-      fontSize: "67.2px",
-    },
-  }),
-);
+  [theme.breakpoints.up("md")]: {
+    fontSize: "67.2px",
+  },
+}));

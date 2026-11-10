@@ -8,10 +8,7 @@ interface UseSpotlightProps {
   spotlightRef: RefObject<HTMLDivElement | null>;
 }
 
-export function useSpotlight({
-  containerRef,
-  spotlightRef,
-}: UseSpotlightProps) {
+export function useSpotlight({ containerRef, spotlightRef }: UseSpotlightProps) {
   useEffect(() => {
     const container = containerRef.current;
 

@@ -24,15 +24,7 @@ import { Line } from "react-chartjs-2";
    CHART.JS
 ========================================================= */
 
-ChartJS.register(
-  CategoryScale,
-  LinearScale,
-  PointElement,
-  LineElement,
-  Tooltip,
-  Legend,
-  Filler,
-);
+ChartJS.register(CategoryScale, LinearScale, PointElement, LineElement, Tooltip, Legend, Filler);
 
 /* =========================================================
    CONSTANTS
@@ -242,8 +234,7 @@ export default function DonationGrowthChart() {
 
         borderRadius: "24px",
 
-        background:
-          "linear-gradient(145deg, rgba(255,255,255,0.72), rgba(255,255,255,0.38))",
+        background: "linear-gradient(145deg, rgba(255,255,255,0.72), rgba(255,255,255,0.38))",
 
         backdropFilter: "blur(35px)",
 
@@ -251,8 +242,7 @@ export default function DonationGrowthChart() {
 
         border: "1px solid rgba(255,255,255,0.45)",
 
-        boxShadow:
-          "0 30px 80px rgba(0,0,0,0.16), inset 0 1px 1px rgba(255,255,255,0.8)",
+        boxShadow: "0 30px 80px rgba(0,0,0,0.16), inset 0 1px 1px rgba(255,255,255,0.8)",
 
         "&::before": {
           content: '""',
@@ -269,8 +259,7 @@ export default function DonationGrowthChart() {
 
           borderRadius: "50%",
 
-          background:
-            "radial-gradient(circle, rgba(0,242,96,0.16), transparent 70%)",
+          background: "radial-gradient(circle, rgba(0,242,96,0.16), transparent 70%)",
 
           pointerEvents: "none",
         },
@@ -290,8 +279,7 @@ export default function DonationGrowthChart() {
 
           borderRadius: "50%",
 
-          background:
-            "radial-gradient(circle, rgba(0,198,255,0.14), transparent 70%)",
+          background: "radial-gradient(circle, rgba(0,198,255,0.14), transparent 70%)",
 
           pointerEvents: "none",
         },

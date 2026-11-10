@@ -1,5 +1,5 @@
-import { FaFire, FaHeart } from "react-icons/fa";
-import { GiConverseShoe } from "react-icons/gi";
+// ICONS
+import { FaFire, FaHeart, GiConverseShoe } from "@/app/utils/constants/icons";
 
 export const trekStats = [
   {

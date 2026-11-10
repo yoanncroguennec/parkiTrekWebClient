@@ -1,16 +1,16 @@
-import type { IconType } from "react-icons";
-
+// ICONS
 import {
+  type IconType,
   MdDirectionsBike,
+  MdDirectionsWalk,
+  MdFavorite,
+  MdFitnessCenter,
+  MdHiking,
+  MdMusicNote,
   MdSelfImprovement,
   MdSportsMma,
-  MdDirectionsWalk,
-  MdFitnessCenter,
   MdTheaterComedy,
-  MdFavorite,
-  MdMusicNote,
-  MdHiking,
-} from "react-icons/md";
+} from "@/app/utils/constants/icons";
 
 export type TrainingCategory =
   | "Agilité"
@@ -58,15 +58,8 @@ export interface SportsTrainingSession {
 
 export const sportsTrainingSessions: SportsTrainingSession[] = [
   {
-    mainImage:
-      "/assets/imgs/trek-dashboard/explorerScreen/sportsTraingSessions/streching.jpg",
-    categories: [
-      "Souplesse",
-      "Mobilité",
-      "Posture",
-      "Équilibre",
-      "Respiration",
-    ],
+    mainImage: "/assets/imgs/trek-dashboard/explorerScreen/sportsTraingSessions/streching.jpg",
+    categories: ["Souplesse", "Mobilité", "Posture", "Équilibre", "Respiration"],
     decorativeIcon: "",
     sport: "Streching / Gymnastique",
     iconSport: MdSelfImprovement,
@@ -79,8 +72,7 @@ export const sportsTrainingSessions: SportsTrainingSession[] = [
     ],
   },
   {
-    mainImage:
-      "/assets/imgs/trek-dashboard/explorerScreen/sportsTraingSessions/boxing.jpg",
+    mainImage: "/assets/imgs/trek-dashboard/explorerScreen/sportsTraingSessions/boxing.jpg",
     categories: [
       "Coordination",
       "Agilité",
@@ -105,32 +97,17 @@ export const sportsTrainingSessions: SportsTrainingSession[] = [
     ],
   },
   {
-    mainImage:
-      "/assets/imgs/trek-dashboard/explorerScreen/sportsTraingSessions/briskWalking.jpg",
-    categories: [
-      "Endurance cardiovasculaire",
-      "Mobilité",
-      "Équilibre",
-      "Coordination",
-    ],
+    mainImage: "/assets/imgs/trek-dashboard/explorerScreen/sportsTraingSessions/briskWalking.jpg",
+    categories: ["Endurance cardiovasculaire", "Mobilité", "Équilibre", "Coordination"],
     decorativeIcon: "",
     sport: "Marche rapide",
     iconSport: MdDirectionsWalk,
     practiceDuration: "2 à 4h",
-    benefitsForSymptoms: [
-      "Améliore l'endurance",
-      "Améliorer la mobilité et l'équilibre",
-    ],
+    benefitsForSymptoms: ["Améliore l'endurance", "Améliorer la mobilité et l'équilibre"],
   },
   {
-    mainImage:
-      "/assets/imgs/trek-dashboard/explorerScreen/sportsTraingSessions/weightTraining.jpg",
-    categories: [
-      "Renforcement musculaire",
-      "Posture",
-      "Mobilité fonctionnelle",
-      "Équilibre",
-    ],
+    mainImage: "/assets/imgs/trek-dashboard/explorerScreen/sportsTraingSessions/weightTraining.jpg",
+    categories: ["Renforcement musculaire", "Posture", "Mobilité fonctionnelle", "Équilibre"],
     decorativeIcon: "",
     sport: "Musculation",
     iconSport: MdFitnessCenter,
@@ -147,8 +124,7 @@ export const sportsTrainingSessions: SportsTrainingSession[] = [
     ],
   },
   {
-    mainImage:
-      "/assets/imgs/trek-dashboard/explorerScreen/sportsTraingSessions/theatre.jpg",
+    mainImage: "/assets/imgs/trek-dashboard/explorerScreen/sportsTraingSessions/theatre.jpg",
     categories: [
       "Communication",
       "Expression faciale",
@@ -170,15 +146,8 @@ export const sportsTrainingSessions: SportsTrainingSession[] = [
     ],
   },
   {
-    mainImage:
-      "/assets/imgs/trek-dashboard/explorerScreen/sportsTraingSessions/cardio.jpg",
-    categories: [
-      "Renforcement",
-      "Endurance",
-      "Cardio",
-      "Mobilité",
-      "Coordination",
-    ],
+    mainImage: "/assets/imgs/trek-dashboard/explorerScreen/sportsTraingSessions/cardio.jpg",
+    categories: ["Renforcement", "Endurance", "Cardio", "Mobilité", "Coordination"],
     decorativeIcon: "",
     sport: "Renforcement musculaire / Cardio",
     iconSport: MdFavorite,
@@ -195,8 +164,7 @@ export const sportsTrainingSessions: SportsTrainingSession[] = [
     ],
   },
   {
-    mainImage:
-      "/assets/imgs/trek-dashboard/explorerScreen/sportsTraingSessions/zumba.jpg",
+    mainImage: "/assets/imgs/trek-dashboard/explorerScreen/sportsTraingSessions/zumba.jpg",
     categories: [
       "Cardio",
       "Coordination",
@@ -216,8 +184,7 @@ export const sportsTrainingSessions: SportsTrainingSession[] = [
     ],
   },
   {
-    mainImage:
-      "/assets/imgs/trek-dashboard/explorerScreen/sportsTraingSessions/hiking.jpg",
+    mainImage: "/assets/imgs/trek-dashboard/explorerScreen/sportsTraingSessions/hiking.jpg",
     categories: [
       "Endurance",
       "Équilibre",
@@ -235,8 +202,7 @@ export const sportsTrainingSessions: SportsTrainingSession[] = [
     ],
   },
   {
-    mainImage:
-      "/assets/imgs/trek-dashboard/explorerScreen/sportsTraingSessions/cycling.jpg",
+    mainImage: "/assets/imgs/trek-dashboard/explorerScreen/sportsTraingSessions/cycling.jpg",
     categories: [
       "Endurance",
       "Cardio",

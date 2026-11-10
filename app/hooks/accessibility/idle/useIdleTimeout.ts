@@ -9,7 +9,6 @@ import {
 } from "@/app/utils/constants/storage/localStorage";
 import { idleConfig } from "@/app/components/effects/globalEffects/components/idleScreen/constants";
 
-
 // -----------------------------------------------------------------------------
 // DEFAULT CONFIGURATION
 // -----------------------------------------------------------------------------
@@ -21,10 +20,7 @@ export const DEFAULT_TIMEOUT = idleConfig.timeout;
 // -----------------------------------------------------------------------------
 
 function getTimeout(): number {
-  return getLocalStorage<number>(
-    STORAGE_KEYS.idleTimeout,
-    DEFAULT_TIMEOUT,
-  );
+  return getLocalStorage<number>(STORAGE_KEYS.idleTimeout, DEFAULT_TIMEOUT);
 }
 
 // -----------------------------------------------------------------------------
@@ -33,10 +29,7 @@ function getTimeout(): number {
 
 function subscribe(callback: () => void) {
   const handleStorageChange = (event: Event) => {
-    if (
-      event instanceof CustomEvent &&
-      event.detail?.key !== STORAGE_KEYS.idleTimeout
-    ) {
+    if (event instanceof CustomEvent && event.detail?.key !== STORAGE_KEYS.idleTimeout) {
       return;
     }
 
@@ -59,11 +52,7 @@ function subscribe(callback: () => void) {
 // -----------------------------------------------------------------------------
 
 export default function useIdleTimeout() {
-  const timeout = useSyncExternalStore(
-    subscribe,
-    getTimeout,
-    () => DEFAULT_TIMEOUT,
-  );
+  const timeout = useSyncExternalStore(subscribe, getTimeout, () => DEFAULT_TIMEOUT);
 
   const updateTimeout = useCallback((value: number) => {
     setLocalStorage(STORAGE_KEYS.idleTimeout, value);

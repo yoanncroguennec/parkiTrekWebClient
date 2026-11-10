@@ -3,15 +3,7 @@
 import { useMediaQuery, useTheme } from "@mui/material";
 
 // COMPONENTS
-import {
-  AnimatedTrail,
-  Compass,
-  Content,
-  Footer,
-  Time,
-  IdleHalo,
-  IdleGrain,
-} from "./components";
+import { AnimatedTrail, Compass, Content, Footer, Time, IdleHalo, IdleGrain } from "./components";
 
 // HOOKS
 import { useIdle, useIdleAnimation } from "./hooks";
@@ -20,10 +12,7 @@ import { useIdle, useIdleAnimation } from "./hooks";
 import { idleConfig } from "./constants";
 
 // STYLES
-import {
-  IdleOverlay,
-  IdleBackground,
-} from "./IdleScreen.Styles";
+import { IdleOverlay, IdleBackground } from "./IdleScreen.Styles";
 
 // -----------------------------------------------------------------------------
 // TYPES
@@ -44,17 +33,11 @@ export default function IdleScreen({
 }: IdleScreenProps) {
   const theme = useTheme();
 
-  const isDesktop = useMediaQuery(
-    theme.breakpoints.up("md"),
-  );
+  const isDesktop = useMediaQuery(theme.breakpoints.up("md"));
 
   const idle = useIdle(timeout);
 
-  const {
-    overlayRef,
-    haloRef,
-    grainRef,
-  } = useIdleAnimation(idle, initialVisible);
+  const { overlayRef, haloRef, grainRef } = useIdleAnimation(idle, initialVisible);
 
   return (
     <IdleOverlay ref={overlayRef}>

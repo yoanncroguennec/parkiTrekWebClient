@@ -15,7 +15,7 @@ import {
 } from "./TrekJournalClient.Styles";
 
 export default function TrekJournalClient() {
-    // HERO
+  // HERO
   const heroContentRef = useRef<HTMLDivElement>(null);
   const heroImageRef = useRef<HTMLDivElement>(null);
 
@@ -73,7 +73,7 @@ export default function TrekJournalClient() {
       </IntroLayout>
 
       <ExplorerView ref={explorerScreenRef}>
-                <ExplorerScreen
+        <ExplorerScreen
           onBack={handleBack}
           headerRef={headerRef}
           statsRef={statsRef}
