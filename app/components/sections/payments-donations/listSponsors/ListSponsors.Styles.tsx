@@ -1,10 +1,6 @@
 import Image from "next/image";
 import { Box, Stack, Typography, styled } from "@mui/material";
-
-/* =========================================================
-   01 — ROOT
-   Conteneur principal de la section sponsors
-========================================================= */
+import type { BoxProps } from "@mui/material";
 
 export const ListSponsorsContainer = styled(Box)(() => ({
   width: "100%",
@@ -313,8 +309,7 @@ export const CardSubtitle = styled(Typography)(({ theme }) => ({
    15 — ARROW CONTAINER
    Indicateur de navigation de la carte
 ========================================================= */
-
-export const ArrowContainer = styled(Box)(({ theme }) => ({
+export const ArrowContainer = styled(Box)<BoxProps>(({ theme }) => ({
   position: "absolute",
   right: "10px",
   bottom: "10px",

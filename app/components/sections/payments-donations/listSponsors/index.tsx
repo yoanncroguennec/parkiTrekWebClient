@@ -162,13 +162,17 @@ export default function ListSponsors() {
                         </CardInfos>
 
                         {/* ARROW */}
-                        <ArrowContainer
-                          ref={(element) => {
-                            arrowsRef.current[refIndex] = element;
-                          }}
-                        >
-                          <MdArrowForwardIos color="#FFF" size={isDesktop ? 24 : 20} />
-                        </ArrowContainer>
+<ArrowContainer
+  component="div"
+  ref={(element) => {
+    arrowsRef.current[refIndex] = element as HTMLDivElement | null;
+  }}
+>
+  <MdArrowForwardIos
+    color="#FFF"
+    size={isDesktop ? 24 : 20}
+  />
+</ArrowContainer>
                       </Card>
                     );
                   })}
