@@ -46,11 +46,7 @@ import {
   FiX,
   FiYoutube,
 } from "react-icons/fi";
-import {
-  GiConverseShoe,
-  GiMountainRoad,
-  GiRunningShoe,
-} from "react-icons/gi";
+import { GiConverseShoe, GiMountainRoad, GiRunningShoe } from "react-icons/gi";
 import { GoArrowUpRight } from "react-icons/go";
 import { GrMapLocation } from "react-icons/gr";
 import { HiOutlineUserGroup } from "react-icons/hi2";

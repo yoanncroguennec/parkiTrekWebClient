@@ -26,6 +26,7 @@ import { useSplitText } from "./animations/gsap/text/splitText/useSplitText";
 import { useSponsorAnimations } from "./animations/gsap/pages/payments-donations/listSponsors";
 import useMagneticPopTitle from "./animations/gsap/text/magneticPop/useMagneticPopTitle";
 import { useContactAnimation } from "./animations/gsap/pages/contact/useContactAnimation";
+import { useCenterReveal } from "./animations/gsap/reveals/useCenterReveal";
 
 // AUDIOS
 import useAudioPlayer from "./audios/useAudioPlayer";
@@ -68,6 +69,7 @@ export {
   useSponsorAnimations,
   useMagneticPopTitle,
   useContactAnimation,
+  useCenterReveal,
 
   // AUDIOS
   useAudioPlayer,
